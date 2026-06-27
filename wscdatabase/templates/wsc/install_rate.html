@@ -1,0 +1,12 @@
+<input id="id_installrate" value="{{ installratea.installrate }}">
+<script>
+$(document).ready(function() {
+    var x = document.getElementById('id_installrate').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById('id_installrate').value = x;
+});
+</script>

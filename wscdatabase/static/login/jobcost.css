@@ -1,0 +1,2032 @@
+body{
+  font: 16px/1.5 Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+
+}
+text{
+    display:none;
+}
+section#workarea1{
+    width:100%;
+    height:770px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+a#back{
+    border: 2px solid black;
+    border-radius: 2px;
+    background: gold;
+    width: 30%;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10%;
+    margin-right: 0%;
+    margin-left:4.0%;
+    transition: 0.6s;
+    float:left;
+    text-align: center;
+    overflow: hidden;
+    display:inline-block;
+    padding: 1%;
+}
+a#back{
+    color: #000000;
+}
+
+a#back:hover{
+    color: white;
+    background: green;
+    text-decoration: underline;
+}
+
+a#gencon{
+    border: 2px solid black;
+    border-radius: 2px;
+    background: #00FFFF;
+    width: 30%;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 22%;
+    margin-right: 0%;
+    margin-left:-33.0%;
+    transition: 0.6s;
+    float:left;
+    text-align: center;
+    overflow: hidden;
+    display:inline-block;
+    padding: 1%;
+}
+a#gencon{
+    color: #000000;
+}
+
+a#gencon:hover{
+    color: white;
+    background: #20B2AA;
+    text-decoration: underline;
+}
+
+
+.labor{
+    border: 2px solid blue;
+    border-radius: 2px;
+    background: #00FF7F;
+    width: 33%;
+    font-size: calc(.4vw + .4vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1.5%;
+    margin-right: 0.0%;
+    margin-left:1.0%;
+    transition: 0.6s;
+    float:right;
+    text-align: center;
+    overflow: hidden;
+    display:inline-block;
+    box-sizing:border-box;
+    padding-top: 1.0%;
+    padding-bottom: 1.0%;
+}
+.labor{
+    color: #000000;
+}
+
+.labor:hover{
+    color: white;
+    background: green;
+    text-decoration: underline;
+}
+
+div.container{
+    width:100%;
+    height:99vh;
+    margin-top:0px;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+}
+
+div.container1{
+    flex: 1;
+}
+
+div.container2{
+    flex: 2;
+}
+
+div.container3{
+    flex: 1;
+}
+
+#formh2{
+    width:100%;
+    padding-top:0px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:0px;
+    margin-top:11px;
+    color:white;
+    text-align:center;
+    font-size: calc(2.0vw + 1.0vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-shadow: 2px 2px 5px black;
+
+}
+
+.formh3{
+    width:100%;
+    padding-top:0px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:0px;
+    margin-top: 0px;
+    color: gold;
+    text-align:center;
+    font-size: calc(.75vw + .75vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-shadow: 2px 2px 5px black;
+
+}
+
+.formh4{
+    width:100%;
+    padding-top:0px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:0px;
+    margin-top: 0px;
+    color: blue;
+    text-align:center;
+    font-size: calc(.75vw + .75vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+
+
+}
+
+#bh{
+    margin-top: 10%;
+
+}
+
+
+.form2{
+    width:100%;
+    height: 90%;
+    background:#a9a9a9;
+    border:#5a3510 3px solid;
+    margin-top: 5%;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+}
+div#col1.fieldWrapper{
+    width:100%;
+    margin-top: 0%;
+
+}
+
+
+
+div.container6{
+    flex: 1.0;
+}
+
+hr{
+    width: 100%;
+    border:black 1px solid;
+}
+
+div.container7{
+    height: 68vh;
+    width:45%;
+    margin-top:1.0%;
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    background-color: #a9a9a9;
+    flex-direction: column;
+}
+
+div.container8{
+    flex: 1.0;
+}
+
+.container4{
+    height: 13vh;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    border-bottom: 2px solid black;
+    background-color: #a9a9a9;
+    flex-direction: column;
+
+}
+
+.container9{
+    height: 38vh;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:-10vh;
+    background-color: #a9a9a9;
+    flex-direction: column;
+
+}
+
+#section3{
+    width:1281px;
+    height:354px;
+    margin-left:30px;
+    margin-right:0px;
+    margin-top:11px;
+    background-color: #a9a9a9;
+    display:inline-block;
+    border: 2px solid black;
+}
+
+div.container5{
+    height: 59%;
+    width:100%;
+    display: flex;
+
+}
+
+div.container5a{
+    flex: 1.0;
+}
+
+div.container5b{
+    flex: 2.0;
+}
+
+div.container5c{
+    flex: 1.0;
+}
+
+
+
+div.container6{
+    height:100%;
+    width:100%;
+    display: flex;
+
+}
+
+div.container6a{
+    flex: 1.0;
+}
+
+div.container6b{
+    flex: 1.0;
+}
+
+div.container6c{
+    flex: 1.0;
+}
+
+#jobid{
+    width:100%;
+    margin-top: 0.0%;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#label_id{
+    width:50%;
+    margin-top: 0px;
+    margin-left:0.0%;
+    margin-right:0px;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-align:center;
+    display:inline-block;
+}
+
+#id_jobid{
+    width:50%;
+    margin-top: 0px;
+    margin-left:0px;
+    margin-right:0px;
+    color:black;
+    background:#dcdcdc;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:center;
+    box-sizing:border-box;
+    pointer-events: none;
+    border-radius: 0px;
+}
+
+#custid{
+    width:20%;
+    height: 20%;
+    margin-top: 0px;
+    margin-left:7%;
+    margin-right:0px;
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+}
+
+#label_custid{
+    width:50%;
+    margin-top: 0px;
+    margin-left:0.0%;
+    margin-right:0px;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-align:center;
+    display:inline-block;
+}
+
+#id_custid{
+    width:50%;
+    margin-top: 0px;
+    margin-left:0px;
+    margin-right:0px;
+    color:black;
+    background:#dcdcdc;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    -moz-appearance: textfield;
+    text-align:center;
+    box-sizing:border-box;
+    pointer-events: none;
+    border-radius: 0px;
+}
+
+#conid{
+    width:100%;
+    margin-top: 0.0%;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#label_conid{
+    width:50%;
+    margin-top: 0px;
+    margin-left:0.0%;
+    margin-right:0px;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-align:center;
+    display:inline-block;
+}
+
+
+#id_conid{
+    width:50%;
+    margin-top: 0px;
+    margin-left:0px;
+    margin-right:0px;
+    color:black;
+    background:#dcdcdc;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    -moz-appearance: textfield;
+    text-align:center;
+    box-sizing:border-box;
+    pointer-events: none;
+    border-radius: 0px;
+}
+
+#saleid{
+    width:9%;
+    height: 20%;
+    margin-top: 0px;
+    margin-left:2%;
+    margin-right:0px;
+}
+
+#label_sale{
+    width:50%;
+    margin-top: 0px;
+    margin-left:0.0%;
+    margin-right:0px;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-align:center;
+    display:inline-block;
+}
+
+
+#id_saleid{
+    width:50%;
+    margin-top: 0px;
+    margin-left:0px;
+    margin-right:0px;
+    color:black;
+    background:#dcdcdc;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    -moz-appearance: textfield;
+    text-align:center;
+    box-sizing:border-box;
+    pointer-events: none;
+    border-radius: 0px;
+}
+
+#pageid{
+    width:59px;
+    height:36px;
+    margin-top: -57px;
+    margin-left:0px;
+    margin-right:478px;
+    float:right
+}
+
+#id_pageid{
+    width:52px;
+    height:29px;
+    margin-top: -7px;
+    margin-left:0px;
+    margin-right:0px;
+    color:white;
+    font-weight: bold;
+    font-size:32px;
+    font-style: italic;
+    font-family: "Times New Roman";
+    display:inline-block;
+    -moz-appearance: textfield;
+    text-align:left;
+    background-color: transparent;
+    border:none;
+    text-shadow: 2px 2px 5px black;
+}
+
+#custlastname{
+    width:100%;
+    margin-top: 0.0%;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#label_custlastname{
+
+}
+
+#id_custlastname{
+    width:56%;
+    margin-top: 0.0%;
+    margin-left: 4.0%;
+    margin-right: 0.0px;
+    color:black;
+    background:#dcdcdc;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:center;
+    box-sizing:border-box;
+    pointer-events: none;
+    border-radius: 0px;
+}
+
+#custadd1{
+    width:50%;
+    margin-top: 0.0%;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#label_custadd1{
+}
+
+#id_custadd1{
+    width:100%;
+    margin-top: 0.0%;
+    margin-left: 2.0%;
+    margin-right: 0.0px;
+    color:black;
+    background:#dcdcdc;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:center;
+    box-sizing:border-box;
+    pointer-events: none;
+    border-radius: 0px;
+}
+.container7a{
+    width: 100%;
+
+}
+
+
+#totalrmcost{
+    width:100%;
+    margin-top: 0.0%;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    display: flex;
+}
+
+#label_room{
+    width:100%;
+    margin-top: 0vh;
+    margin-left:0%;
+    margin-right: 0%;
+    margin-bottom: 0.0%;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    display:inline-block;
+    padding-right:5%;
+    text-align: right;
+}
+
+input#id_totalrmcost{
+    width:51%;
+    margin-top: 0.0vh;
+    margin-left:1.0%;
+    margin-right: 0%;
+    margin-bottom: 0vh;
+    background:#dcdcdc;
+    color:black;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:right;
+    box-sizing:border-box;
+    border-radius: 0px;
+    pointer-events: none;
+    padding:1.7%;
+}
+
+
+#label_totalrmcost{
+    width:23%;
+    margin-top: 0px;
+    margin-left:0px;
+    margin-right:0px;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align: right;
+}
+
+input#id_totalrmcost_0{
+    width:6%;
+    margin-top: 0px;
+    margin-left:0px;
+    margin-right:0px;
+    display:inline-block;
+    text-align:right;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    background: #a9a9a9;
+    border: none;
+}
+
+#label_prodqueuetotal{
+    width:117px;
+    height:21px;
+    margin-top: 0px;
+    margin-left:0px;
+    margin-right:0px;
+    color:black;
+    font-weight: bold;
+    font-size:20px;
+    font-style: italic;
+    font-family: "Times New Roman";
+    display:inline-block;
+}
+
+input#id_prodqueuetotal_0{
+    width:10%;
+    margin-top: 0px;
+    margin-left:-1%;
+    margin-right:0px;
+    display:inline-block;
+    text-align:left;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    background: #a9a9a9;
+    border: none;
+}
+
+#label_rmgrandtotal{
+    width:11%;
+    margin-top: 7%;
+    margin-left:68%;
+    margin-right:0px;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    display:inline-block;
+}
+
+input#id_rmgrandtotal_0{
+    width:15%;
+    margin-top: 0px;
+    margin-left:0px;
+    margin-right:0px;
+    display:inline-block;
+    text-align:center;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    background: #00FF7F;
+}
+
+select#id_totalrmcost_1{
+    display:none;
+}
+
+select#id_rmgrandtotal_1{
+    display:none;
+}
+
+select#id_prodqueuetotal_1{
+    display:none;
+}
+
+
+option{
+    text-align:center;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+
+
+}
+
+
+
+#customtext{
+    width:100%;
+    margin-top: 0.0%;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    display: flex;
+    align-items: center;
+}
+
+#label_customtext{
+    width:0%;
+    margin-top: 0px;
+    margin-left:0%;
+    margin-right:0%;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-align:right;
+    display:inline-block;
+}
+
+#id_customtext{
+    width:50%;
+    margin-top: 0%;
+    margin-left:0%;
+    margin-right:0%;
+
+}
+
+select#id_customtext{
+    width:83%;
+    margin-top: 0.0vh;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    margin-bottom: 0vh;
+    background:white;
+    color:black;
+    border: 2px solid blue;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:right;
+    box-sizing:border-box;
+    border-radius: 0px;
+    padding:1%;
+}
+
+#custom{
+    width: 55%;
+    text-align: right;
+}
+
+input#id_custom{
+    width:83%;
+    margin-top: 0.0vh;
+    margin-left:  0.0%;
+    margin-right:0.0%;
+    margin-bottom: 1%;
+    color:black;
+    border: 2px solid blue;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:right;
+    box-sizing:border-box;
+    border-radius: 0px;
+    padding:3.4%;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#discount1{
+    width:100%;
+    margin-top: 1.0%;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    display: flex;
+    align-items: center;
+}
+
+#label_discounttext{
+    width:0%;
+    margin-top: 0px;
+    margin-left:0%;
+    margin-right:0%;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-align:right;
+    display:inline-block;
+}
+
+#id_discounttext{
+    width:50%;
+    margin-top: 0%;
+    margin-left:0%;
+    margin-right:0%;
+
+}
+
+
+
+select#id_discounttext{
+    width:83%;
+    margin-top: 0.0vh;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    margin-bottom: 0vh;
+    background:white;
+    color:black;
+    border: 2px solid blue;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:right;
+    box-sizing:border-box;
+    border-radius: 0px;
+    padding:1%;
+}
+
+#discount{
+    width: 55%;
+    text-align: right;
+}
+
+input#id_discount{
+    width:83%;
+    margin-top: 0.0vh;
+    margin-left:12.5%;
+    margin-right:0.0%;
+    margin-bottom: 1%;
+    color:black;
+    border: 2px solid blue;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:right;
+    box-sizing:border-box;
+    border-radius: 0px;
+    padding:3.4%;
+}
+
+
+
+#label_discounttext{
+    width:0%;
+    margin-top: 0px;
+    margin-left:0%;
+    margin-right:0%;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-align:right;
+    display:inline-block;
+}
+
+#id_discounttext{
+    width:50%;
+    margin-top: 0%;
+    margin-left:0%;
+    margin-right:0%;
+
+}
+
+#subtotalcost1{
+    width:100%;
+    margin-top: 0.0%;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    display: flex;
+    align-items: center;
+}
+
+#label_subtotalcost{
+    width:100%;
+    margin-top: 0vh;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    margin-bottom: 0.0%;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    display:inline-block;
+    padding-top:1%;
+    padding-bottom:1%;
+    padding-right:7%;
+    text-align:right;
+}
+
+#subtotalcost {
+    width: 54%;
+    text-align: right;
+}
+
+input#id_subtotalcost{
+    width:100%;
+    margin-top: 0.0vh;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    margin-bottom: 0vh;
+    background:#dcdcdc;
+    color:black;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:right;
+    box-sizing:border-box;
+    border-radius: 0px;
+    padding:3.3%;
+    pointer-events: none;
+}
+
+#tax1{
+    width:100%;
+    margin-top: 1.5%;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    display: flex;
+    align-items: center;
+}
+
+#label_taxrate{
+    width:23%;
+    margin-top: 0vh;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    margin-bottom: 0.0%;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    display:inline-block;
+    padding:1%;
+    text-align:right;
+}
+
+#tax{
+    width: 45%;
+    text-align: right;
+}
+
+input#id_taxrate{
+    width:23%;
+    margin-top: 0.0vh;
+    margin-left:2.0%;
+    margin-right:0.0%;
+    margin-bottom: 0vh;
+    background:#dcdcdc;
+    color:black;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:center;
+    box-sizing:border-box;
+    border-radius: 0px;
+    padding:1.3%;
+    pointer-events: none;
+}
+
+
+#label_tax{
+    width:6%;
+    margin-top: 0vh;
+    margin-left:8.0%;
+    margin-right:0.0%;
+    margin-bottom: 0.0%;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    display:inline-block;
+    padding:1%;
+}
+
+input#id_tax{
+    width:83%;
+    margin-top: 0.0vh;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    margin-bottom: 0vh;
+    background:#dcdcdc;
+    color:black;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:right;
+    box-sizing:border-box;
+    border-radius: 0px;
+    padding:3.3%;
+    pointer-events: none;
+}
+
+
+#totaljobcost1{
+    width:100%;
+    margin-top: 0%;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    display: flex;
+    align-items: center;
+}
+
+#label_totaljobcost{
+    width:100%;
+    margin-top: 0vh;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    margin-bottom: 0.0%;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    display:inline-block;
+    padding-top:1%;
+    padding-bottom:1%;
+    padding-right:7%;
+    text-align:right;
+}
+
+#totaljobcost {
+    width: 54%;
+    text-align: right;
+}
+
+input#id_totaljobcost{
+    width:100%;
+    margin-top: 0.0vh;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    margin-bottom: 0vh;
+    background:#dcdcdc;
+    color:black;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:right;
+    box-sizing:border-box;
+    border-radius: 0px;
+    padding:3.3%;
+    pointer-events: none;
+}
+
+#constructiontext{
+    width:100%;
+    margin-top: 1.5%;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    display: flex;
+    align-items: center;
+}
+
+#label_constructiontext{
+    width:0%;
+    margin-top: 0px;
+    margin-left:0%;
+    margin-right:0%;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-align:right;
+    display:inline-block;
+}
+
+#id_constructiontext{
+    width:50%;
+    margin-top: 0%;
+    margin-left:0%;
+    margin-right:0%;
+
+}
+
+select#id_constructiontext{
+    width:83%;
+    margin-top: 0.0vh;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    margin-bottom: 0vh;
+    background:white;
+    color:black;
+    border: 2px solid blue;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:right;
+    box-sizing:border-box;
+    border-radius: 0px;
+    padding:1%;
+}
+
+#construction1{
+    width:100%;
+    margin-top: .8%;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    display: flex;
+    align-items: center;
+}
+
+#construction{
+    width: 55%;
+    text-align: right;
+}
+
+input#id_construction{
+    width:83%;
+    margin-top: 0.0vh;
+    margin-left:  0.0%;
+    margin-right:0.0%;
+    margin-bottom: 1%;
+    color:black;
+    border: 2px solid blue;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:right;
+    box-sizing:border-box;
+    border-radius: 0px;
+    padding:3.4%;
+}
+
+#opt2text1{
+    width:100%;
+    margin-top: .8%;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    display: flex;
+    align-items: center;
+}
+
+#label_opt2text{
+    width:0%;
+    margin-top: 0px;
+    margin-left:0%;
+    margin-right:0%;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-align:right;
+    display:inline-block;
+}
+
+#id_opt2text{
+    width:50%;
+    margin-top: 0%;
+    margin-left:0%;
+    margin-right:0%;
+
+}
+
+select#id_opt2text{
+    width:83%;
+    margin-top: 0.0vh;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    margin-bottom: 0vh;
+    background:white;
+    color:black;
+    border: 2px solid blue;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:right;
+    box-sizing:border-box;
+    border-radius: 0px;
+    padding:1%;
+}
+
+#opt2{
+    width: 55%;
+    text-align: right;
+}
+
+input#id_opt2{
+    width:83%;
+    margin-top: 0.0vh;
+    margin-left:  0.0%;
+    margin-right:0.0%;
+    margin-bottom: 1%;
+    color:black;
+    border: 2px solid blue;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:right;
+    box-sizing:border-box;
+    border-radius: 0px;
+    padding:3.4%;
+}
+
+#opt3text1{
+    width:100%;
+    margin-top: .8%;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    display: flex;
+    align-items: center;
+}
+
+#label_opt3text{
+    width:0%;
+    margin-top: 0px;
+    margin-left:0%;
+    margin-right:0%;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-align:right;
+    display:inline-block;
+}
+
+#id_opt3text{
+    width:50%;
+    margin-top: 0%;
+    margin-left:0%;
+    margin-right:0%;
+
+}
+
+select#id_opt3text{
+    width:83%;
+    margin-top: 0.0vh;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    margin-bottom: 0vh;
+    background:white;
+    color:black;
+    border: 2px solid blue;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:right;
+    box-sizing:border-box;
+    border-radius: 0px;
+    padding:1%;
+}
+
+#opt3{
+    width: 55%;
+    text-align: right;
+}
+
+input#id_opt3{
+    width:83%;
+    margin-top: 0.0vh;
+    margin-left:  0.0%;
+    margin-right:0.0%;
+    margin-bottom: 1%;
+    color:black;
+    border: 2px solid blue;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:right;
+    box-sizing:border-box;
+    border-radius: 0px;
+    padding:3.4%;
+}
+
+#install1{
+    width:100%;
+    margin-top: 1%;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    display: flex;
+    align-items: center;
+}
+
+#label_install{
+    width:19%;
+    margin-top: 0vh;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    margin-bottom: 0.0%;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    display:inline-block;
+    padding:1%;
+    text-align:right;
+}
+
+#id_install{
+    width:98%;
+    margin-top: 0.5%;
+    margin-left: 3.5%;
+    margin-right:0.0%;
+    margin-bottom: 0vh;
+    background:white;
+    color:black;
+    border: 2px solid blue;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:center;
+    box-sizing:border-box;
+    border-radius: 0px;
+    padding:6.3%;
+
+}
+
+#install{
+    width:25%;
+}
+
+input#id_installtext{
+    width:74%;
+    margin-top: 0.0%;
+    margin-left: 3.5%;
+    margin-right:0.0%;
+    margin-bottom: 0vh;
+    background:white;
+    color:black;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: calc(.65vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:center;
+    box-sizing:border-box;
+    border-radius: 0px;
+    padding-top:2.3%;
+    padding-bottom:3.3%;
+}
+
+#label_installrate{
+    width: 17%;
+    margin-top: 0.0%;
+    margin-left:1.0%;
+    margin-right:0.0%;
+    margin-bottom: 0.0%;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    display:inline-block;
+    padding:1%;
+    padding-right: 4%;
+    text-align:right;
+}
+
+input#id_installrate{
+    width:98%;
+    margin-top: 0.0vh;
+    margin-left:.5%;
+    margin-right:0.0%;
+    margin-bottom: 0vh;
+    background:white;
+    color:black;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:right;
+    box-sizing:border-box;
+    border-radius: 0px;
+    padding-top:3.3%;
+    padding-bottom:3.3%;
+    pointer-events: none;
+}
+
+#installrate{
+    width: 35%;
+    text-align: right;
+}
+
+#grandtotalcost1{
+    width:100%;
+    margin-top: 0%;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    display: flex;
+    align-items: center;
+}
+
+#grandtotalcost{
+    width: 55%;
+    text-align: right;
+}
+
+#label_grandtotalcost{
+    width:100%;
+    margin-top: 0vh;
+    margin-left: 0%;
+    margin-right: 2.5%;
+    margin-bottom: 0.0%;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-align:right;
+    display:inline-block;
+    padding:1%;
+
+}
+
+input#id_grandtotalcost{
+    width: 98%;
+    margin-top: 0.0vh;
+    margin-left:3.0%;
+    margin-right:0.0%;
+    margin-bottom: 0vh;
+    background:#00FF7F;
+    color:black;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:right;
+    box-sizing:border-box;
+    border-radius: 0px;
+    pointer-events: none;
+    padding:3.3%;
+
+}
+
+#depositA, #payment2A, #payment3A, #payment4A, #paymentfinalA{
+    font-weight: bold;
+    margin-top: 1%;
+    display: flex;
+    margin-left: 3%;
+}
+
+.pq, .fpa, .vma{
+    font-weight: bold;
+    margin-top: 1%;
+    display: flex;
+    margin-left: 2%;
+}
+
+.asf{
+    font-weight: bold;
+    margin-top: 4%;
+    display: flex;
+    margin-left: 2%;
+}
+
+.acc{
+    font-weight: bold;
+    margin-top: 1%;
+    margin-bottom:4%;
+    display: flex;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#depositlabel, #payment2label, #payment3label, #payment4label, #finallabel{
+    width:15%;
+    text-align: right;
+    margin-right:1%;
+
+}
+
+#deposit, #payment2, #payment3, #payment4{
+    width:12%;
+    margin-right: 2%;
+    text-align: right;
+    border-bottom: black 1px solid;
+}
+
+input#deposit_id, input#payment2_id, input#payment3_id, input#payment4_id{
+    width:93%;
+    margin-right: 1%;
+    text-align: right;
+    padding-top:.5vh;
+    padding-bottom:.5vh;
+    font-size: calc(.75vw + .75vh + .25vmin);
+}
+
+#custom_0, #discount_0, #construction_0, #opt2amount_0, #opt3amount_0{
+    width:  27%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#installtext_0{
+    width:  100%;
+    margin-left: 0%;
+    margin-right: 0%;
+    display: flex;
+    justify-content: center;
+}
+
+#id_depositperc{
+    width: 100%;
+    text-align: center;
+    font-size: calc(.65vw + .65vh + .25vmin);
+    padding-top:.5vh;
+    padding-bottom:.5vh;
+
+}
+
+#id_depositperc, #id_pay2perc, #id_pay3perc, #id_pay4perc{
+    width: 100%;
+    text-align: center;
+    font-size: calc(.65vw + .65vh + .25vmin);
+    padding-top:.5vh;
+    padding-bottom:.5vh;
+
+}
+
+#id_customamount, #id_discountamount, #id_constructionamount, #id_opt2amount, #id_opt3amount{
+    width: 100%;
+    text-align: right;
+    font-size: calc(.65vw + .65vh + .25vmin);
+    padding-top:.5vh;
+    padding-bottom:.5vh;
+    -webkit-appearance: textfield;
+}
+
+#id_customamount, #id_discountamount, #id_constructionamount, #id_opt2amount, #id_opt3amount{
+    display: flex;
+}
+
+#id_installtext{
+    display: flex;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    font-size: calc( .65vw + .5vh + .25vmin);
+    padding-top:.5vh;
+    padding-bottom:.5vh;
+}
+
+
+input#id_finalpayment{
+    width:93%;
+    margin-right: 0%;
+    text-align: right;
+    padding-top:0.5vh;
+    padding-bottom:0.5vh;
+    font-size: calc(.65vw + .65vh + .25vmin);
+}
+
+#finalpayment{
+    width:12%;
+    margin-left: 0%;
+    margin-right: 2%;
+    text-align: right;
+    border-bottom: black 1px solid;
+}
+
+#payment2perc, #payment3perc, #payment4perc{
+    width:8%;
+    text-align: right;
+    margin-right:1%;
+
+}
+
+#depositperc, #perc2{
+    width:28%;
+    text-align: right;
+    margin-right:1%;
+
+}
+
+
+
+
+#depositterms, #terms2, #terms3, #terms4, #termsfinal{
+    width:43%;
+    text-align: right;
+    margin-right:2%;
+    font-size: calc(.65vw + .65vh + .25vmin);
+    border-bottom: black 1px solid;
+}
+
+#id_finalpaymentdate, #id_payment4date, #id_payment3date, #id_payment2date, #id_depositdate{
+    width:87%;
+    font-family: "Times New Roman";
+    font-size: calc(.75vw + .75vh + .25vmin);
+    border-bottom: black 1px solid;
+}
+
+
+#customdeposit{
+    width:85%;
+    height:10%;
+    background:#c0c0c0;
+    margin-top: 362vh;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+
+#headercustom{
+    padding-top:3%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.rm-modal{
+    width:50.3%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top:0;
+    display:flex;
+    align-items: center;
+
+}
+
+.modal-content{
+    width:50%;
+    height:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: 44%;
+    background-color: #90ee90;
+    border-radius:10px;
+
+}
+
+
+.modaltitle{
+    height:15%;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    font-size: calc( 1vw + 1vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    padding-top:3%;
+}
+
+.button4{
+    border: 2px solid #C0C0C0;
+    border-radius: 2px;
+    background: #006400;
+    width: 30%;
+    height: 15%;
+    font-size: calc(.75vw + .75vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    cursor: pointer;
+    float: left;
+    margin-top: 7%;
+    margin-right: 0px;
+    margin-left:14%;
+    transition: 0.6s;
+    text-align: center;
+    overflow: hidden;
+    padding:0% 3%;
+    display:inline-block;
+}
+.button4{
+    color: #000000;
+}
+
+.button4:hover{
+    color: white;
+    background: green;
+    text-decoration: underline;
+}
+
+.button5{
+    border: 2px solid #C0C0C0;
+    border-radius: 2px;
+    background: #9a0026;
+    width: 30%;
+    height: 15%;
+    font-size: calc(.75vw + .75vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    cursor: pointer;
+    float: left;
+    margin-top: 7%;
+    margin-right: 0px;
+    margin-left:12%;
+    transition: 0.6s;
+    text-align: center;
+    overflow: hidden;
+    padding:0% 3%;
+    display:inline-block;
+}
+.button5{
+    color: #000000;
+}
+
+.button5:hover{
+    color: black;
+    background: red;
+    text-decoration: underline;
+}
+
+.rm-modal2, .rm-modal3, .rm-modal4, .rm-modal5, .rm-modal6, .rm-modal7{
+    width:50.3%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top:0;
+    display:flex;
+    align-items: center;
+}
+
+
+.modal-content2{
+    width:50%;
+    height:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: 35%;
+    background-color: #90ee90;
+    border-radius:10px;
+}
+
+.modal-content3{
+    width:50%;
+    height:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    background-color: #90ee90;
+    border-radius:10px;
+}
+
+.modal-content4{
+    width:50%;
+    height:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: -7%;
+    background-color: #90ee90;
+    border-radius:10px;
+}
+
+.modal-content5{
+    width:50%;
+    height:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: -15%;
+    background-color: #90ee90;
+    border-radius:10px;
+}
+
+.modal-content6{
+    width:50%;
+    height:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: -15%;
+    background-color: #90ee90;
+    border-radius:10px;
+}
+
+.modal-content7{
+    width:50%;
+    height:30%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    background-color: #a9a9a9;
+    border-radius:10px;
+}
+
+#modaltitle2, #modaltitle3, #modaltitle4, #modaltitle5, #modaltitle6{
+    height:15%;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    font-size: calc(.65vw + .65vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    padding-top:5%;
+}
+
+#installtext_id{
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+.button42, .button43, .button44, .button45{
+    border: 2px solid #C0C0C0;
+    border-radius: 2px;
+    background: #006400;
+    width: 30%;
+    height: 15%;
+    font-size: calc(.75vw + .75vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    cursor: pointer;
+    float: left;
+    margin-top: 7%;
+    margin-right: 0px;
+    margin-left:14%;
+    transition: 0.6s;
+    text-align: center;
+    overflow: hidden;
+    padding:0% 3%;
+    display:inline-block;
+}
+.button47, .button57{
+    border: 2px solid #C0C0C0;
+    border-radius: 2px;
+    background: #00FF7F;
+    width: 38%;
+    height: 15%;
+    font-size: calc(.75vw + .75vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    cursor: pointer;
+    float: left;
+    margin-top: 0%;
+    margin-right: 0px;
+    margin-left:7.5%;
+    transition: 0.6s;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 2%;
+    display:inline-block;
+}
+
+.button46{
+    border: 2px solid #C0C0C0;
+    border-radius: 2px;
+    background: #006400;
+    width: 30%;
+    height: 15%;
+    font-size: calc(.75vw + .75vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    cursor: pointer;
+    float: left;
+    margin-top: 12%;
+    margin-right: 0px;
+    margin-left:14%;
+    transition: 0.6s;
+    text-align: center;
+    overflow: hidden;
+    padding:0% 3%;
+    display:inline-block;
+}
+
+.button42, .button43, .button44, .button45, .button46, .button47, .button57{
+    color: #000000;
+}
+
+.button42:hover, .button43:hover, .button44:hover, .button45:hover, .button46:hover{
+    color: white;
+    background: green;
+    text-decoration: underline;
+}
+.button47:hover, .button57:hover{
+    color: white;
+    background: green;
+    text-decoration: underline;
+}
+
+.button52, .button53, .button54, .button55{
+    border: 2px solid #C0C0C0;
+    border-radius: 2px;
+    background: #9a0026;
+    width: 30%;
+    height: 15%;
+    font-size: calc(.75vw + .75vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    cursor: pointer;
+    float: left;
+    margin-top: 7%;
+    margin-right: 0px;
+    margin-left:12%;
+    transition: 0.6s;
+    text-align: center;
+    overflow: hidden;
+    padding:0% 3%;
+    display:inline-block;
+}
+
+.button56{
+    border: 2px solid #C0C0C0;
+    border-radius: 2px;
+    background: #9a0026;
+    width: 30%;
+    height: 15%;
+    font-size: calc(.75vw + .75vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    cursor: pointer;
+    float: left;
+    margin-top: 12%;
+    margin-right: 0px;
+    margin-left:12%;
+    transition: 0.6s;
+    text-align: center;
+    overflow: hidden;
+    padding:0% 3%;
+    display:inline-block;
+}
+
+.button52, .button53, .button54, .button55, .button56{
+    color: #000000;
+}
+
+.button52:hover, .button53:hover, .button54:hover, .button55:hover, .button56:hover{
+    color: black;
+    background: red;
+    text-decoration: underline;
+}
+
+#submitted{
+    display: flex;
+    flex-direction: row;
+    margin-top: 6%;
+}
+.sb{
+    width: 60.8%;
+    margin-left:2%;
+    font-size: calc(.75vw + .75vh + .25vmin);
+    font-weight: bold;
+    border-bottom: 2px solid black;
+
+}
+.date1{
+    width: 30%;
+    margin-left:3%;
+    font-size: calc(.75vw + .75vh + .25vmin);
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+.ab{
+    width: 60%;
+    margin-left:3%;
+    font-size: calc(.75vw + .75vh + .25vmin);
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+.date2{
+    width: 30%;
+    margin-left: 3%;
+    font-size: calc(.75vw + .75vh + .25vmin);
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+
+#accepted{
+    display: flex;
+    flex-direction: row;
+    margin-top: 9%;
+    margin-bottom: 2%;
+}

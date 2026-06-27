@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="../../../img/favicon1.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/custinfo.css">
+    <title>Wood Street Cabinet Bidding Program</title>
+</head>
+<body  style="background-image: url('../../../../img/wood.jpg');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;">
+<div class="container">
+    <div class="container1">
+    </div>
+    <div class="container2">
+        <h1 id="formh2">Customers Information</h1>
+         <div class="outerdiv">
+            <form id="form2" method="post"
+                  prodqueue-url="{% url 'wscdatabase:prodqueue' instance.id %}"
+                  roomcost1-url = "{% url 'wscdatabase:load_rmcost1' instance.id %}"
+                  roomcost2-url = "{% url 'wscdatabase:load_rmcost2' instance.id %}"
+                  roomcost3-url = "{% url 'wscdatabase:load_rmcost3' instance.id %}"
+                  roomcost4-url = "{% url 'wscdatabase:load_rmcost4' instance.id %}"
+                  roomcost5-url = "{% url 'wscdatabase:load_rmcost5' instance.id %}"
+                  roomcost6-url = "{% url 'wscdatabase:load_rmcost6' instance.id %}"
+                  roomcost7-url = "{% url 'wscdatabase:load_rmcost7' instance.id %}"
+                  roomcost8-url = "{% url 'wscdatabase:load_rmcost8' instance.id %}"
+                  roomcost9-url = "{% url 'wscdatabase:load_rmcost9' instance.id %}"
+                  roomcost10-url = "{% url 'wscdatabase:load_rmcost10' instance.id %}"
+                  roomcost11-url = "{% url 'wscdatabase:load_rmcost11' instance.id %}"
+                  roomcost12-url = "{% url 'wscdatabase:load_rmcost12' instance.id %}"
+                  roomcost13-url = "{% url 'wscdatabase:load_rmcost13' instance.id %}"
+                  addnewrm2-url =  "{% url 'wscdatabase:addnewrm2' instance.id %}"
+            >
+                 {% csrf_token %}
+                 {{ form.name_of_field }}
+                 <div class="form-rowcustid">
+                     {{ form.custid.errors }}
+                     <label id="label_custid">Cust. ID</label>
+                     {{ form.custid }}
+                    {{ form.prodqueue }}
+                 </div>
+                 <div class="form-rowconid">
+                    {{ form.conid.errors }}
+                    <label id="label_conid">Con. ID</label>
+                    {{ form.conid }}
+                 </div>
+                 <div class="form-rowcom">
+                     {{ form.custcompanytname.errors }}
+                     <label id="label_custcompanytname">Company:</label>
+                     {{ form.custcompanytname }}
+                 </div>
+                 <div class="form-row">
+                     {{ form.custfirstname.errors }}
+                     <label id="label_custfirstname">First Name:</label>
+                     {{ form.custfirstname }}
+                 </div>
+                 <div class="form-row">
+                     {{ form.custlastname.errors }}
+                     <label id="label_custlastname">Last Name:</label>
+                     {{ form.custlastname }}
+                 </div>
+                 <div class="form-row">
+                     {{ form.custadd1.errors }}
+                     <label id="label_custadd1">Address #1:</label>
+                     {{ form.custadd1 }}
+                 </div>
+                 <div class="form-row">
+                     {{ form.custadd2.errors }}
+                     <label id="label_custadd2">Address #2:</label>
+                     {{ form.custadd2 }}
+                 </div>
+                 <div class="form-row">
+                     {{ form.custcity.errors }}
+                     <label id="label_custcity">City:</label>
+                     {{ form.custcity }}
+                 </div>
+                 <div class="form-rowst">
+                     {{ form.custst.errors }}
+                     <label class="label_custst">State:</label>
+                     {{ form.custst }}
+                 </div>
+                 <div class="form-row">
+                     {{ form.custzipcode.errors }}
+                     <label class="label_custzipcode">Zip Code:</label>
+                     {{ form.custzipcode }}
+                 </div>
+                 <div class="form-rowphone">
+                     {{ form.custwork1.errors }}
+                     <label class="label_custwork1">Work Phone #1:</label>
+                     {{ form.custwork1 }}
+                 </div>
+                 <div class="form-rowphone">
+                     {{ form.custwork2.errors }}
+                     <label class="label_custwork2">Work Phone #2:</label>
+                     {{ form.custwork2 }}
+                 </div>
+                 <div class="form-rowphone">
+                     {{ form.custcell1.errors }}
+                     <label class="label_custcell1">Cell Phone #1:</label>
+                     {{ form.custcell1 }}
+                 </div>
+                 <div class="form-rowphone">
+                     {{ form.custcell2.errors }}
+                     <label class="label_custcell2">Cell Phone #2:</label>
+                     {{ form.custcell2 }}
+                 </div>
+                 <div class="form-rowphone">
+                     {{ form.custhome.errors }}
+                     <label class="label_custhome">Home Phone:</label>
+                     {{ form.custhome }}
+                 </div>
+                 <div class="form-rowemail">
+                     {{ form.custemail1.errors }}
+                     <label class="label_custemail1">Email #1:</label>
+                     {{ form.custemail1 }}
+                 </div>
+                 <div class="form-rowemail">
+                     {{ form.custemail2.errors }}
+                     <label class="label_custemail2">Email #2:</label>
+                     {{ form.custemail2 }}
+                 </div>
+             </form>
+         </div>
+            <div id="but2">
+                 <a class="btn btn9" id="btn1" href="{% url 'wscdatabase:edit_cust_info' instance.id %}">Update Customers Info.</a>
+                 <a class="btn btn9" id="btn2" href="{{ instance.get_absolute26_url }}">Delete Customer</a>
+            </div>
+
+    </div>
+    <div class="container3">
+            <h1 id="formh3">Room Information</h1>
+            <a id="back"  href="{% url 'wscdatabase:cust_info_existing' %}">Back</a>
+            <form id="form3" method="post">
+                <div id="menu2">
+                    <div id="header1">
+                    <div id="A">ID</div>
+                    <div id="C">Current Room</div>
+                    <div id="D">Room Cost</div>
+                    <div id="E">Add to Contract</div>
+                    <div id="F">Delete Room</div>
+                </div>
+                    <section id="sec1"></section>
+                    <section id="sec2"></section>
+                    <section id="sec3"></section>
+                    <section id="sec4"></section>
+                    <section id="sec5"></section>
+                    <section id="sec6"></section>
+                    <section id="sec7"></section>
+                    <section id="sec8"></section>
+                    <section id="sec9"></section>
+                    <section id="sec10"></section>
+                    <section id="sec11"></section>
+                    <section id="sec12"></section>
+                    <section id="sec13"></section>
+                    <form id="form1" method="post">
+                        <div class="form-rowrm1">
+                            {% for obj in room1 %}
+                            <a id="bid_idA" href="{{ obj.get_absolute17_url }}" >{{ obj.bid_idA }}</a>
+                            <div id="rm" >{{ obj.rmnum }}</div>
+                            <div id="rmcost">
+                                <div id="id_rmcost">{{ obj.rmcost }}</div>
+                            </div>
+                            <div id="rmactive1">
+                                <a id="rmactive"  href="{{ obj.get_absolute20_url }}" >{{ obj.rmactive|yesno:"Yes,No,maybe" }}</a>
+                            </div>
+                            <div id="delete">
+                                <a class="btn btn9" id="delete1" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="form-rowrm2">
+                            {% for obj in room2 %}
+                            <a id="bid_idA2" href="{{ obj.get_absolute17_url }}" >{{ obj.bid_idA }}</a>
+                            <div id="rm2" >{{ obj.rmnum }}</div>
+                            <div id="rmcost2">
+                                <div id="id_rmcost2">{{ obj.rmcost }}</div>
+                            </div>
+                            <div id="rmactive12">
+                                <a id="rmactive2"  href="{{ obj.get_absolute20_url }}" >{{ obj.rmactive|yesno:"Yes,No,maybe" }}</a>
+                            </div>
+                            <div id="delete2">
+                                <a class="btn btn9" id="delete12" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="form-rowrm3">
+                            {% for obj in room3 %}
+                            <a id="bid_idA3" href="{{ obj.get_absolute17_url }}" >{{ obj.bid_idA }}</a>
+                            <div id="rm3" >{{ obj.rmnum }}</div>
+                            <div id="rmcost3">
+                                <div id="id_rmcost3">{{ obj.rmcost }}</div>
+                            </div>
+                            <div id="rmactive13">
+                                <a id="rmactive3"  href="{{ obj.get_absolute20_url }}" >{{ obj.rmactive|yesno:"Yes,No,maybe" }}</a>
+                            </div>
+                            <div id="delete3">
+                                <a class="btn btn9" id="delete13" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="form-rowrm4">
+                            {% for obj in room4 %}
+                            <a id="bid_idA4" href="{{ obj.get_absolute17_url }}" >{{ obj.bid_idA }}</a>
+                            <div id="rm4" >{{ obj.rmnum }}</div>
+                            <div id="rmcost4">
+                                <div id="id_rmcost4">{{ obj.rmcost }}</div>
+                            </div>
+                            <div id="rmactive14">
+                                <a id="rmactive4"  href="{{ obj.get_absolute20_url }}" >{{ obj.rmactive|yesno:"Yes,No,maybe" }}</a>
+                            </div>
+                            <div id="delete4">
+                                <a class="btn btn9" id="delete14" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="form-rowrm5">
+                            {% for obj in room5 %}
+                            <a id="bid_idA5" href="{{ obj.get_absolute17_url }}" >{{ obj.bid_idA }}</a>
+                            <div id="rm5" >{{ obj.rmnum }}</div>
+                            <div id="rmcost5">
+                                <div id="id_rmcost5">{{ obj.rmcost }}</div>
+                            </div>
+                            <div id="rmactive15">
+                                <a id="rmactive5"  href="{{ obj.get_absolute20_url }}" >{{ obj.rmactive|yesno:"Yes,No,maybe" }}</a>
+                            </div>
+                            <div id="delete5">
+                                <a class="btn btn9" id="delete15" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="form-rowrm6">
+                            {% for obj in room6 %}
+                            <a id="bid_idA6" href="{{ obj.get_absolute17_url }}" >{{ obj.bid_idA }}</a>
+                            <div id="rm6" >{{ obj.rmnum }}</div>
+                            <div id="rmcost6">
+                                <div id="id_rmcost6">{{ obj.rmcost }}</div>
+                            </div>
+                            <div id="rmactive16">
+                                <a id="rmactive6"  href="{{ obj.get_absolute20_url }}" >{{ obj.rmactive|yesno:"Yes,No,maybe" }}</a>
+                            </div>
+                            <div id="delete6">
+                                <a class="btn btn9" id="delete16" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="form-rowrm7">
+                            {% for obj in room7 %}
+                            <a id="bid_idA7" href="{{ obj.get_absolute17_url }}" >{{ obj.bid_idA }}</a>
+                            <div id="rm7" >{{ obj.rmnum }}</div>
+                            <div id="rmcost7">
+                                <div id="id_rmcost7">{{ obj.rmcost }}</div>
+                            </div>
+                            <div id="rmactive17">
+                                <a id="rmactive7"  href="{{ obj.get_absolute20_url }}" >{{ obj.rmactive|yesno:"Yes,No,maybe" }}</a>
+                            </div>
+                            <div id="delete7">
+                                <a class="btn btn9" id="delete17" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="form-rowrm8">
+                            {% for obj in room8 %}
+                            <a id="bid_idA8" href="{{ obj.get_absolute17_url }}" >{{ obj.bid_idA }}</a>
+                            <div id="rm8" >{{ obj.rmnum }}</div>
+                            <div id="rmcost8">
+                                <div id="id_rmcost8">{{ obj.rmcost }}</div>
+                            </div>
+                            <div id="rmactive18">
+                                <a id="rmactive8"  href="{{ obj.get_absolute20_url }}" >{{ obj.rmactive|yesno:"Yes,No,maybe" }}</a>
+                            </div>
+                            <div id="delete8">
+                                <a class="btn btn9" id="delete18" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="form-rowrm9">
+                            {% for obj in room9 %}
+                            <a id="bid_idA9" href="{{ obj.get_absolute17_url }}" >{{ obj.bid_idA }}</a>
+                            <div id="rm9" >{{ obj.rmnum }}</div>
+                            <div id="rmcost9">
+                                <div id="id_rmcost9">{{ obj.rmcost }}</div>
+                            </div>
+                            <div id="rmactive19">
+                                <a id="rmactive9"  href="{{ obj.get_absolute20_url }}" >{{ obj.rmactive|yesno:"Yes,No,maybe" }}</a>
+                            </div>
+                            <div id="delete9">
+                                <a class="btn btn9" id="delete19" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="form-rowrm10">
+                            {% for obj in room10 %}
+                            <a id="bid_idA10" href="{{ obj.get_absolute17_url }}" >{{ obj.bid_idA }}</a>
+                            <div id="rm10" >{{ obj.rmnum }}</div>
+                            <div id="rmcost10">
+                                <div id="id_rmcost10">{{ obj.rmcost }}</div>
+                            </div>
+                            <div id="rmactive110">
+                                <a id="rmactive10"  href="{{ obj.get_absolute20_url }}" >{{ obj.rmactive|yesno:"Yes,No,maybe" }}</a>
+                            </div>
+                            <div id="delete10">
+                                <a class="btn btn9" id="delete110" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="form-rowrm11">
+                            {% for obj in room11 %}
+                            <a id="bid_idA11" href="{{ obj.get_absolute17_url }}" >{{ obj.bid_idA }}</a>
+                            <div id="rm11" >{{ obj.rmnum }}</div>
+                            <div id="rmcost11">
+                                <div id="id_rmcost11">{{ obj.rmcost }}</div>
+                            </div>
+                            <div id="rmactive111">
+                                <a id="rmactive11"  href="{{ obj.get_absolute20_url }}" >{{ obj.rmactive|yesno:"Yes,No,maybe" }}</a>
+                            </div>
+                            <div id="delete11">
+                                <a class="btn btn9" id="delete111" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="form-rowrm12">
+                            {% for obj in room12 %}
+                            <a id="bid_idA12" href="{{ obj.get_absolute17_url }}" >{{ obj.bid_idA }}</a>
+                            <div id="rm12" >{{ obj.rmnum }}</div>
+                            <div id="rmcost12">
+                                <div id="id_rmcost12">{{ obj.rmcost }}</div>
+                            </div>
+                            <div id="rmactive112">
+                                <a id="rmactive121"  href="{{ obj.get_absolute20_url }}" >{{ obj.rmactive|yesno:"Yes,No,maybe" }}</a>
+                            </div>
+                            <div id="delete112">
+                                <a class="btn btn9" id="delete121" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                        <div class="form-rowrm13">
+                            {% for obj in room13 %}
+                            <a id="bid_idA13" href="{{ obj.get_absolute17_url }}" >{{ obj.bid_idA }}</a>
+                            <div id="rm13" >{{ obj.rmnum }}</div>
+                            <div id="rmcost13">
+                                <div id="id_rmcost13">{{ obj.rmcost }}</div>
+                            </div>
+                            <div id="rmactive113">
+                                <a id="rmactive131"  href="{{ obj.get_absolute20_url }}" >{{ obj.rmactive|yesno:"Yes,No,maybe" }}</a>
+                            </div>
+                            <div id="delete113">
+                                <a class="btn btn9" id="delete131" href="{{ obj.get_absolute23_url }}" >Delete</a>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </form>
+                </div>
+                <div id="but1">
+                    <a class="btn btn9" id="btn">Add New Room</a>
+                    <a id="tjcf"  href="{{ instance.get_absolute50_url }}">Open Total Job Cost Form</a>
+                </div>
+            </form>
+
+    </div>
+    <div class="container4">
+    </div>
+<div class="rm-modal" style="display:none">
+            <div class="modal-content">
+                <h3 class="modaltitle">Do you wish to add a new room to this job?</h3>
+                <a class="btn btn9" id="btnyes" href="{% url 'wscdatabase:addnewrm2' instance.id %}">Yes</a>
+                <button type="button" class="button2">No</button>
+            </div>
+        </div>
+ </div>
+<div class="rm-modal2" style="display:none">
+    <div class="modal-content2">
+        <h3 id="modaltitle2">Please Wait</h3>
+    </div>
+</div>
+
+</body>
+
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+<script>
+
+
+
+function change(url) {
+    window.history.pushState('new', 'title', url);
+}
+
+
+$(document).ready(function() {
+    $("#id_custid").attr("disabled", true)
+    $("#id_conid").attr("disabled", true)
+    $("#id_custcompanytname").attr("disabled", true)
+    $("#id_custfirstname").attr("disabled", true)
+    $("#id_custlastname").attr("disabled", true)
+    $("#id_custadd1").attr("disabled", true)
+    $("#id_custadd2").attr("disabled", true)
+    $("#id_custcity").attr("disabled", true)
+    $("#id_custst").attr("disabled", true)
+    $("#id_custzipcode").attr("disabled", true)
+    $("#id_custwork1_0").attr("disabled", true)
+    $("#id_custwork2_0").attr("disabled", true)
+    $("#id_custcell1_0").attr("disabled", true)
+    $("#id_custcell2_0").attr("disabled", true)
+    $("#id_custhome_0").attr("disabled", true)
+    $("#id_custemail1").attr("disabled", true)
+    $("#id_custemail2").attr("disabled", true)
+
+});
+
+$(function(){
+    $('.button2').click(function(){
+        $(".rm-modal").hide()
+    });
+});
+
+$(function(){
+    $('#btn').click(function(){
+        $(".rm-modal").show()
+    });
+});
+
+$(function(){
+    $('#btnyes').click(function(){
+        $(".rm-modal2").show()
+    });
+});
+
+$(function(){
+    $('#id_prodqueue').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_prodqueue');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $("#form2").attr("prodqueue-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_prodqueue: $('#id_prodqueue').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+
+        }, 0);
+    });
+});
+
+$(function(){
+$('#id_prodqueue').change(function(){
+    setTimeout(function(){
+            var urlC = $("#form2").attr("roomcost1-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_rmcost").html(data);
+                     }
+                });
+        }, 1000);
+    });
+});
+
+$(function(){
+$('#id_prodqueue').change(function(){
+    setTimeout(function(){
+            var urlC = $("#form2").attr("roomcost2-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_rmcost2").html(data);
+                     }
+                });
+        }, 1000);
+    });
+});
+
+$(function(){
+$('#id_prodqueue').change(function(){
+    setTimeout(function(){
+            var urlC = $("#form2").attr("roomcost3-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_rmcost3").html(data);
+                     }
+                });
+        }, 1000);
+    });
+});
+
+$(function(){
+$('#id_prodqueue').change(function(){
+    setTimeout(function(){
+            var urlC = $("#form2").attr("roomcost4-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_rmcost4").html(data);
+                     }
+                });
+        }, 1000);
+    });
+});
+
+$(function(){
+$('#id_prodqueue').change(function(){
+    setTimeout(function(){
+            var urlC = $("#form2").attr("roomcost5-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_rmcost5").html(data);
+                     }
+                });
+        }, 1000);
+    });
+});
+
+$(function(){
+$('#id_prodqueue').change(function(){
+    setTimeout(function(){
+            var urlC = $("#form2").attr("roomcost6-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_rmcost6").html(data);
+                     }
+                });
+        }, 1000);
+    });
+});
+
+$(function(){
+$('#id_prodqueue').change(function(){
+    setTimeout(function(){
+            var urlC = $("#form2").attr("roomcost7-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_rmcost7").html(data);
+                     }
+                });
+        }, 1000);
+    });
+});
+
+$(function(){
+$('#id_prodqueue').change(function(){
+    setTimeout(function(){
+            var urlC = $("#form2").attr("roomcost8-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_rmcost8").html(data);
+                     }
+                });
+        }, 1000);
+    });
+});
+
+$(function(){
+$('#id_prodqueue').change(function(){
+    setTimeout(function(){
+            var urlC = $("#form2").attr("roomcost9-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_rmcost9").html(data);
+                     }
+                });
+        }, 1000);
+    });
+});
+
+$(function(){
+$('#id_prodqueue').change(function(){
+    setTimeout(function(){
+            var urlC = $("#form2").attr("roomcost10-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_rmcost10").html(data);
+                     }
+                });
+        }, 1000);
+    });
+});
+
+$(function(){
+$('#id_prodqueue').change(function(){
+    setTimeout(function(){
+            var urlC = $("#form2").attr("roomcost11-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_rmcost11").html(data);
+                     }
+                });
+        }, 1000);
+    });
+});
+
+$(function(){
+$('#id_prodqueue').change(function(){
+    setTimeout(function(){
+            var urlC = $("#form2").attr("roomcost12-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_rmcost12").html(data);
+                     }
+                });
+        }, 1000);
+    });
+});
+
+$(function(){
+$('#id_prodqueue').change(function(){
+    setTimeout(function(){
+            var urlC = $("#form2").attr("roomcost13-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_rmcost13").html(data);
+                     }
+                });
+        }, 1000);
+    });
+});
+
+
+
+//$(function(){
+//    $('#id_prodqueue').change(function(){
+//        setTimeout(function(){
+//             location.reload(true)
+//        }, 1000);
+//    });
+//});
+
+
+</script>
+
+
+
+
+
+

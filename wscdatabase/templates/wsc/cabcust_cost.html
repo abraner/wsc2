@@ -1,0 +1,31 @@
+<label id="label_custcabcost">Custom Cost</label><input id="cabcustcost_id" value="{{ custcabcost.custcabcost }}">
+
+<label id="label_custcabtotal">Custom Cabinet Total</label><input id="custcabtotal_id" value="{{ custcabtotal.custcabtotal }}">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function() {
+var x = document.getElementById("cabcustcost_id").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("cabcustcost_id").value = x;
+    });
+
+$(document).ready(function() {
+var x = document.getElementById("custcabtotal_id").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("custcabtotal_id").value = x;
+    });
+
+
+
+
+</script>

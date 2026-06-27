@@ -1,0 +1,45 @@
+<label id="label_cabsidenum">Number of Sides</label><input id="id_cabsidenum" value="{{ cabsidenum.cabsidenum }}">
+
+<label id="label_cabsidecost">Sides Cost</label><input id="id_cabsidecost_0" value="{{ cabsidecost.cabsidecost }}">
+
+<label id="label_cabsidetotal">Price for Sides</label><input id="id_cabsidetotal_0" value="{{ cabsidetotal.cabsidetotal }}">
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function() {
+var x = document.getElementById("id_cabsidecost_0").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_cabsidecost_0").value = x;
+    });
+
+$(document).ready(function() {
+var x = document.getElementById("id_cabsidecost_0").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_cabsidecost_0").value = x;
+    })
+
+$(document).ready(function() {
+var x = document.getElementById("id_cabsidetotal_0").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_cabsidetotal_0").value = x;
+    })
+
+
+
+
+</script>

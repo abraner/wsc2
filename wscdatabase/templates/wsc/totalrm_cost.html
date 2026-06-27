@@ -1,0 +1,46 @@
+
+<label id="label_totalrmcost">Production Number</label>
+<input id="id_totalrmcost_0" value="{{ totalrmcost1.totalrmcost }}">
+
+<label id="label_prodqueuetotal">Prodution Queue</label>
+<input id="id_prodqueuetotal_0" value="{{ totalrmcost2.prodqueuetotal }}">
+
+<label id="label_rmgrandtotal">Total Room Cost</label>
+<input id="id_rmgrandtotal_0" value="{{ totalrmcost3.rmgrandtotal }}">
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function() {
+var x = document.getElementById("id_totalrmcost_0").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_totalrmcost_0").value = x;
+    });
+
+$(document).ready(function() {
+var x = document.getElementById("id_prodqueuetotal_0").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_prodqueuetotal_0").value = x;
+    });
+
+$(document).ready(function() {
+var x = document.getElementById("id_rmgrandtotal_0").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_rmgrandtotal_0").value = x;
+    });
+
+</script>

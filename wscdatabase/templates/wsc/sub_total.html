@@ -1,0 +1,15 @@
+<input id="id_subtotalcost" value="{{ subtotalcost.subtotalcost }}">
+<script>
+$(document).ready(function() {
+    var x = document.getElementById('id_subtotalcost').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById('id_subtotalcost').value = x;
+    });
+
+
+
+</script>

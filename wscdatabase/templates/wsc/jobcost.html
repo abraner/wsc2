@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="../../../img/favicon1.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/jobcost.css">
+    <title>WSC/Total Room Cost</title>
+</head>
+<body  style="background-image: url('../../../../img/wood.jpg');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;"
+       >
+<div class="container">
+    <div class="container1">
+    </div>
+    <div class="container2">
+
+        <form class="form2" method="post"
+              customtexta-url="{% url 'wscdatabase:load_customtext' instance.custid %}"
+              customtext-url="{% url 'wscdatabase:customtext' instance.custid %}"
+              custom-url="{% url 'wscdatabase:custom' instance.custid %}"
+              custom1-url="{% url 'wscdatabase:custom1' instance.custid %}"
+              customa-url="{% url 'wscdatabase:load_custom' instance.custid %}"
+              discounttexta-url="{% url 'wscdatabase:load_discounttext' instance.custid %}"
+              discounttext-url="{% url 'wscdatabase:discounttext' instance.custid %}"
+              discount-url="{% url 'wscdatabase:discount' instance.custid %}"
+              discounta-url="{% url 'wscdatabase:load_discount' instance.custid %}"
+              subtotalcosta-url="{% url 'wscdatabase:load_subtotalcost' instance.custid %}"
+              taxa-url="{% url 'wscdatabase:load_tax' instance.custid %}"
+              totaljobcosta-url="{% url 'wscdatabase:load_totaljobcost' instance.custid %}"
+              grandtotalcosta-url="{% url 'wscdatabase:load_grandtotalcost' instance.custid %}"
+              constructiontexta-url="{% url 'wscdatabase:load_constructiontext' instance.custid %}"
+              constructiontext-url="{% url 'wscdatabase:constructiontext' instance.custid %}"
+              construction-url="{% url 'wscdatabase:construction' instance.custid %}"
+              constructiona-url="{% url 'wscdatabase:load_construction' instance.custid %}"
+              opt2texta-url="{% url 'wscdatabase:load_opt2text' instance.custid %}"
+              opt2text-url="{% url 'wscdatabase:opt2text' instance.custid %}"
+              opt2-url="{% url 'wscdatabase:opt2' instance.custid %}"
+              opt2a-url="{% url 'wscdatabase:load_opt2' instance.custid %}"
+              opt3texta-url="{% url 'wscdatabase:load_opt3text' instance.custid %}"
+              opt3text-url="{% url 'wscdatabase:opt3text' instance.custid %}"
+              opt3-url="{% url 'wscdatabase:opt3' instance.custid %}"
+              opt3a-url="{% url 'wscdatabase:load_opt3' instance.custid %}"
+
+
+              installa-url="{% url 'wscdatabase:load_install' instance.custid %}"
+
+              installtexta-url="{% url 'wscdatabase:load_installtext' instance.custid %}"
+              jobcost-url="{% url 'wscdatabase:jobcost' instance.id %}"
+              installyes-url="{% url 'wscdatabase:installyes' instance.custid %}"
+              installno-url="{% url 'wscdatabase:installno' instance.custid %}"
+              installratea-url="{% url 'wscdatabase:load_installrate' instance.custid %}"
+            >
+            {% csrf_token %}
+            {{ form.name_of_field }}
+            <div class="container8">
+                <div class="container4">
+                    <div class="container5">
+                        <div class="container5a">
+
+                        </div>
+                        <div class="container5b">
+                            <h1 id="formh2">Final Cost Form</h1>
+                        </div>
+                        <div class="container5c">
+
+
+                        </div>
+                    </div>
+                    <div class="container6">
+                        <div class="container6a">
+                            <div id="jobid">
+                                {{ form.jobid.errors }}
+                                <label id="label_id">Job ID</label>
+                                {{ form.jobid }}
+                                {{ form.custid.errors }}
+                                <label id="label_custid">Cust ID</label>
+                                {{ form.custid }}
+                            </div>
+                        </div>
+                        <div class="container6b">
+                            <div id="custlastname">
+                                {{ form.custlastname }}
+                                {{ form.custadd1 }}
+                            </div>
+                        </div>
+                        <div class="container6c">
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="container7">
+                    <div class="container7a">
+                        <div id="totalrmcost">
+                            {{ form.totalrmcost.errors }}
+                            <label id="label_room">Cabinetry</label>
+                            <input id="id_totalrmcost" value="{{ totalrmcost.totalrmcost }}">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="container7b">
+                        <div id="customtext">
+                        <label id="label_customtext"></label>
+                            <select id="id_customtext"></select>
+                            <div id="custom"></div>
+                        </div>
+                    </div>
+                    <div class="container7c">
+                        <div id="discount1">
+                        <label id="label_discounttext"></label>
+                            <select id="id_discounttext"></select>
+                            <div id="discount"></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="container7d">
+                        <div id="subtotalcost1">
+                            <label id="label_subtotalcost">Sub Total Cost</label>
+                            <div id="subtotalcost"></div>
+                        </div>
+                    </div>
+                    <div class="container7e">
+                        <div id="tax1">
+                            <label id="label_taxrate">Tax Rate</label>
+                            <input id="id_taxrate" value="{{ taxrate.taxperc }}">
+                            <label id="label_tax">Tax</label>
+                            <div id="tax"></div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="container7f">
+                        <div id="totaljobcost1">
+                            <label id="label_totaljobcost">Total Job Cost</label>
+                            <div id="totaljobcost"></div>
+                        </div>
+                    </div>
+                     <div class="container7g">
+                        <div id="construction1">
+                        <label id="label_constructiontext"></label>
+                            <select id="id_constructiontext"></select>
+                            <div id="construction"></div>
+                        </div>
+                    </div>
+                    <div class="container7h">
+                        <div id="opt2text1">
+                        <label id="label_opt2text"></label>
+                            <select id="id_opt2text"></select>
+                            <div id="opt2"></div>
+                        </div>
+                    </div>
+                    <div class="container7i">
+                        <div id="opt3text1">
+                        <label id="label_opt3text"></label>
+                            <select id="id_opt3text"></select>
+                            <div id="opt3"></div>
+                        </div>
+                    </div>
+                     <div class="container7j">
+                        <div id="install1">
+                            <label id="label_install">Installing</label>
+                            <div id="install"></div>
+                            <label id="label_installrate">Rate</label>
+                            <div id="installrate"></div>
+                        </div>
+                    </div>
+                     <div class="container7j">
+                        <div id="labor1">
+                            <button type="button" class="labor">Install Labor</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="container7k">
+                        <div id="grandtotalcost1">
+                            <label id="label_grandtotalcost">Grand Total Cost</label>
+                            <div id="grandtotalcost"></div>
+                        </div>
+                    </div>
+                    <div id="bh">
+                    <h1 class="formh3">Touch boxes with</h1><h1 class="formh4"> Blue</h1><h1 class="formh3"> borders to change values.</h1>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="rm-modal" style="display: none">
+            <div class="modal-content">
+                <h3 class="modaltitle">Enter Amount</h3>
+                <div id="customamount_id">
+                    <div id="custom_0">
+                        {{ form.customamount.errors }}
+                        {{ form.customamount }}
+                    </div>
+                </div>
+                <button type="button" class="button4">Accept</button>
+                <button type="button" class="button5">Cancel</button>
+            </div>
+        </div>
+        <div class="rm-modal2" style="display: none">
+            <div class="modal-content2">
+                <h3 class="modaltitle">Enter Amount</h3>
+                <div id="discount_id">
+                    <div id="discount_0">
+                        {{ form.discountamount.errors }}
+                        {{ form.discountamount }}
+                    </div>
+                </div>
+                <button type="button" class="button42">Accept</button>
+                <button type="button" class="button52">Cancel</button>
+            </div>
+        </div>
+        <div class="rm-modal3" style="display: none">
+            <div class="modal-content3">
+                <h3 class="modaltitle">Enter Amount</h3>
+                <div id="construction_id">
+                    <div id="construction_0">
+                        {{ form.constructionamount.errors }}
+                        {{ form.constructionamount }}
+                    </div>
+                </div>
+                <button type="button" class="button43">Accept</button>
+                <button type="button" class="button53">Cancel</button>
+            </div>
+        </div>
+        <div class="rm-modal4" style="display: none">
+            <div class="modal-content4">
+                <h3 class="modaltitle">Enter Amount</h3>
+                <div id="opt2amount_id">
+                    <div id="opt2amount_0">
+                        {{ form.opt2amount.errors }}
+                        {{ form.opt2amount }}
+                    </div>
+                </div>
+                <button type="button" class="button44">Accept</button>
+                <button type="button" class="button54">Cancel</button>
+            </div>
+        </div>
+        <div class="rm-modal5" style="display: none">
+            <div class="modal-content5">
+                <h3 class="modaltitle">Enter Amount</h3>
+                <div id="opt3amount_id">
+                    <div id="opt3amount_0">
+                        {{ form.opt3amount.errors }}
+                        {{ form.opt3amount }}
+                    </div>
+                </div>
+                <button type="button" class="button45">Accept</button>
+                <button type="button" class="button55">Cancel</button>
+            </div>
+        </div>
+        <div class="rm-modal6" style="display: none">
+            <div class="modal-content6">
+                <h3 class="modaltitle">Is Wood Street Cabinets installing the Cabinets?</h3>
+                <div id="installtext_id">
+                    <div id="installtext_0">
+                    </div>
+                </div>
+                <button type="button" class="button46">Yes</button>
+                <button type="button" class="button56">No</button>
+            </div>
+        </div>
+        <div class="rm-modal7" style="display: none">
+            <div class="modal-content7">
+                <h3 class="modaltitle">View Labor Options</h3>
+                <a class="button47"  href="{% url 'wscdatabase:laborbd' instance.custid %}">Labor by Room</a>
+                <a class="button57"  href="{% url 'wscdatabase:totallabor' instance.custid %}">Total Labor</a>
+            </div>
+        </div>
+    </div>
+    <div class="container3">
+        <a id="back"  href="{% url 'wscdatabase:custinfo' instance.custid %}">Back</a>
+        <a id="gencon"  href="{% url 'wscdatabase:contract' instance.custid %}">Generate Contract</a>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+
+$(document).ready(function() {
+
+
+var x = document.getElementById("id_totalrmcost").value;
+    console.log(x);
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById("id_totalrmcost").value = x;
+
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("customtexta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_customtext").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("customa-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#custom").html(data);
+                     }
+                });
+        }, 0);
+
+ setTimeout(function(){
+            var urlC = $(".form2").attr("discounttexta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_discounttext").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("discounta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#discount").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("subtotalcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#subtotalcost").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("taxa-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#tax").html(data);
+                     }
+                });
+        }, 400);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("totaljobcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#totaljobcost").html(data);
+                     }
+                });
+        }, 600);
+
+ setTimeout(function(){
+            var urlC = $(".form2").attr("constructiontexta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_constructiontext").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("constructiona-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#construction").html(data);
+                     }
+                });
+        }, 0);
+
+ setTimeout(function(){
+            var urlC = $(".form2").attr("opt2texta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_opt2text").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("opt2a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#opt2").html(data);
+                     }
+                });
+        }, 0);
+
+ setTimeout(function(){
+            var urlC = $(".form2").attr("opt3texta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_opt3text").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("opt3a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#opt3").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("custom1-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_custom1").html(data);
+                     }
+                });
+        }, 0);
+
+
+ setTimeout(function(){
+            var urlC = $(".form2").attr("installa-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_install").html(data);
+                     }
+                });
+        }, 0);
+
+ setTimeout(function(){
+            var urlC = $(".form2").attr("installtexta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#install").html(data);
+                     }
+                });
+        }, 0);
+
+ setTimeout(function(){
+            var urlC = $(".form2").attr("installratea-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#installrate").html(data);
+                     }
+                });
+        }, 0);
+
+ setTimeout(function(){
+            var urlC = $(".form2").attr("grandtotalcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#grandtotalcost").html(data);
+                     }
+                });
+        }, 500);
+
+
+
+
+
+
+setTimeout(function(){
+        if ($('#id_install').val() == 'Yes') $("#id_install").css('background-color', '#00FF7F')
+        if ($('#id_install').val() == 'Yes') $("#labor").show()
+        if ($('#id_install').val() =='No') $("#id_install").css('background-color', 'red')
+        if ($('#id_install').val() =='No') $("#labor").hide()
+        if ($('#id_install').val() == '') $("#id_install").css('background-color', 'white')
+
+}, 1000);
+
+    });
+
+$(function(){
+    $('.button5').click(function(){
+        $(".rm-modal").hide()
+    });
+});
+
+$(function(){
+    $('.button52').click(function(){
+        $(".rm-modal2").hide()
+    });
+});
+
+$(function(){
+    $('.button53').click(function(){
+        $(".rm-modal3").hide()
+    });
+});
+
+$(function(){
+    $('.button54').click(function(){
+        $(".rm-modal4").hide()
+    });
+});
+$(function(){
+    $('.button55').click(function(){
+        $(".rm-modal5").hide()
+    });
+});
+
+$(function(){
+    $('.labor').click(function(){
+        $(".rm-modal7").show()
+    });
+});
+
+
+
+
+
+/////////////////////////  Custom Text //////////////////////////////////////
+
+    $(function(){
+    $('#id_customtext').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_customtext');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("customtext-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_customtext: $('#id_customtext').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+/////////////////////////  Custom  //////////////////////////////////////
+
+
+
+
+$(function(){
+    $('.button4').click(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_customamount');
+                var userInput =selectBox.value;
+                console.log(userInput);
+                var url = $(".form2").attr("custom-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_customamount: $('#id_customamount').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+
+        }, 0);
+
+    });
+});
+
+$(function(){
+    $('.button4').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("customa-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#custom").html(data);
+                     }
+                });
+
+        }, 100);
+
+    });
+});
+
+$(function(){
+    $('.button4').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("subtotalcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#subtotalcost").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+$(function(){
+    $('.button4').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("taxa-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#tax").html(data);
+                     }
+                });
+        }, 300);
+    });
+});
+
+$(function(){
+    $('.button4').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("totaljobcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#totaljobcost").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+$(function(){
+    $('.button4').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("grandtotalcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#grandtotalcost").html(data);
+                     }
+                });
+            $(".rm-modal").hide()
+        }, 500);
+    });
+});
+
+
+/////////////////////////  Discount Text //////////////////////////////////////
+
+    $(function(){
+    $('#id_discounttext').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_discounttext');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("discounttext-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_discounttext: $('#id_discounttext').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+/////////////////////////  Discount  //////////////////////////////////////
+
+   $(function(){
+    $('.button42').click(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_discountamount');
+                var userInput =selectBox.value;
+                console.log(userInput);
+                var url = $(".form2").attr("discount-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_discountamount: $('#id_discountamount').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+
+        }, 0);
+
+    });
+});
+
+$(function(){
+    $('.button42').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("discounta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#discount").html(data);
+                     }
+                });
+
+        }, 100);
+
+    });
+});
+
+$(function(){
+    $('.button42').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("subtotalcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#subtotalcost").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+$(function(){
+    $('.button42').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("taxa-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#tax").html(data);
+                     }
+                });
+        }, 300);
+    });
+});
+
+$(function(){
+    $('.button42').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("totaljobcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#totaljobcost").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+$(function(){
+    $('.button42').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("grandtotalcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#grandtotalcost").html(data);
+                     }
+                });
+            $(".rm-modal2").hide()
+        }, 500);
+    });
+});
+
+/////////////////////////  Construction Text //////////////////////////////////////
+
+    $(function(){
+    $('#id_constructiontext').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_constructiontext');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("constructiontext-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_constructiontext: $('#id_constructiontext').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+/////////////////////////  Construction  //////////////////////////////////////
+
+   $(function(){
+    $('.button43').click(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_constructionamount');
+                var userInput =selectBox.value;
+                console.log(userInput);
+                var url = $(".form2").attr("construction-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_constructionamount: $('#id_constructionamount').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+
+        }, 0);
+
+    });
+});
+$(function(){
+    $('.button43').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("constructiona-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#construction").html(data);
+                     }
+                });
+
+        }, 100);
+
+    });
+});
+
+$(function(){
+    $('.button43').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("subtotalcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#subtotalcost").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+$(function(){
+    $('.button43').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("taxa-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#tax").html(data);
+                     }
+                });
+        }, 300);
+    });
+});
+
+$(function(){
+    $('.button43').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("totaljobcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#totaljobcost").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+$(function(){
+    $('.button43').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("grandtotalcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#grandtotalcost").html(data);
+                     }
+                });
+            $(".rm-modal3").hide()
+        }, 500);
+    });
+});
+
+/////////////////////////  Opt2 Text //////////////////////////////////////
+
+    $(function(){
+    $('#id_opt2text').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_opt2text');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("opt2text-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_opt2text: $('#id_opt2text').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+/////////////////////////  Opt2  //////////////////////////////////////
+
+   $(function(){
+    $('.button44').click(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_opt2amount');
+                var userInput =selectBox.value;
+                console.log(userInput);
+                var url = $(".form2").attr("opt2-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_opt2amount: $('#id_opt2amount').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+
+        }, 0);
+
+    });
+});
+$(function(){
+    $('.button44').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("opt2a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#opt2").html(data);
+                     }
+                });
+
+        }, 100);
+
+    });
+});
+
+$(function(){
+    $('.button44').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("subtotalcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#subtotalcost").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+$(function(){
+    $('.button44').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("taxa-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#tax").html(data);
+                     }
+                });
+        }, 300);
+    });
+});
+
+$(function(){
+    $('.button44').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("totaljobcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#totaljobcost").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+$(function(){
+    $('.button44').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("grandtotalcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#grandtotalcost").html(data);
+                     }
+                });
+            $(".rm-modal4").hide()
+        }, 500);
+    });
+});
+
+/////////////////////////  Opt3 Text //////////////////////////////////////
+
+    $(function(){
+    $('#id_opt3text').change(function(){
+        setTimeout(function(){
+
+                var selectBox =document.getElementById('id_opt3text');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("opt3text-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_opt3text: $('#id_opt3text').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+/////////////////////////  Opt3  //////////////////////////////////////
+
+    $(function(){
+    $('.button45').click(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_opt3amount');
+                var userInput =selectBox.value;
+                console.log(userInput);
+                var url = $(".form2").attr("opt3-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_opt3amount: $('#id_opt3amount').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+
+        }, 0);
+
+    });
+});
+$(function(){
+    $('.button45').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("opt3a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#opt3").html(data);
+                     }
+                });
+
+        }, 100);
+
+    });
+});
+
+$(function(){
+    $('.button45').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("subtotalcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#subtotalcost").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+$(function(){
+    $('.button45').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("taxa-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#tax").html(data);
+                     }
+                });
+        }, 300);
+    });
+});
+
+$(function(){
+    $('.button45').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("totaljobcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#totaljobcost").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+$(function(){
+    $('.button45').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("grandtotalcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#grandtotalcost").html(data);
+                     }
+                });
+            $(".rm-modal5").hide()
+        }, 500);
+    });
+});
+
+/////////////////////////  Install Yes //////////////////////////////////////
+
+$(function(){
+    $('.button46').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("installyes-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_install").html(data);
+                     }
+                });
+
+        }, 0);
+    });
+});
+
+
+
+$(function(){
+    $('.button46').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("taxa-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#tax").html(data);
+                     }
+                });
+        }, 300);
+    });
+});
+
+$(function(){
+    $('.button46').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("totaljobcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#totaljobcost").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+$(function(){
+    $('.button46').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("installa-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_install").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+$(function(){
+    $('.button46').click(function(){
+ setTimeout(function(){
+            var urlC = $(".form2").attr("installratea-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#installrate").html(data);
+                     }
+                });
+        }, 500);
+    });
+});
+
+$(function(){
+    $('.button46').click(function(){
+ setTimeout(function(){
+            var urlC = $(".form2").attr("installtexta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#install").html(data);
+                     }
+                });
+        }, 600);
+    });
+});
+
+$(function(){
+    $('.button46').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("grandtotalcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#grandtotalcost").html(data);
+                     }
+                });
+        }, 700);
+    });
+});
+
+$(function(){
+    $('.button46').click(function(){
+setTimeout(function(){
+        $("#id_install").css('background-color', '#00FF7F')
+         $(".rm-modal6").hide()
+         $("#labor").show()
+        }, 700);
+    });
+});
+
+/////////////////////////  Install No //////////////////////////////////////
+
+$(function(){
+$('.button56').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("installno-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_install").html(data);
+                     }
+                });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('.button56').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("taxa-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#tax").html(data);
+                     }
+                });
+        }, 300);
+    });
+});
+
+$(function(){
+    $('.button56').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("totaljobcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#totaljobcost").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+$(function(){
+    $('.button56').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("installa-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_install").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+$(function(){
+    $('.button56').click(function(){
+ setTimeout(function(){
+            var urlC = $(".form2").attr("installratea-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#installrate").html(data);
+                     }
+                });
+        }, 500);
+    });
+});
+
+$(function(){
+    $('.button56').click(function(){
+ setTimeout(function(){
+            var urlC = $(".form2").attr("installtexta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#install").html(data);
+                     }
+                });
+        }, 600);
+    });
+});
+
+$(function(){
+    $('.button56').click(function(){
+setTimeout(function(){
+            var urlC = $(".form2").attr("grandtotalcosta-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#grandtotalcost").html(data);
+                     }
+                });
+        }, 700);
+    });
+});
+
+$(function(){
+    $('.button56').click(function(){
+setTimeout(function(){
+        $("#id_install").css('background-color', 'red')
+        }, 700);
+    });
+});
+
+$(function(){
+    $('.button56').click(function(){
+setTimeout(function(){
+        $("#labor").hide()
+         $(".rm-modal6").hide()
+        }, 700);
+    });
+});
+
+</script>

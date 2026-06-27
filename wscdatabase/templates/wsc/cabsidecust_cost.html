@@ -1,0 +1,31 @@
+<label id="label_custsidecost">Custom Cost</label><input id="custsidecost_id" value="{{ custcabsidecost.custsidecost }}">
+
+<label id="label_custcabtotal">Custom Sides Total</label><input id="custsidetotal_id" value="{{ custcabsidetotal.custsidetotal }}">
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function() {
+var x = document.getElementById("custsidecost_id").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("custsidecost_id").value = x;
+    });
+
+ $(document).ready(function() {
+var x = document.getElementById("custsidetotal_id").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("custsidetotal_id").value = x;
+    });
+
+
+
+</script>

@@ -1,0 +1,13 @@
+<input id="id_rmcost1010" value="{{ rmcost10.rmcost }}">
+<script>
+$(document).ready(function() {
+    var x = document.getElementById('id_rmcost1010').value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById('id_rmcost1010').value = x;
+    });
+</script>

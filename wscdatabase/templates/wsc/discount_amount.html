@@ -1,0 +1,20 @@
+<input id="id_discount" value="{{ discounta.discount }}">
+<script>
+$(document).ready(function() {
+    var x = document.getElementById('id_discount').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById('id_discount').value = x;
+    });
+
+$(function(){
+    $('input#id_discount').focus(function(){
+setTimeout(function(){
+    $(".rm-modal2").show()
+        }, 200);
+    });
+});
+</script>

@@ -1,0 +1,2646 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="../../../img/favicon1.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/contract.css">
+    <title>Wood Street Cabinet Bidding Program</title>
+</head>
+<body  style="background-image: url('../../../../img/wood.jpg');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;">
+<section id="workarea1">
+    <div class="container">
+        <div class="container1">
+
+        </div>
+        <div class="container2">
+            <div class="outerdiv">
+                <form class="form2" method="post"
+                      workorderdate-url="{% url 'wscdatabase:workorderdate' instance.custid %}"
+                      workorderdatea-url="{% url 'wscdatabase:load_workorderdate' instance.custid %}"
+                      worktypea-url="{% url 'wscdatabase:load_worktype' instance.custid %}"
+                      worktype-url="{% url 'wscdatabase:worktype' instance.custid %}"
+                      memo1a-url="{% url 'wscdatabase:load_memo1' instance.custid %}"
+                      memo1-url="{% url 'wscdatabase:memo1' instance.custid %}"
+                      memo2a-url="{% url 'wscdatabase:load_memo2' instance.custid %}"
+                      memo2-url="{% url 'wscdatabase:memo2' instance.custid %}"
+                      memo3a-url="{% url 'wscdatabase:load_memo3' instance.custid %}"
+                      memo3-url="{% url 'wscdatabase:memo3' instance.custid %}"
+                      memo4a-url="{% url 'wscdatabase:load_memo4' instance.custid %}"
+                      memo4-url="{% url 'wscdatabase:memo4' instance.custid %}"
+                      memo5a-url="{% url 'wscdatabase:load_memo5' instance.custid %}"
+                      memo5-url="{% url 'wscdatabase:memo5' instance.custid %}"
+                      memo6a-url="{% url 'wscdatabase:load_memo6' instance.custid %}"
+                      memo6-url="{% url 'wscdatabase:memo6' instance.custid %}"
+                      memo7a-url="{% url 'wscdatabase:load_memo7' instance.custid %}"
+                      memo7-url="{% url 'wscdatabase:memo7' instance.custid %}"
+                      memo8a-url="{% url 'wscdatabase:load_memo8' instance.custid %}"
+                      memo8-url="{% url 'wscdatabase:memo8' instance.custid %}"
+                      memo9a-url="{% url 'wscdatabase:load_memo9' instance.custid %}"
+                      memo9-url="{% url 'wscdatabase:memo9' instance.custid %}"
+                      memo10a-url="{% url 'wscdatabase:load_memo10' instance.custid %}"
+                      memo10-url="{% url 'wscdatabase:memo10' instance.custid %}"
+                      memo11a-url="{% url 'wscdatabase:load_memo11' instance.custid %}"
+                      memo11-url="{% url 'wscdatabase:memo11' instance.custid %}"
+                      memo12a-url="{% url 'wscdatabase:load_memo12' instance.custid %}"
+                      memo12-url="{% url 'wscdatabase:memo12' instance.custid %}"
+                      memo13a-url="{% url 'wscdatabase:load_memo13' instance.custid %}"
+                      memo13-url="{% url 'wscdatabase:memo13' instance.custid %}"
+                      memo14a-url="{% url 'wscdatabase:load_memo14' instance.custid %}"
+                      memo14-url="{% url 'wscdatabase:memo14' instance.custid %}"
+                      memo15a-url="{% url 'wscdatabase:load_memo15' instance.custid %}"
+                      memo15-url="{% url 'wscdatabase:memo15' instance.custid %}"
+                      memo16a-url="{% url 'wscdatabase:load_memo16' instance.custid %}"
+                      memo16-url="{% url 'wscdatabase:memo16' instance.custid %}"
+                      memo17a-url="{% url 'wscdatabase:load_memo17' instance.custid %}"
+                      memo17-url="{% url 'wscdatabase:memo17' instance.custid %}"
+                      payment2perc-url="{% url 'wscdatabase:payment2perc' instance.custid %}"
+                      payment2perca-url="{% url 'wscdatabase:load_payment2perc' instance.custid %}"
+                      payment3perc-url="{% url 'wscdatabase:payment3perc' instance.custid %}"
+                      payment3perca-url="{% url 'wscdatabase:load_payment3perc' instance.custid %}"
+                      payment4perc-url="{% url 'wscdatabase:payment4perc' instance.custid %}"
+                      payment4perca-url="{% url 'wscdatabase:load_payment4perc' instance.custid %}"
+                      depositterms-url="{% url 'wscdatabase:depositterms' instance.custid %}"
+                      deposittermsa-url="{% url 'wscdatabase:load_depositterms' instance.custid %}"
+                      terms2-url="{% url 'wscdatabase:terms2' instance.custid %}"
+                      terms2a-url="{% url 'wscdatabase:load_terms2' instance.custid %}"
+                      terms3-url="{% url 'wscdatabase:terms3' instance.custid %}"
+                      terms3a-url="{% url 'wscdatabase:load_terms3' instance.custid %}"
+                      terms4-url="{% url 'wscdatabase:terms4' instance.custid %}"
+                      terms4a-url="{% url 'wscdatabase:load_terms4' instance.custid %}"
+                      termsfinal-url="{% url 'wscdatabase:termsfinal' instance.custid %}"
+                      termsfinala-url="{% url 'wscdatabase:load_termsfinal' instance.custid %}"
+                      customdeposit-url="{% url 'wscdatabase:customdeposit' instance.custid %}"
+                      customdepositA-url="{% url 'wscdatabase:load_depositamount' instance.custid %}"
+                      finalpaymentc-url="{% url 'wscdatabase:load_finalpayment' instance.custid %}"
+                      cdp-url="{% url 'wscdatabase:cdp' instance.custid %}"
+                      seconddeposit-url="{% url 'wscdatabase:seconddeposit' instance.custid %}"
+                      seconddepositA-url="{% url 'wscdatabase:load_secondamount' instance.custid %}"
+                      secdp-url="{% url 'wscdatabase:secdp' instance.custid %}"
+                      thirddeposit-url="{% url 'wscdatabase:thirddeposit' instance.custid %}"
+                      thirddepositA-url="{% url 'wscdatabase:load_thirdamount' instance.custid %}"
+                      thirddp-url="{% url 'wscdatabase:thirddp' instance.custid %}"
+                      forthdeposit-url="{% url 'wscdatabase:forthdeposit' instance.custid %}"
+                      forthdepositA-url="{% url 'wscdatabase:load_forthamount' instance.custid %}"
+                      forthdp-url="{% url 'wscdatabase:forthdp' instance.custid %}"
+                      depositdate-url="{% url 'wscdatabase:depositdate' instance.custid %}"
+                      depositdatea-url="{% url 'wscdatabase:load_depositdate' instance.custid %}"
+                      payment2date-url="{% url 'wscdatabase:payment2date' instance.custid %}"
+                      payment2datea-url="{% url 'wscdatabase:load_payment2date' instance.custid %}"
+                      payment3date-url="{% url 'wscdatabase:payment3date' instance.custid %}"
+                      payment3datea-url="{% url 'wscdatabase:load_payment3date' instance.custid %}"
+                      payment4date-url="{% url 'wscdatabase:payment4date' instance.custid %}"
+                      payment4datea-url="{% url 'wscdatabase:load_payment4date' instance.custid %}"
+                      finalpaymentdate-url="{% url 'wscdatabase:finalpaymentdate' instance.custid %}"
+                      finalpaymentdatea-url="{% url 'wscdatabase:load_finalpaymentdate' instance.custid %}"
+                      agreementlist-url="{% url 'wscdatabase:agreementlist' instance.custid %}"
+                      worktypelistdescr-url="{% url 'wscdatabase:worktypelistdescr' instance.custid %}"
+                      worktypedescr-url="{% url 'wscdatabase:worktypedescr' instance.custid %}"
+                      includedescr-url="{% url 'wscdatabase:includedescr' instance.custid %}"
+                      excludedescr-url="{% url 'wscdatabase:excludedescr' instance.custid %}"
+                >
+
+                        {% csrf_token %}
+                        {{ form.name_of_field }}
+                        <div class="form-rowcustid">
+                            {% for obj in object_list %}
+                            <label class="label_custid">Cust. ID:</label>
+                            <div class="custid">{{ obj.custid }}</div>
+                        </div>
+                    <div class="headercontainer">
+                        <div class="logo"><img class="img" src='../../../img/mainlogo2.png'></div>
+                        <div id="address">9712 191st Street, Mokena IL 60448</div>
+                        <div id="phonenum">
+                            <div id="show">Showroom: 708-995-6077</div>
+                            <div id="office">Office: 708-995-5449</div>
+                        </div>
+                        <div id="email">design@woodstreetcabinet.com</div>
+                    </div>
+                    <div class="custcontainer">
+                        <div class="form-row">
+                            <label id="label_custfirstname">Customer:</label>
+                            <div id="custfirstname">{{ obj.custfirstname }}</div>
+                            <div id="custlastname">{{ obj.custlastname }}</div>
+                            <label class="label_custcell1">Mr. Cell#:</label>
+                            <div id="custcell1_0">{{ obj.custcell1 }}</div>
+                        </div>
+                        <div class="form-row">
+                            <label id="label_custadd1">Address:</label>
+                            <div id="custadd1">{{ obj.custadd1 }}</div>
+                            <div id="custcity">{{ obj.custcity }}</div>
+                            <div id="custst">{{ obj.custst }}</div>
+                            <div id="custzipcode">{{ obj.custzipcode }}</div>
+                            <label class="label_custcell2">Mrs. Cell #:</label>
+                            <div id="custcell2_0">{{ obj.custcell2 }}</div>
+                        </div>
+                        <div class="form-rowemail">
+                            <label class="label_custemail1">Email #1:</label>
+                            <div id="custemail1">{{ obj.custemail1 }}</div>
+                            <label class="label_custemail2">Email #2:</label>
+                            <div id="custemail2">{{ obj.custemail2 }}</div>
+                            <label class="label_custhome">Home #:</label>
+                            <div id="custhome_0">{{ obj.custhome }}</div>
+                         {% endfor %}
+                        </div>
+                    </div>
+                    <div class="memocontainer">
+                        <div id="memo1">
+                            <label><select id="id_memo1"></select></label>
+                        </div>
+                        <div class="dateline">
+                            <label><select id="id_worktype"></select></label>
+                            <div id="drawn">as drawn</div>
+                            <div id="workorderdate">{{ form.workorderdate }}</div>
+                        </div>
+                        <div id="memo2">
+                            <label><select id="id_memo2"></select></label>
+                        </div>
+                        <div id="memo3">
+                            <label><select id="id_memo3"></select></label>
+                        </div>
+                        <div id="memo4">
+                            <label><select id="id_memo4"></select></label>
+                        </div>
+                        <div id="memo5">
+                            <label><select id="id_memo5"></select></label>
+                        </div>
+                        <div id="memo6">
+                            <label><select id="id_memo6"></select></label>
+                        </div>
+                        <div id="memo7">
+                            <label><select id="id_memo7"></select></label>
+                        </div>
+                        <div id="memo8">
+                            <label><select id="id_memo8"></select></label>
+                        </div>
+                        <div id="memo9">
+                            <label><select id="id_memo9"></select></label>
+                        </div>
+                        <div id="memo10">
+                            <label><select id="id_memo10"></select></label>
+                        </div>
+                        <div id="memo11">
+                            <label><select id="id_memo11"></select></label>
+                        </div>
+                        <div id="memo12">
+                            <label><select id="id_memo12"></select></label>
+                        </div>
+                        <div id="memo13">
+                            <label><select id="id_memo13"></select></label>
+                        </div>
+                        <div id="memo14">
+                            <label><select id="id_memo14"></select></label>
+                        </div>
+                        <div id="memo15">
+                            <label><select id="id_memo15"></select></label>
+                        </div>
+                    </div>
+                    <div class="footercontainer">
+                        <div id="inc">
+                            <div id="include">Included:</div>
+                            <div id="memo16">
+                                <label><select id="id_memo16"></select></label>
+                            </div>
+                        </div>
+                        <div id="exc">
+                            <div id="exclude">Excluded:</div>
+                            <div id="memo17">
+                                <label><select id="id_memo17"></select></label>
+                            </div>
+                        </div>
+                        <div class="page" >1 of 3</div>
+                    </div>
+                    <div class="pagebreak"></div>
+                </form>
+                <div class="rm-modal5" style="display: none">
+                    <div class="modal-content5">
+                        <h3 id="modaltitle5">Enter New "Agreement" Description</h3>
+                        <div id="value5">
+                            <div id="value_5">
+                                {{ form.agreementlist.errors }}
+                                {{ form.agreementlist }}
+                            </div>
+                        </div>
+                        <button type="button" class="button45">Accept Descr.</button>
+                        <button type="button" class="button55">Cancel</button>
+                    </div>
+                </div>
+                <div class="rm-modal6" style="display: none">
+                    <div class="modal-content6">
+                        <h3 id="modaltitle6">Enter New "Work Type" Description</h3>
+                        <div id="value6">
+                            <div id="value_6">
+                                {{ form.worktypelistdescr.errors }}
+                                {{ form.worktypelistdescr }}
+                            </div>
+                        </div>
+                        <button type="button" class="button46">Accept Descr.</button>
+                        <button type="button" class="button56">Cancel</button>
+                    </div>
+                </div>
+                <div class="rm-modal7" style="display: none">
+                    <div class="modal-content7">
+                        <h3 id="modaltitle7">Enter New "Work Type List" Description</h3>
+                        <div id="value7">
+                            <div id="value_7">
+                                {{ form.worktypedescr.errors }}
+                                {{ form.worktypedescr }}
+                            </div>
+                        </div>
+                        <button type="button" class="button47">Accept Descr.</button>
+                        <button type="button" class="button57">Cancel</button>
+                    </div>
+                </div>
+                <div class="rm-modal8" style="display: none">
+                    <div class="modal-content8">
+                        <h3 id="modaltitle8">Enter New "Include" Description</h3>
+                        <div id="value8">
+                            <div id="value_8">
+                                {{ form.includedescr.errors }}
+                                {{ form.includedescr }}
+                            </div>
+                        </div>
+                        <button type="button" class="button48">Accept Descr.</button>
+                        <button type="button" class="button58">Cancel</button>
+                    </div>
+                </div>
+                 <div class="rm-modal9" style="display: none">
+                    <div class="modal-content9">
+                        <h3 id="modaltitle9">Enter New "Exclude" Description</h3>
+                        <div id="value9">
+                            <div id="value_9">
+                                {{ form.excludedescr.errors }}
+                                {{ form.excludedescr }}
+                            </div>
+                        </div>
+                        <button type="button" class="button49">Accept Descr.</button>
+                        <button type="button" class="button59">Cancel</button>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="outerdiv2">
+                <form class="form2" method="post">
+                    {% csrf_token %}
+                    {{ form.name_of_field }}
+                    <div class="memodivB">
+                        <div class="form-rowcustid2">
+                            {% for obj in object_list %}
+                            <label class="label_custid">Cust. ID:</label>
+                            <div class="custid">{{ obj.custid }}</div>
+                            {% endfor %}
+                        </div>
+                        <div class="header1">Room Information</div>
+                                            </div>
+                    <div class="memodivA">
+                        <div class="roomcontainer">
+                            <div class="roomheader">
+                                <div class="roomhd">Room</div>
+                                <div class="woodhd">Wood Species</div>
+                                <div class="doorhd">Door Style</div>
+                                <div class="colorhd">Finish Color</div>
+                                <div class="optionhd">Finish Option 1</div>
+                                <div class="optionhd2">Finish Option 2</div>
+                                <div class="costhd">Cost</div>
+                            </div>
+                            <div id="containerrm">
+                            {% for obj in object_list1 %}
+                            <div class="form-rowrm1">
+                                <div class="room">{{ obj.rmname }}</div>
+                                <div class="wood">{{ obj.wood }}</div>
+                                <div class="door">{{ obj.door }}</div>
+                                <div class="color">{{ obj.fncolor }}</div>
+                                <div class="option">{{ obj.fnoption}}</div>
+                                <div class="option">{{ obj.fnoption2}}</div>
+                                <div class="cost">{{ obj.rmgrandtotal }}</div>
+                            </div>
+                            {% endfor %}
+                        </div>
+
+
+                        </div>
+                    </div>
+                        <div class="memodiv2A">
+                            <div class="header2A">Job to Include</div>
+                            <div id="containeroption">
+                                <div id="left">
+                                    <div class="header2">
+                                        <div class="A">Qty</div>
+                                        <div class="B">Description</div>
+                                    </div>
+                                    <div class="description">
+                                        {% for obj in object_list1e %}
+                                        <div class="description1">
+                                            <div class="qty1" >{{ obj.qty }}</div>
+                                            <div class="id_name1">{{ obj.name }}</div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+
+                                </div>
+                                <div id="right">
+                                    <div class="header2">
+                                        <div class="A">Qty</div>
+                                        <div class="B">Description</div>
+                                    </div>
+                                    <div class="description">
+                                        {% for obj in object_list1o %}
+                                        <div class="description1">
+                                            <div class="qty1" >{{ obj.qty }}</div>
+                                            <div class="id_name1">{{ obj.name }}</div>
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="page2" >2 of 3</div>
+                        </div>
+                </form>
+                <div class="pagebreak"></div>
+            </div>
+            <div class="outerdiv3">
+                <form class="form2" method="post" action="">
+                    <div class="memodivA3">
+                        <div class="form-rowcustid2">
+                            {% for obj in object_list %}
+                            <label class="label_custid">Cust. ID:</label>
+                            <div class="custid">{{ obj.custid }}</div>
+                            {% endfor %}
+                        </div>
+                        <div class="form-rowjobcost">
+                            <div class="jobcost1">
+                                {% for obj in object_list2 %}
+                                <div id="cabinetry">
+                                    <div id="trclabel">Cabinetry</div>
+                                    <input id="id_totalrmcost" value="{{ obj.totalrmcost }}">
+                                </div>
+                                <div id="customA">
+                                    <div id="customtext_id">{{ customtext }}</div>
+                                    <input id="custom" value="{{ obj.custom  }}">
+                                </div>
+                                <div id="discountA">
+                                    <div id="discounttext_id">{{ discounttext }}</div>
+                                    <input id="discount" value="{{ obj.discount  }}">
+                                </div>
+                                <div id="subtotalcostA">
+                                    <div id="stclabel">Sub Total</div>
+                                    <input id="subtotalcost" value="{{ obj.subtotalcost  }}">
+                                </div>
+                                <div id="taxA">
+                                    <div id="taxlabel">Tax</div>
+                                    <input id="tax" value="{{ obj.tax  }}">
+                                </div>
+                                <div id="totaljobcostA">
+                                    <div id="totaljobcostlabel">Cabinetry Cost</div>
+                                    <input id="totaljobcost" value="{{ obj.totaljobcost  }}">
+                                </div>
+                            </div>
+                            <div class="jobcost2">
+                                <div id="constructionA">
+                                    <div id="constructiontext_id">{{ constructiontext }}</div>
+                                    <input id="construction" value="{{ obj.construction  }}">
+                                </div>
+                                <div id="opt2A">
+                                    <div id="opt2text_id">{{ opt2text }}</div>
+                                    <input id="opt2" value="{{ obj.opt2  }}">
+                                </div>
+                                <div id="opt3A">
+                                    <div id="opt3text_id">{{ opt3text }}</div>
+                                    <input id="opt3" value="{{ obj.opt3  }}">
+                                </div>
+                                <div id="installrateA">
+                                    <div id="installratelabel">Install</div>
+                                    <input id="installrate" value="{{ obj.installrate  }}">
+                                </div>
+                                <div id="grandtotalcostA">
+                                    <div id="grandtotalcostlabel">Total Job</div>
+                                    <input id="grandtotalcost" value="{{ obj.grandtotalcost  }}">
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <div id="wordsA">
+                                <div id="words">
+                                    {{ grandtotalcost }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="memodivB3">
+                        {% for obj in object_list16 %}
+                        <div id="depositA">
+                            <div id="depositlabel">Deposit</div>
+                            <div id="deposit"></div>
+                            <select id="depositterms"></select>
+                            <div id="depositdate">{{ form.depositdate }}</div>
+                        </div>
+                        <div id="payment2A">
+                            <div id="payment2label">2nd Payment</div>
+                            <div id="payment2"></div>
+                            <select id="terms2"></select>
+                            <div id="payment2date">{{ form.payment2date }}</div>
+                        </div>
+                            <div id="payment3A">
+                            <div id="payment3label">3rd Payment</div>
+                            <div id="payment3"></div>
+                            <select id="terms3"></select>
+                            <div id="payment3date">{{ form.payment3date }}</div>
+                        </div>
+                        <div id="payment4A">
+                            <div id="payment4label">4th Payment</div>
+                            <div id="payment4"></div>
+                            <select id="terms4"></select>
+                            <div id="payment4date">{{ form.payment4date }}</div>
+                        </div>
+                        <div id="paymentfinalA">
+                            <div id="finallabel">Final Payment</div>
+                            <div id="finalpayment"></div>
+                            <select id="termsfinal"></select>
+                            <div id="finalpaymentdate">{{ form.finalpaymentdate }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="memodivC3">
+                          {% for obj in object_listlegally1 %}
+                        <div class="memodivC31">
+                           {{ obj.legal }}
+                        </div>
+                        {% endfor %}
+                        {% for obj in object_listlegally2 %}
+                        <div class="memodivC32">
+                            {{ obj.legal }}
+                        </div>
+                        {% endfor %}
+                        {% for obj in object_listlegally3 %}
+                        <div class="memodivC33">
+                            {{ obj.legal }}
+                        </div>
+                        {% endfor %}
+                        {% for obj in object_listlegally4 %}
+                        <div class="memodivC34">
+                           {{ obj.legal }}
+                        </div>
+                        {% endfor %}
+                        {% for obj in object_listlegally5 %}
+                        <div class="memodivC35">
+                            {{ obj.legal }}
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="memodivD3">
+                        <div id="submitted">
+                            <div class="sb">Submitted by:</div>
+                            <div class="date1">Date:</div>
+                        </div>
+                        <div id="accepted">
+                            <div class="ab">Accepted by:</div>
+                            <div class="date2">Date:</div>
+                        </div>
+                        <div class="page3" >3 of 3</div>
+                    </div>
+                </form>
+                <div class="pagebreak"></div>
+                <div class="rm-modal" style="display: none">
+                    <div class="modal-content">
+                        <h3 id="modaltitle">Enter deposit amount or pick a percentage.</h3>
+                        <div id="depositvalue">
+                            <div id="custom_0">
+                                {{ form.customdeposit.errors }}
+                                {{ form.customdeposit }}
+                            </div>
+                            <div id="depositperc">
+                                {{ form.depositperc.errors }}
+                                {{ form.depositperc }}
+                            </div>
+                        </div>
+                        <button type="button" class="button4">Accept Amount</button>
+                        <button type="button" class="button5">Cancel</button>
+                    </div>
+                </div>
+                <div class="rm-modal2" style="display: none">
+                    <div class="modal-content2">
+                        <h3 id="modaltitle2">Enter 2nd payment amount or pick a percentage.</h3>
+                        <div id="value2">
+                            <div id="value_2">
+                                {{ form.seconddeposit.errors }}
+                                {{ form.seconddeposit }}
+                            </div>
+                            <div id="perc2">
+                                {{ form.pay2perc.errors }}
+                                {{ form.pay2perc }}
+                            </div>
+                        </div>
+                        <button type="button" class="button42">Accept Amount</button>
+                        <button type="button" class="button52">Cancel</button>
+                    </div>
+                </div>
+                <div class="rm-modal3" style="display: none">
+                    <div class="modal-content3">
+                        <h3 id="modaltitle3">Enter 3rd payment amount or pick a percentage.</h3>
+                        <div id="value3">
+                            <div id="value_3">
+                                {{ form.thirddeposit.errors }}
+                                {{ form.thirddeposit }}
+                            </div>
+                            <div id="perc3">
+                                {{ form.pay3perc.errors }}
+                                {{ form.pay3perc }}
+                            </div>
+                        </div>
+                        <button type="button" class="button43">Accept Amount</button>
+                        <button type="button" class="button53">Cancel</button>
+                    </div>
+                </div>
+                <div class="rm-modal4" style="display: none">
+                    <div class="modal-content4">
+                        <h3 id="modaltitle4">Enter 4th payment amount or pick a percentage.</h3>
+                        <div id="value4">
+                            <div id="value_4">
+                                {{ form.forthdeposit.errors }}
+                                {{ form.forthdeposit }}
+                            </div>
+                            <div id="perc4">
+                                {{ form.pay4perc.errors }}
+                                {{ form.pay4perc }}
+                            </div>
+                        </div>
+                        <button type="button" class="button44">Accept Amount</button>
+                        <button type="button" class="button54">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container3">
+            <div class="button1">
+                <a class="back"  href="{% url 'wscdatabase:jobcost' instance.custid %}">Back</a>
+                <button class="gencon" onclick="window.print()">Print</button>
+            </div>
+            <div class="button2">
+                <a class="back"  href="{% url 'wscdatabase:jobcost' instance.custid %}">Back</a>
+                <button class="gencon" onclick="window.print()">Print</button>
+            </div>
+            <div class="button2">
+                <a class="back"  href="{% url 'wscdatabase:jobcost' instance.custid %}">Back</a>
+                <button class="gencon" onclick="window.print()">Print</button>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+
+
+
+var x = document.getElementById("id_totalrmcost").value;
+    console.log(x);
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById("id_totalrmcost").value = x;
+
+
+var x = document.getElementById("construction").value;
+    console.log(x);
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById("construction").value = x;
+
+
+var x = document.getElementById("opt2").value;
+    console.log(x);
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById("opt2").value = x;
+
+var x = document.getElementById("opt3").value;
+    console.log(x);
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById("opt3").value = x;
+
+var x = document.getElementById("tax").value;
+    console.log(x);
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById("tax").value = x;
+
+
+var x = document.getElementById("installrate").value;
+    console.log(x);
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById("installrate").value = x;
+
+var x = document.getElementById("grandtotalcost").value;
+    console.log(x);
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById("grandtotalcost").value = x;
+
+
+var x = document.getElementById("discount").value;
+    console.log(x);
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById("discount").value = x;
+
+var x = document.getElementById("subtotalcost").value;
+    console.log(x);
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById("subtotalcost").value = x;
+
+var x = document.getElementById("tax").value;
+    console.log(x);
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById("tax").value = x;
+
+
+var x = document.getElementById("totaljobcost").value;
+    console.log(x);
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById("totaljobcost").value = x;
+
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("customdepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#deposit").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("seconddepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#payment2").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("thirddepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#payment3").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("forthdepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#payment4").html(data);
+                     }
+                });
+        }, 0);
+
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("workorderdatea-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#workorderdate").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("depositdatea-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#depositdate").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("payment2datea-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#payment2date").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("payment3datea-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#payment3date").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("payment4datea-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#payment4date").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("finalpaymentdatea-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#finalpaymentdate").html(data);
+                     }
+                });
+        }, 0);
+
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("memo1a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo1").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("worktypea-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_worktype").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("memo2a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo2").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("memo3a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo3").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("memo4a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo4").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("memo5a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo5").html(data);
+                     }
+                });
+        }, 0);
+
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("memo6a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo6").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("memo7a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo7").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("memo8a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo8").html(data);
+                     }
+                });
+        }, 0);
+
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("memo9a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo9").html(data);
+                     }
+                });
+        }, 0);
+
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("memo10a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo10").html(data);
+                     }
+                });
+        }, 0);
+
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("memo11a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo11").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("memo12a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo12").html(data);
+                     }
+                });
+        }, 0);
+
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("memo13a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo13").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("memo14a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo14").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("memo15a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo15").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("memo16a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo16").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("memo17a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo17").html(data);
+                     }
+                });
+        }, 0);
+
+
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("deposittermsa-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#depositterms").html(data);
+                     }
+                });
+        }, 0);
+
+
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("terms2a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#terms2").html(data);
+                     }
+                });
+        }, 0);
+
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("terms3a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#terms3").html(data);
+                     }
+                });
+        }, 0);
+
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("terms4a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#terms4").html(data);
+                     }
+                });
+        }, 0);
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("termsfinala-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#termsfinal").html(data);
+                     }
+                });
+        }, 0);
+
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("finalpaymentc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#finalpayment").html(data);
+                     }
+                });
+        }, 0);
+
+
+});
+
+////////////////// Work Order Date //////////////////////////////////////
+function WorkOrderDateFunction() {
+    setTimeout(function(){
+        var selectBox =document.getElementById('id_workorderdate');
+        var userInput =selectBox.value;
+            console.log(userInput);
+            var url = $(".form2").attr("workorderdate-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_workorderdate: $('#id_workorderdate').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    }, 0);
+}
+
+function DepositDateFunction() {
+    setTimeout(function(){
+        var selectBox =document.getElementById('id_depositdate');
+        var userInput =selectBox.value;
+            console.log(userInput);
+            var url = $(".form2").attr("depositdate-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_depositdate: $('#id_depositdate').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    }, 0);
+}
+
+function Deposit2DateFunction() {
+    setTimeout(function(){
+        var selectBox =document.getElementById('id_payment2date');
+        var userInput =selectBox.value;
+            console.log(userInput);
+            var url = $(".form2").attr("payment2date-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_payment2date: $('#id_payment2date').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    }, 0);
+}
+
+function Deposit3DateFunction() {
+    setTimeout(function(){
+        var selectBox =document.getElementById('id_payment3date');
+        var userInput =selectBox.value;
+            console.log(userInput);
+            var url = $(".form2").attr("payment3date-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_payment3date: $('#id_payment3date').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    }, 0);
+}
+
+function Deposit4DateFunction() {
+    setTimeout(function(){
+        var selectBox =document.getElementById('id_payment4date');
+        var userInput =selectBox.value;
+            console.log(userInput);
+            var url = $(".form2").attr("payment4date-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_payment4date: $('#id_payment4date').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    }, 0);
+}
+
+
+function FinalDateFunction() {
+    setTimeout(function(){
+        var selectBox =document.getElementById('id_finalpaymentdate');
+        var userInput =selectBox.value;
+            console.log(userInput);
+            var url = $(".form2").attr("finalpaymentdate-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_finalpaymentdate: $('#id_finalpaymentdate').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+    }, 0);
+}
+
+
+
+
+$(function(){
+    $('#id_memo1').change(function(){
+        if ($(this).val() ==1) $(".rm-modal5").show()
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_memo1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("memo1-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_memo1: $('#id_memo1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+
+        }, 0);
+    });
+});
+
+
+$(function(){
+    $('.button45').click(function(){
+        setTimeout(function(){
+            var inputBox =document.getElementById('id_agreementlist');
+            var userInput =inputBox.value;
+            console.log(userInput);
+            var url = $(".form2").attr("agreementlist-url");
+                $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_agreementlist: $('#id_agreementlist').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+            $(".rm-modal5").hide()
+
+        }, 0);
+    });
+});
+
+$(function(){
+    $('.button45').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("memo1a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo1").html(data);
+                     }
+                });
+
+        }, 400);
+    });
+});
+
+
+
+$(function(){
+    $('.button55').click(function(){
+    $(".rm-modal5").hide()
+
+    });
+});
+
+
+$(function(){
+    $('#id_worktype').change(function(){
+    if ($(this).val() ==1) $(".rm-modal6").show()
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_worktype');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("worktype-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_worktype: $('#id_worktype').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('.button46').click(function(){
+        setTimeout(function(){
+            var inputBox =document.getElementById('id_worktypelistdescr');
+            var userInput =inputBox.value;
+            console.log(userInput);
+            var url = $(".form2").attr("worktypelistdescr-url");
+                $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_worktypelistdescr: $('#id_worktypelistdescr').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+            $(".rm-modal6").hide()
+
+        }, 0);
+    });
+});
+
+$(function(){
+    $('.button46').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("worktypea-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_worktype").html(data);
+                     }
+                });
+
+        }, 400);
+    });
+});
+
+$(function(){
+    $('.button56').click(function(){
+    $(".rm-modal6").hide()
+
+    });
+});
+
+$(function(){
+    $('#id_memo2').change(function(){
+    if ($(this).val() ==5) $(".rm-modal7").show()
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_memo2');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("memo2-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_memo2: $('#id_memo2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('.button47').click(function(){
+        setTimeout(function(){
+            var inputBox =document.getElementById('id_worktypedescr');
+            var userInput =inputBox.value;
+            console.log(userInput);
+            var url = $(".form2").attr("worktypedescr-url");
+                $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_worktypedescr: $('#id_worktypedescr').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+            $(".rm-modal7").hide()
+
+        }, 0);
+    });
+});
+
+$(function(){
+    $('.button47').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("memo2a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo2").html(data);
+                     }
+                });
+
+        }, 400);
+    });
+});
+
+$(function(){
+    $('.button47').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("memo3a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo3").html(data);
+                     }
+                });
+
+        }, 500);
+    });
+});
+
+$(function(){
+    $('.button47').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("memo4a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo4").html(data);
+                     }
+                });
+
+        }, 600);
+    });
+});
+
+$(function(){
+    $('.button47').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("memo5a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo5").html(data);
+                     }
+                });
+
+        }, 600);
+    });
+});
+
+$(function(){
+    $('.button47').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("memo6a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo6").html(data);
+                     }
+                });
+
+        }, 600);
+    });
+});
+
+$(function(){
+    $('.button47').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("memo7a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo7").html(data);
+                     }
+                });
+
+        }, 600);
+    });
+});
+
+$(function(){
+    $('.button47').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("memo8a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo8").html(data);
+                     }
+                });
+
+        }, 600);
+    });
+});
+
+$(function(){
+    $('.button47').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("memo9a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo9").html(data);
+                     }
+                });
+
+        }, 600);
+    });
+});
+
+$(function(){
+    $('.button47').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("memo10a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo10").html(data);
+                     }
+                });
+
+        }, 600);
+    });
+});
+
+$(function(){
+    $('.button47').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("memo11a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo11").html(data);
+                     }
+                });
+
+        }, 600);
+    });
+});
+
+$(function(){
+    $('.button47').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("memo12a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo12").html(data);
+                     }
+                });
+
+        }, 600);
+    });
+});
+
+
+$(function(){
+    $('.button47').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("memo13a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo13").html(data);
+                     }
+                });
+
+        }, 600);
+    });
+});
+
+$(function(){
+    $('.button47').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("memo14a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo14").html(data);
+                     }
+                });
+
+        }, 600);
+    });
+});
+
+$(function(){
+    $('.button47').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("memo15a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo15").html(data);
+                     }
+                });
+
+        }, 600);
+    });
+});
+
+$(function(){
+    $('.button48').click(function(){
+        setTimeout(function(){
+            var inputBox =document.getElementById('id_includedescr');
+            var userInput =inputBox.value;
+            console.log(userInput);
+            var url = $(".form2").attr("includedescr-url");
+                $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_includedescr: $('#id_includedescr').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+            $(".rm-modal8").hide()
+
+        }, 0);
+    });
+});
+
+$(function(){
+    $('.button48').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("memo16a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo16").html(data);
+                     }
+                });
+
+        }, 600);
+    });
+});
+
+$(function(){
+    $('.button49').click(function(){
+        setTimeout(function(){
+            var inputBox =document.getElementById('id_excludedescr');
+            var userInput =inputBox.value;
+            console.log(userInput);
+            var url = $(".form2").attr("excludedescr-url");
+                $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_excludedescr: $('#id_excludedescr').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+            $(".rm-modal9").hide()
+
+        }, 0);
+    });
+});
+
+$(function(){
+    $('.button49').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("memo17a-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_memo17").html(data);
+                     }
+                });
+
+        }, 600);
+    });
+});
+
+
+
+
+$(function(){
+    $('.button57').click(function(){
+    $(".rm-modal7").hide()
+
+    });
+});
+
+$(function(){
+    $('#id_memo3').change(function(){
+    if ($(this).val() ==5) $(".rm-modal7").show()
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_memo3');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("memo3-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_memo3: $('#id_memo3').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+
+
+$(function(){
+    $('#id_memo4').change(function(){
+    if ($(this).val() ==5) $(".rm-modal7").show()
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_memo4');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("memo4-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_memo4: $('#id_memo4').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#id_memo5').change(function(){
+    if ($(this).val() ==5) $(".rm-modal7").show()
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_memo5');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("memo5-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_memo5: $('#id_memo5').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#id_memo6').change(function(){
+    if ($(this).val() ==5) $(".rm-modal7").show()
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_memo6');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("memo6-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_memo6: $('#id_memo6').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#id_memo7').change(function(){
+    if ($(this).val() ==5) $(".rm-modal7").show()
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_memo7');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("memo7-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_memo7: $('#id_memo7').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#id_memo8').change(function(){
+    if ($(this).val() ==5) $(".rm-modal7").show()
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_memo8');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("memo8-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_memo8: $('#id_memo8').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#id_memo9').change(function(){
+    if ($(this).val() ==5) $(".rm-modal7").show()
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_memo9');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("memo9-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_memo9: $('#id_memo9').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#id_memo10').change(function(){
+    if ($(this).val() ==5) $(".rm-modal7").show()
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_memo10');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("memo10-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_memo10: $('#id_memo10').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#id_memo11').change(function(){
+    if ($(this).val() ==5) $(".rm-modal7").show()
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_memo11');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("memo11-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_memo11: $('#id_memo11').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#id_memo12').change(function(){
+    if ($(this).val() ==5) $(".rm-modal7").show()
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_memo12');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("memo12-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_memo12: $('#id_memo12').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#id_memo13').change(function(){
+    if ($(this).val() ==5) $(".rm-modal7").show()
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_memo13');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("memo13-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_memo13: $('#id_memo13').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#id_memo14').change(function(){
+    if ($(this).val() ==5) $(".rm-modal7").show()
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_memo14');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("memo14-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_memo14: $('#id_memo14').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#id_memo15').change(function(){
+    if ($(this).val() ==5) $(".rm-modal7").show()
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_memo15');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("memo15-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_memo15: $('#id_memo15').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#id_memo16').change(function(){
+    if ($(this).val() ==1) $(".rm-modal8").show()
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_memo16');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("memo16-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_memo16: $('#id_memo16').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('.button58').click(function(){
+    $(".rm-modal8").hide()
+
+    });
+});
+
+$(function(){
+    $('#id_memo17').change(function(){
+    if ($(this).val() ==1) $(".rm-modal9").show()
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_memo17');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("memo17-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_memo17: $('#id_memo17').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('.button59').click(function(){
+    $(".rm-modal9").hide()
+
+    });
+});
+
+$(function(){
+    $('.button4').click(function(){
+        setTimeout(function(){
+            var inputBox =document.getElementById('id_customdeposit');
+            var userInput =inputBox.value;
+            console.log(userInput);
+            var url = $(".form2").attr("customdeposit-url");
+                $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_customdeposit: $('#id_customdeposit').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+            $(".rm-modal").hide()
+
+        }, 0);
+    });
+});
+
+
+$(function(){
+    $('.button4').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("customdepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#deposit").html(data);
+                     }
+                });
+
+        }, 400);
+    });
+});
+
+
+$(function(){
+    $('.button4').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("finalpaymentc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#finalpayment").html(data);
+                     }
+                });
+
+        }, 800);
+    });
+});
+
+
+
+$(function(){
+    $('.button5').click(function(){
+        $(".rm-modal").hide()
+    });
+});
+
+$(function(){
+    $('.button52').click(function(){
+        $(".rm-modal2").hide()
+    });
+});
+
+$(function(){
+    $('.button53').click(function(){
+        $(".rm-modal3").hide()
+    });
+});
+
+$(function(){
+    $('.button54').click(function(){
+        $(".rm-modal4").hide()
+    });
+});
+
+
+$(function(){
+    $('#id_depositperc').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_depositperc');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("cdp-url");
+
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_depositperc: $('#id_depositperc').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+$(".rm-modal").hide()
+        }, 200);
+    });
+});
+
+
+$(function(){
+        $('#id_depositperc').change(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("customdepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#deposit").html(data);
+                     }
+                });
+
+        }, 500);
+    });
+});
+
+$(function(){
+    $('#id_depositperc').change(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("finalpaymentc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#finalpayment").html(data);
+                     }
+                });
+
+        }, 800);
+    });
+});
+
+$(function(){
+    $('.button42').click(function(){
+        setTimeout(function(){
+            var inputBox =document.getElementById('id_seconddeposit');
+            var userInput =inputBox.value;
+            console.log(userInput);
+            var url = $(".form2").attr("seconddeposit-url");
+                $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_seconddeposit: $('#id_seconddeposit').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+            $(".rm-modal2").hide()
+
+        }, 0);
+    });
+});
+
+
+$(function(){
+    $('.button42').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("seconddepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#payment2").html(data);
+                     }
+                });
+
+        }, 400);
+    });
+});
+
+
+$(function(){
+    $('.button42').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("finalpaymentc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#finalpayment").html(data);
+                     }
+                });
+
+        }, 800);
+    });
+});
+
+$(function(){
+    $('#id_pay2perc').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_pay2perc');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("secdp-url");
+
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_pay2perc: $('#id_pay2perc').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+$(".rm-modal2").hide()
+        }, 200);
+    });
+});
+
+
+$(function(){
+        $('#id_pay2perc').change(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("seconddepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#payment2").html(data);
+                     }
+                });
+
+        }, 500);
+    });
+});
+
+$(function(){
+    $('#id_pay2perc').change(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("finalpaymentc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#finalpayment").html(data);
+                     }
+                });
+
+        }, 800);
+    });
+});
+
+
+$(function(){
+    $('.button43').click(function(){
+        setTimeout(function(){
+            var inputBox =document.getElementById('id_thirddeposit');
+            var userInput =inputBox.value;
+            console.log(userInput);
+            var url = $(".form2").attr("thirddeposit-url");
+                $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_thirddeposit: $('#id_thirddeposit').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+            $(".rm-modal3").hide()
+
+        }, 0);
+    });
+});
+
+
+$(function(){
+    $('.button43').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("thirddepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#payment3").html(data);
+                     }
+                });
+
+        }, 400);
+    });
+});
+
+
+$(function(){
+    $('.button43').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("finalpaymentc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#finalpayment").html(data);
+                     }
+                });
+
+        }, 800);
+    });
+});
+
+$(function(){
+    $('#id_pay3perc').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_pay3perc');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("thirddp-url");
+
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_pay3perc: $('#id_pay3perc').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+$(".rm-modal3").hide()
+        }, 200);
+    });
+});
+
+
+$(function(){
+        $('#id_pay3perc').change(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("thirddepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#payment3").html(data);
+                     }
+                });
+
+        }, 500);
+    });
+});
+
+$(function(){
+    $('#id_pay3perc').change(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("finalpaymentc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#finalpayment").html(data);
+                     }
+                });
+
+        }, 800);
+    });
+});
+
+$(function(){
+    $('.button44').click(function(){
+        setTimeout(function(){
+            var inputBox =document.getElementById('id_forthdeposit');
+            var userInput =inputBox.value;
+            console.log(userInput);
+            var url = $(".form2").attr("forthdeposit-url");
+                $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+                            id_forthdeposit: $('#id_forthdeposit').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+            $(".rm-modal4").hide()
+
+        }, 0);
+    });
+});
+
+
+$(function(){
+    $('.button44').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("forthdepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#payment4").html(data);
+                     }
+                });
+
+        }, 400);
+    });
+});
+
+
+$(function(){
+    $('.button44').click(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("finalpaymentc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#finalpayment").html(data);
+                     }
+                });
+
+        }, 800);
+    });
+});
+
+$(function(){
+    $('#id_pay4perc').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_pay4perc');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("forthdp-url");
+
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_pay4perc: $('#id_pay4perc').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+$(".rm-modal4").hide()
+        }, 200);
+    });
+});
+
+
+$(function(){
+        $('#id_pay4perc').change(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("forthdepositA-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#payment4").html(data);
+                     }
+                });
+
+        }, 500);
+    });
+});
+
+$(function(){
+    $('#id_pay4perc').change(function(){
+        setTimeout(function(){
+            var urlC = $(".form2").attr("finalpaymentc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#finalpayment").html(data);
+                     }
+                });
+
+        }, 800);
+    });
+});
+
+
+$(function(){
+    $('#depositterms').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('depositterms');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("depositterms-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            depositterms: $('#depositterms').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+
+$(function(){
+    $('#terms2').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('terms2');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("terms2-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            terms2: $('#terms2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#terms3').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('terms3');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("terms3-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            terms3: $('#terms3').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#terms4').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('terms4');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("terms4-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            terms4: $('#terms4').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+    $('#termsfinal').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('termsfinal');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("termsfinal-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            termsfinal: $('#termsfinal').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+
+$(function(){
+    $('#id_depositdate').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('#id_depositdate');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("depositdate-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_depositdate: $('#id_depositdate').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+
+
+
+</script>

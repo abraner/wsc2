@@ -1,0 +1,15 @@
+<input id="id_grandtotalcost" value="{{ grandtotalcost.grandtotalcost }}">
+<script>
+$(document).ready(function() {
+    var x = document.getElementById('id_grandtotalcost').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById('id_grandtotalcost').value = x;
+    });
+
+
+
+</script>

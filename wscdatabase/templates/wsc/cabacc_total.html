@@ -1,0 +1,16 @@
+<label id="label_optionnum">Cabinet Accessories</label><input id="id_optionnum_0" value="{{ optionnum.optionnum }}">
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function() {
+var x = document.getElementById("id_optionnum_0").value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_optionnum_0").value = x;
+    });
+</script>

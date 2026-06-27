@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="../../../img/favicon1.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/laborbd.css">
+    <title>WSC/Total Room Cost</title>
+</head>
+<body  style="background-image: url('../../../../img/wood.jpg');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;">
+<div class="container">
+    <div class="container1">
+
+    </div>
+    <div class="container2">
+        <div class="form2" method="post">
+            {% csrf_token %}
+            {{ form.name_of_field }}
+            <div class="container2c">
+                <h1 id="formh2">Labor Breakdown  2 of 3</h1>
+            </div>
+            <div class="containertop">
+            <div class="containerRoom1">
+                <div class="container2d">
+                    <div class="container2da">
+                        {{ form.bid_idA.errors }}
+                        <label id="label_bid_idA">Bid ID</label>
+                        <div id="id_bid_idA1">{{ bid_idA1 }}</div>
+                    </div>
+                    <div class="container2db">
+                        <label id="label_roomid">Room</label>
+                        <div id="room">{{ roomid1 }}</div>
+                    </div>
+                    <div class="container2dc">
+                        <label id="label_trl">Total Room Labor</label>
+                        <input id="trl" value="{{ trl1 }}">
+                    </div>
+                </div>
+                <div class="container2e">
+                    <div id="menu2">
+                        <div id="cabinet">
+                            <div id="headercab">
+                                <div id="cabA">Qty</div>
+                                <div id="cabC">Cabinets</div>
+                                <div id="cabD">Labor Per Ft.</div>
+                                <div id="cabE">Total Cab. Labor</div>
+                            </div>
+                            <div id="form-rowcabinfo">
+                                <div id="cabqty">{{ cab1qty }}</div>
+                                <div id="cabcomp">Cabinets</div>
+                                <input id="cablabor" value="{{ cab1labor }}">
+                                <input id="cabtotallabor" value="{{ cab1total }}">
+                            </div>
+                            <div id="header1">
+                                <div id="A">Qty</div>
+                                <div id="C">Comp. Description</div>
+                                <div id="D">Labor</div>
+                                <div id="E">Total Labor</div>
+                            </div>
+                            <section id="sec1"></section>
+                            <section id="sec2"></section>
+                            <section id="sec3"></section>
+                            <section id="sec4"></section>
+                            <section id="sec5"></section>
+                            <section id="sec6"></section>
+                            <section id="sec7"></section>
+                            <section id="sec8"></section>
+                            <section id="sec9"></section>
+                            <section id="sec10"></section>
+                            <section id="sec11"></section>
+                            <section id="sec12"></section>
+                            <section id="sec13"></section>
+                            <form id="form1" method="post">
+                                <div class="form-rowcompinfo1">
+                                    {% for obj in comp1 %}
+                                    <div id="qty1">{{ obj.compqty }}</div>
+                                    <div id="comp1">{{ obj.compname }}</div>
+                                    <div id="labor1">{{ obj.labor }}</div>
+                                    <div id="totallabor1">{{ obj.totallabor }}</div>
+                                    {% endfor %}
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="containerRoom2">
+                <div class="container2d">
+                    <div class="container2da">
+                        {{ form.bid_idA.errors }}
+                        <label id="label_bid_idA2">Bid ID</label>
+                        <div id="id_bid_idA2">{{ bid_idA2 }}</div>
+                    </div>
+                    <div class="container2db">
+                        <label id="label_roomid2">Room</label>
+                        <div id="room2">{{ roomid2 }}</div>
+                    </div>
+                    <div class="container2dc">
+                        <label id="label_trl2">Total Room Labor</label>
+                        <input id="trl2" value="{{ trl2 }}">
+                    </div>
+                </div>
+                <div class="container2e">
+                    <div id="menu22">
+                        <div id="cabinet2">
+                            <div id="headercab2">
+                                <div id="cabA2">Qty</div>
+                                <div id="cabC2">Cabinets</div>
+                                <div id="cabD2">Labor Per Ft.</div>
+                                <div id="cabE2">Total Cab. Labor</div>
+                            </div>
+                            <div id="form-rowcabinfo2">
+                                <div id="cabqty2">{{ cab2qty }}</div>
+                                <div id="cabcomp2">Cabinets</div>
+                                <input id="cablabor2" value="{{ cab2labor }}">
+                                <input id="cabtotallabor2" value="{{ cab2total }}">
+                            </div>
+                            <div id="header12">
+                                <div id="A2">Qty</div>
+                                <div id="C2">Comp. Description</div>
+                                <div id="D2">Labor</div>
+                                <div id="E2">Total Labor</div>
+                            </div>
+                            <section id="sec100"></section>
+                            <section id="sec22"></section>
+                            <section id="sec32"></section>
+                            <section id="sec42"></section>
+                            <section id="sec52"></section>
+                            <section id="sec62"></section>
+                            <section id="sec72"></section>
+                            <section id="sec82"></section>
+                            <section id="sec92"></section>
+                            <section id="sec102"></section>
+                            <section id="sec112"></section>
+                            <section id="sec122"></section>
+                            <section id="sec132"></section>
+                            <form id="form12" method="post">
+                                <div class="form-rowcompinfo12">
+                                    {% for obj in comp2 %}
+                                    <div id="qty2">{{ obj.compqty }}</div>
+                                    <div id="comp2">{{ obj.compname }}</div>
+                                    <div id="labor2">{{ obj.labor }}</div>
+                                    <div id="totallabor2">{{ obj.totallabor }}</div>
+                                    {% endfor %}
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+                <div class="containerRoom3">
+                <div class="container3d">
+                    <div class="container3da">
+                        {{ form.bid_idA.errors }}
+                        <label id="label_bid_idA3">Bid ID</label>
+                        <div id="id_bid_idA3">{{ bid_idA3 }}</div>
+                    </div>
+                    <div class="container3db">
+                        <label id="label_roomid3">Room</label>
+                        <div id="room3">{{ roomid3 }}</div>
+                    </div>
+                    <div class="container3dc">
+                        <label id="label_trl3">Total Room Labor</label>
+                        <input id="trl3" value="{{ trl3 }}">
+                    </div>
+                </div>
+                <div class="container3e">
+                    <div id="menu23">
+                        <div id="cabinet3">
+                            <div id="headercab3">
+                                <div id="cabA3">Qty</div>
+                                <div id="cabC3">Cabinets</div>
+                                <div id="cabD3">Labor Per Ft.</div>
+                                <div id="cabE3">Total Cab. Labor</div>
+                            </div>
+                            <div id="form-rowcabinfo3">
+                                <div id="cabqty3">{{ cab3qty }}</div>
+                                <div id="cabcomp3">Cabinets</div>
+                                <input id="cablabor3" value="{{ cab3labor }}">
+                                <input id="cabtotallabor3" value="{{ cab3total }}">
+                            </div>
+                            <div id="header13">
+                                <div id="A3">Qty</div>
+                                <div id="C3">Comp. Description</div>
+                                <div id="D3">Labor</div>
+                                <div id="E3">Total Labor</div>
+                            </div>
+                            <section id="sec300"></section>
+                            <section id="sec23"></section>
+                            <section id="sec33"></section>
+                            <section id="sec43"></section>
+                            <section id="sec53"></section>
+                            <section id="sec63"></section>
+                            <section id="sec73"></section>
+                            <section id="sec83"></section>
+                            <section id="sec93"></section>
+                            <section id="sec103"></section>
+                            <section id="sec113"></section>
+                            <section id="sec123"></section>
+                            <section id="sec133"></section>
+                            <form id="form13" method="post">
+                                <div class="form-rowcompinfo13">
+                                    {% for obj in comp3 %}
+                                    <div id="qty3">{{ obj.compqty }}</div>
+                                    <div id="comp3">{{ obj.compname }}</div>
+                                    <div id="labor3">{{ obj.labor }}</div>
+                                    <div id="totallabor3">{{ obj.totallabor }}</div>
+                                    {% endfor %}
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+            <div class="containerbottom">
+                <div class="containerRoom4">
+                <div class="container4d">
+                    <div class="container4da">
+                        {{ form.bid_idA.errors }}
+                        <label id="label_bid_idA4">Bid ID</label>
+                        <div id="id_bid_idA4">{{ bid_idA4 }}</div>
+                    </div>
+                    <div class="container4db">
+                        <label id="label_roomid4">Room</label>
+                        <div id="room4">{{ roomid4 }}</div>
+                    </div>
+                    <div class="container4dc">
+                        <label id="label_trl4">Total Room Labor</label>
+                        <input id="trl4" value="{{ trl4 }}">
+                    </div>
+                </div>
+                <div class="container4e">
+                    <div id="menu24">
+                        <div id="cabinet4">
+                            <div id="headercab4">
+                                <div id="cabA4">Qty</div>
+                                <div id="cabC4">Cabinets</div>
+                                <div id="cabD4">Labor Per Ft.</div>
+                                <div id="cabE4">Total Cab. Labor</div>
+                            </div>
+                            <div id="form-rowcabinfo4">
+                                <div id="cabqty4">{{ cab4qty }}</div>
+                                <div id="cabcomp4">Cabinets</div>
+                                <input id="cablabor4" value="{{ cab4labor }}">
+                                <input id="cabtotallabor4" value="{{ cab4total }}">
+                            </div>
+                            <div id="header14">
+                                <div id="A4">Qty</div>
+                                <div id="C4">Comp. Description</div>
+                                <div id="D4">Labor</div>
+                                <div id="E4">Total Labor</div>
+                            </div>
+                            <section id="sec400"></section>
+                            <section id="sec24"></section>
+                            <section id="sec34"></section>
+                            <section id="sec44"></section>
+                            <section id="sec54"></section>
+                            <section id="sec64"></section>
+                            <section id="sec74"></section>
+                            <section id="sec84"></section>
+                            <section id="sec94"></section>
+                            <section id="sec104"></section>
+                            <section id="sec114"></section>
+                            <section id="sec124"></section>
+                            <section id="sec134"></section>
+                            <form id="form14" method="post">
+                                <div class="form-rowcompinfo14">
+                                    {% for obj in comp4 %}
+                                    <div id="qty4">{{ obj.compqty }}</div>
+                                    <div id="comp4">{{ obj.compname }}</div>
+                                    <div id="labor4">{{ obj.labor }}</div>
+                                    <div id="totallabor4">{{ obj.totallabor }}</div>
+                                    {% endfor %}
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="containerRoom5">
+                <div class="container5d">
+                    <div class="container5da">
+                        {{ form.bid_idA.errors }}
+                        <label id="label_bid_idA5">Bid ID</label>
+                        <div id="id_bid_idA5">{{ bid_idA5 }}</div>
+                    </div>
+                    <div class="container5db">
+                        <label id="label_roomid5">Room</label>
+                        <div id="room5">{{ roomid5 }}</div>
+                    </div>
+                    <div class="container5dc">
+                        <label id="label_trl5">Total Room Labor</label>
+                        <input id="trl5" value="{{ trl5 }}">
+                    </div>
+                </div>
+                <div class="container5e">
+                    <div id="menu25">
+                        <div id="cabinet5">
+                            <div id="headercab5">
+                                <div id="cabA5">Qty</div>
+                                <div id="cabC5">Cabinets</div>
+                                <div id="cabD5">Labor Per Ft.</div>
+                                <div id="cabE5">Total Cab. Labor</div>
+                            </div>
+                            <div id="form-rowcabinfo5">
+                                <div id="cabqty5">{{ cab5qty }}</div>
+                                <div id="cabcomp5">Cabinets</div>
+                                <input id="cablabor5" value="{{ cab5labor }}">
+                                <input id="cabtotallabor5" value="{{ cab5total }}">
+                            </div>
+                            <div id="header15">
+                                <div id="A5">Qty</div>
+                                <div id="C5">Comp. Description</div>
+                                <div id="D5">Labor</div>
+                                <div id="E5">Total Labor</div>
+                            </div>
+                            <section id="sec500"></section>
+                            <section id="sec25"></section>
+                            <section id="sec35"></section>
+                            <section id="sec45"></section>
+                            <section id="sec55"></section>
+                            <section id="sec65"></section>
+                            <section id="sec75"></section>
+                            <section id="sec85"></section>
+                            <section id="sec95"></section>
+                            <section id="sec105"></section>
+                            <section id="sec115"></section>
+                            <section id="sec125"></section>
+                            <section id="sec135"></section>
+                            <form id="form15" method="post">
+                                <div class="form-rowcompinfo15">
+                                    {% for obj in comp5 %}
+                                    <div id="qty5">{{ obj.compqty }}</div>
+                                    <div id="comp5">{{ obj.compname }}</div>
+                                    <div id="labor5">{{ obj.labor }}</div>
+                                    <div id="totallabor5">{{ obj.totallabor }}</div>
+                                    {% endfor %}
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+                <div class="containerRoom6">
+                <div class="container6d">
+                    <div class="container6da">
+                        {{ form.bid_idA.errors }}
+                        <label id="label_bid_idA6">Bid ID</label>
+                        <div id="id_bid_idA6">{{ bid_idA6 }}</div>
+                    </div>
+                    <div class="container6db">
+                        <label id="label_roomid6">Room</label>
+                        <div id="room6">{{ roomid6 }}</div>
+                    </div>
+                    <div class="container6dc">
+                        <label id="label_trl6">Total Room Labor</label>
+                        <input id="trl6" value="{{ trl6 }}">
+                    </div>
+                </div>
+                <div class="container6e">
+                    <div id="menu26">
+                        <div id="cabinet6">
+                            <div id="headercab6">
+                                <div id="cabA6">Qty</div>
+                                <div id="cabC6">Cabinets</div>
+                                <div id="cabD6">Labor Per Ft.</div>
+                                <div id="cabE6">Total Cab. Labor</div>
+                            </div>
+                            <div id="form-rowcabinfo6">
+                                <div id="cabqty6">{{ cab6qty }}</div>
+                                <div id="cabcomp6">Cabinets</div>
+                                <input id="cablabor6" value="{{ cab6labor }}">
+                                <input id="cabtotallabor6" value="{{ cab6total }}">
+                            </div>
+                            <div id="header16">
+                                <div id="A6">Qty</div>
+                                <div id="C6">Comp. Description</div>
+                                <div id="D6">Labor</div>
+                                <div id="E6">Total Labor</div>
+                            </div>
+                            <section id="sec600"></section>
+                            <section id="sec26"></section>
+                            <section id="sec36"></section>
+                            <section id="sec46"></section>
+                            <section id="sec56"></section>
+                            <section id="sec66"></section>
+                            <section id="sec76"></section>
+                            <section id="sec86"></section>
+                            <section id="sec96"></section>
+                            <section id="sec106"></section>
+                            <section id="sec116"></section>
+                            <section id="sec126"></section>
+                            <section id="sec136"></section>
+                            <form id="form16" method="post">
+                                <div class="form-rowcompinfo16">
+                                    {% for obj in comp6 %}
+                                    <div id="qty6">{{ obj.compqty }}</div>
+                                    <div id="comp6">{{ obj.compname }}</div>
+                                    <div id="labor6">{{ obj.labor }}</div>
+                                    <div id="totallabor6">{{ obj.totallabor }}</div>
+                                    {% endfor %}
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container3">
+        <a id="back"  href="{% url 'wscdatabase:laborbd' instance.custid %}">Back</a>
+        <a id="nextpage"  href="{% url 'wscdatabase:laborbd3' instance.custid %}">Next Page</a>
+
+    </div>
+</div>
+</body>
+</html>

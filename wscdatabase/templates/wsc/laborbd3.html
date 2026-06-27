@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="../../../img/favicon1.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/laborbd.css">
+    <title>WSC/Total Room Cost</title>
+</head>
+<body  style="background-image: url('../../../../img/wood.jpg');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;">
+<div class="container">
+    <div class="container1">
+
+    </div>
+    <div class="container2">
+        <div class="form2" method="post">
+            {% csrf_token %}
+            {{ form.name_of_field }}
+            <div class="container2c">
+                <h1 id="formh2">Labor Breakdown  3 of 3</h1>
+            </div>
+            <div class="containertop">
+            <div class="containerRoom1">
+
+            </div>
+            <div class="containerRoom2">
+                <div class="container2d">
+                    <div class="container2da">
+                        {{ form.bid_idA.errors }}
+                        <label id="label_bid_idA2">Bid ID</label>
+                        <div id="id_bid_idA2">{{ bid_idA2 }}</div>
+                    </div>
+                    <div class="container2db">
+                        <label id="label_roomid2">Room</label>
+                        <div id="room2">{{ roomid2 }}</div>
+                    </div>
+                    <div class="container2dc">
+                        <label id="label_trl2">Total Room Labor</label>
+                        <input id="trl2" value="{{ trl2 }}">
+                    </div>
+                </div>
+                <div class="container2e">
+                    <div id="menu22">
+                        <div id="cabinet2">
+                            <div id="headercab2">
+                                <div id="cabA2">Qty</div>
+                                <div id="cabC2">Cabinets</div>
+                                <div id="cabD2">Labor Per Ft.</div>
+                                <div id="cabE2">Total Cab. Labor</div>
+                            </div>
+                            <div id="form-rowcabinfo2">
+                                <div id="cabqty2">{{ cab2qty }}</div>
+                                <div id="cabcomp2">Cabinets</div>
+                                <input id="cablabor2" value="{{ cab2labor }}">
+                                <input id="cabtotallabor2" value="{{ cab2total }}">
+                            </div>
+                            <div id="header12">
+                                <div id="A2">Qty</div>
+                                <div id="C2">Comp. Description</div>
+                                <div id="D2">Labor</div>
+                                <div id="E2">Total Labor</div>
+                            </div>
+                            <section id="sec100"></section>
+                            <section id="sec22"></section>
+                            <section id="sec32"></section>
+                            <section id="sec42"></section>
+                            <section id="sec52"></section>
+                            <section id="sec62"></section>
+                            <section id="sec72"></section>
+                            <section id="sec82"></section>
+                            <section id="sec92"></section>
+                            <section id="sec102"></section>
+                            <section id="sec112"></section>
+                            <section id="sec122"></section>
+                            <section id="sec132"></section>
+                            <form id="form12" method="post">
+                                <div class="form-rowcompinfo12">
+                                    {% for obj in comp2 %}
+                                    <div id="qty2">{{ obj.compqty }}</div>
+                                    <div id="comp2">{{ obj.compname }}</div>
+                                    <div id="labor2">{{ obj.labor }}</div>
+                                    <div id="totallabor2">{{ obj.totallabor }}</div>
+                                    {% endfor %}
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+                <div class="containerRoom3">
+                </div>
+
+            </div>
+            </div>
+
+    <div class="container3">
+        <a id="back"  href="{% url 'wscdatabase:laborbd2' instance.custid %}">Back</a>
+
+
+    </div>
+</div>
+</body>
+</html>

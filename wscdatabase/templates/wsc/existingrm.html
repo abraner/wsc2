@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="#" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/existingrm.css">
+    <title>Wood Street Cabinet Bidding Program</title>
+</head>
+<body  style="background-image: url('../../../../img/wood.jpg');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;">
+<div class="rmdup">
+    <div class="modal-content3">
+        <h1 id="formh3">This Room already exists.</h1>
+        <h1 id="formh4">You will be returned to the Customers Information page.</h1>
+        <a type="button" class="return" href="{{ instance.get_absolute19_url }}">Return</a>
+"
+    </div>
+</div>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+ $(function(){
+    $('.button1').click(function(){
+        setTimeout(function(){
+                var url = $("#section2").attr("deleterm-url");
+                    $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+</script>

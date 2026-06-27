@@ -1,0 +1,30 @@
+<label id="label_cabacccustom">Custom Cost</label><input id="id_cabacccustom_0" value="{{ cabacccustom.cabacccustom }}">
+
+<label id="label_cabacctotal">Custom Cab. Option Total</label><input id="id_cabacctotal_0" value="{{ cabacctotal.cabacctotal }}">
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+ $(document).ready(function() {
+var x = document.getElementById("id_cabacccustom_0").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_cabacccustom_0").value = x;
+    });
+
+ $(document).ready(function() {
+var x = document.getElementById("id_cabacctotal_0").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_cabacctotal_0").value = x;
+    });
+
+
+</script>

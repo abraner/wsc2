@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="#" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/custinfo2.css">
+    <title>Wood Street Cabinet Bidding Program</title>
+</head>
+<body  style="background-image: url('../../../../img/wood.jpg');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;">
+<section id="workarea1">
+    <a id="back"  href="{% url 'wscdatabase:cust_info_existing' %}">Back Button</a>
+    <section id="section2">
+                <h1 id="formh2">Customers Information</h1>
+                <form id="form2" method="post"
+                      checkbox-url="{% url 'wscdatabase:checkbox' instance.id %}"
+                      rmselection-url="{% url 'wscdatabase:rmselection' instance.id %}"
+
+                     >
+                    <br>
+                    {% csrf_token %}
+                    {{ form.name_of_field }}
+                    <div id="idA">
+                    {{ form.idA.errors }}
+                    <label id="label_idA">Cust. ID</label>
+                    {{ form.idA }}
+                    </div>
+                    <div id="conid">
+                    {{ form.conid.errors }}
+                    <label id="label_conid">Con. ID</label>
+                    {{ form.conid }}
+                    </div>
+                    <div id="custcompanytname">
+                    {{ form.custcompanytname.errors }}
+                    <label id="label_custcompanytname">Company Name</label>
+                    {{ form.custcompanytname }}
+                    </div>
+                    <div id="custfirstname">
+                    {{ form.custfirstname.errors }}
+                    <label id="label_custfirstnamee">First Name</label>
+                    {{ form.custfirstname}}
+                    </div>
+                    <div id="custlastname">
+                    {{ form.custlastname.errors }}
+                    <label id="label_custlastname">Last Name</label>
+                    {{ form.custlastname}}
+                    </div>
+                    <div id="custadd">
+                    {{ form.custadd.errors }}
+                    <label id="label_custadd">Address</label>
+                    {{ form.custadd1}}
+                    </div>
+                    <div id="custcity">
+                    {{ form.custcity.errors }}
+                    <label id="label_custcity">City</label>
+                    {{ form.custcity}}
+                    </div>
+                    <div id="custst">
+                    {{ form.custst.errors }}
+                    <label id="label_custst">State</label>
+                    {{ form.custst}}
+                    </div>
+                    <div id="custzipcode">
+                    {{ form.custzipcode.errors }}
+                    <label id="label_custzipcode">Zip Code</label>
+                    {{ form.custzipcode}}
+                    </div>
+                    <div id="custwork1">
+                    {{ form.custwork1.errors }}
+                    <label id="label_custwork1">Work Number #1</label>
+                    {{ form.custwork1}}
+                    </div>
+                    <div id="custwork2">
+                    {{ form.custwork2.errors }}
+                    <label id="label_custwork2">Work Number #2</label>
+                    {{ form.custwork2}}
+                    </div>
+                    <div id="custcell1">
+                   {{ form.custcell1.errors }}
+                    <label id="label_custcell1">Cell Number #1</label>
+                    {{  form.custcell1}}
+                    </div>
+                    <div id="custcell2">
+                   {{ form.custcell2.errors }}
+                    <label id="label_custcell2">Cell Number #2</label>
+                    {{  form.custcell2}}
+                    </div>
+                    <div id="custhome">
+                   {{ form.custhome.errors }}
+                    <label id="label_custhome">Home Number</label>
+                    {{  form.custhome}}
+                    </div>
+                    <div id="custemail1">
+                   {{ form.custemail1.errors }}
+                    <label id="label_custemail1">Email #1</label>
+                    {{  form.custemail1}}
+                    </div>
+                    <div id="custemail2">
+                   {{ form.custemail2.errors }}
+                    <label id="label_custemail2">Email #2</label>
+                    {{  form.custemail2}}
+                    </div>
+                    <div id="but2">
+                    <a class="btn btn9" id="btn1" href="">Update Customers Info.</a>
+                    <a class="btn btn9" id="btn2" href="">Delete Customer</a>
+                    </div>
+                </form>
+        <h1 id="formh3">Room Information</h1>
+        <div class="container">
+            <table>
+                <thead>
+                    <th>Bid ID</th>
+                    <th>Current Room</th>
+                    <th>Room Cost</th>
+                    <th>Add to Contract</th>
+                    <th>Delete Room</th>
+                </thead>
+                <tbody id="sectionA">
+                    {% csrf_token %}
+                    {% for obj in object_list %}
+                        <tr id="">
+                            <td href="{{ obj.get_absolute17_url }}">{{ obj.bid_idA }}</td>
+                            <td>{{ obj.rmnum }}</td>
+                            <td>{{ obj.rmcost }}</td>
+                            <td>
+                                <input type="checkbox" name="bid_idA[]" value="{{ obj.bid_idA }}" id="rmactive">
+                            </td>
+                        </tr>
+                    {% endfor %}
+
+
+                </tbody>
+            </table>
+            <div>
+                <button type="submit" class="btn_delete">Delete</button>
+            </div>
+        </div>
+
+    </section>
+</section>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function() {
+$('input:checkbox').click(function(){
+    console.log()
+     if(this.checked) {
+        $('#sectionA').each(function() {
+            this.checked = true;
+            console.log('True')
+            var url = $("#form2").attr("rmselection-url");
+                $.ajax({
+                        type:'POST',
+                       url: url,
+                       data:{
+//                           id_roomadd: $('#id_roomadd').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+
+
+
+        });
+     } else {
+        $('#sectionA').each(function() {
+            this.checked = false;
+            console.log('False')
+        });
+     }
+});
+});
+
+
+
+
+
+//$(document).ready(function(){
+//    $('input:checkbox').click(function(){
+//            var bid_idA = [];
+//            $(':checkbox:checked').click(function(i){
+//                bid_idA[i]=$(this).val()
+//            })
+//            if(bid_idA.length===0){
+//                alert("please select items to delete")
+//            }else{
+//                console.log(bid_idA)
+//            }
+//    })
+//})
+
+</script>
+</body>
+</html>

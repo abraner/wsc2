@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="image/png" href="../../../img/favicon1.png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/bidpageselection.css">
+    <title>Wood Street Cabinet Bidding Program</title>
+</head>
+<body  style="background-image: url('../../../../img/wood.jpg');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;">
+<section id="workarea1">
+            <section id="section2">
+                <form id="form2" method="post">
+                    {% csrf_token %}
+                    {{ form.as_table }}
+
+                <h1 id="formh2">Select page would you like to navigate to.</h1>
+                <div id="button1">
+                    <a class="button1" href="{% url 'wscdatabase:totalrmcost3' instance.id %}">Cabinet Bid Page</a>
+                    <a class="button2" href="{% url 'wscdatabase:totalrmcost' instance.bid_idA %}">Finish Selection Page</a>
+                </div>
+                </form>
+            </section>
+    <div class="rm-modal" style="display:none">
+        <div class="modal-content">
+            <h3 id="modaltitle">Please Wait</h3>
+        </div>
+    </div>
+        </section>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(function(){
+    $('.button1').click(function(){
+    $(".rm-modal").show()
+
+    });
+});
+</script>
+</body>
+</html>

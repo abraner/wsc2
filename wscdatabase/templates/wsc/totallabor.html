@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="../../../img/favicon1.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/totallabor.css">
+    <title>WSC/Total Room Cost</title>
+</head>
+<body  style="background-image: url('../../../../img/wood.jpg');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;"
+       >
+<div class="container">
+    <div class="container1">
+    </div>
+    <div class="container2">
+
+        <form class="form2" method="post"
+                          >
+            {% csrf_token %}
+            {{ form.name_of_field }}
+            <div class="container8">
+
+                <div class="container4">
+                    <div class="container5">
+                        <div class="container5a">
+
+                        </div>
+                        <div class="container5b">
+                            <h1 id="formh2">Labor List</h1>
+                        </div>
+                        <div class="container5c">
+
+
+                        </div>
+                    </div>
+                    <div class="container6">
+                        <div class="container6a">
+                            <div id="jobid">
+                                {{ form.jobid.errors }}
+                                <label id="label_id">Job ID</label>
+                                {{ form.jobid }}
+                                {{ form.custid.errors }}
+                                <label id="label_custid">Cust ID</label>
+                                {{ form.custid }}
+                            </div>
+                        </div>
+                        <div class="container6b">
+                            <div id="custlastname">
+                                {{ form.custlastname }}
+                                {{ form.custadd1 }}
+                            </div>
+                        </div>
+                        <div class="container6c">
+
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="container7">
+                    <div id="totallaborlabel">
+                        <div id="totallaborcostlabel">Total Labor Cost</div>
+                    </div>
+                    <div id="totallaborcost1">
+                        <input id="totallaborcost" value="{{ totallaborcost.installrate }}">
+                    </div>
+                    <div class="container7a">
+                        <div id="cabinet">
+                            <div id="headercab">
+                                <div id="cabA">Qty</div>
+                                <div id="cabC">Cabinets</div>
+                                <div id="cabD">Labor Per Ft.</div>
+                                <div id="cabE">Total Labor</div>
+                            </div>
+                            <div id="form-rowcabinfo">
+                                <div id="cabqty">{{ cab1qty }}</div>
+                                <div id="cabcomp">Cabinets</div>
+                                <input id="cab1labor" value="{{ cab1labor }}">
+                                <input id="cabtotallabor" value="{{ cab1total }}">
+                            </div>
+                            <div id="header1">
+                                <div id="A">Qty</div>
+                                <div id="C">Comp. Description</div>
+                                <div id="D">Labor</div>
+                                <div id="E">Total Labor</div>
+                            </div>
+                            <form id="form1" method="post">
+                                <div class="form-rowcompinfo1">
+                                    {% for obj in comp1 %}
+                                    <div id="qty1">{{ obj.compqty }}</div>
+                                    <div id="comp1">{{ obj.compname }}</div>
+                                    <input id="labor1" value="{{ obj.labor }}">
+                                    <input id="totallabor1" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo2">
+                                    {% for obj in comp2 %}
+                                    <div id="qty2">{{ obj.compqty }}</div>
+                                    <div id="comp2">{{ obj.compname }}</div>
+                                    <input id="labor2" value="{{ obj.labor }}">
+                                    <input id="totallabor2" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo3">
+                                    {% for obj in comp3 %}
+                                    <div id="qty3">{{ obj.compqty }}</div>
+                                    <div id="comp3">{{ obj.compname }}</div>
+                                    <input id="labor3" value="{{ obj.labor }}">
+                                    <input id="totallabor3" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo4">
+                                    {% for obj in comp4 %}
+                                    <div id="qty4">{{ obj.compqty }}</div>
+                                    <div id="comp4">{{ obj.compname }}</div>
+                                    <input id="labor4" value="{{ obj.labor }}">
+                                    <input id="totallabor4" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo5">
+                                    {% for obj in comp5 %}
+                                    <div id="qty5">{{ obj.compqty }}</div>
+                                    <div id="comp5">{{ obj.compname }}</div>
+                                    <input id="labor5" value="{{ obj.labor }}">
+                                    <input id="totallabor5" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo6">
+                                    {% for obj in comp6 %}
+                                    <div id="qty6">{{ obj.compqty }}</div>
+                                    <div id="comp6">{{ obj.compname }}</div>
+                                    <input id="labor6" value="{{ obj.labor }}">
+                                    <input id="totallabor6" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo7">
+                                    {% for obj in comp7 %}
+                                    <div id="qty7">{{ obj.compqty }}</div>
+                                    <div id="comp7">{{ obj.compname }}</div>
+                                    <input id="labor7" value="{{ obj.labor }}">
+                                    <input id="totallabor7" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo8">
+                                    {% for obj in comp8 %}
+                                    <div id="qty8">{{ obj.compqty }}</div>
+                                    <div id="comp8">{{ obj.compname }}</div>
+                                    <input id="labor8" value="{{ obj.labor }}">
+                                    <input id="totallabor8" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo9">
+                                    {% for obj in comp9 %}
+                                    <div id="qty9">{{ obj.compqty }}</div>
+                                    <div id="comp9">{{ obj.compname }}</div>
+                                    <input id="labor9" value="{{ obj.labor }}">
+                                    <input id="totallabor9" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo10">
+                                    {% for obj in comp10 %}
+                                    <div id="qty10">{{ obj.compqty }}</div>
+                                    <div id="comp10">{{ obj.compname }}</div>
+                                    <input id="labor10" value="{{ obj.labor }}">
+                                    <input id="totallabor10" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo11">
+                                    {% for obj in comp11 %}
+                                    <div id="qty11">{{ obj.compqty }}</div>
+                                    <div id="comp11">{{ obj.compname }}</div>
+                                    <input id="labor11" value="{{ obj.labor }}">
+                                    <input id="totallabor11" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo12">
+                                    {% for obj in comp12 %}
+                                    <div id="qty12">{{ obj.compqty }}</div>
+                                    <div id="comp12">{{ obj.compname }}</div>
+                                    <input id="labor12" value="{{ obj.labor }}">
+                                    <input id="totallabor12" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo13">
+                                    {% for obj in comp13 %}
+                                    <div id="qty13">{{ obj.compqty }}</div>
+                                    <div id="comp13">{{ obj.compname }}</div>
+                                    <input id="labor13" value="{{ obj.labor }}">
+                                    <input id="totallabor13" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo14">
+                                    {% for obj in comp14 %}
+                                    <div id="qty14">{{ obj.compqty }}</div>
+                                    <div id="comp14">{{ obj.compname }}</div>
+                                    <input id="labor14" value="{{ obj.labor }}">
+                                    <input id="totallabor14" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo15">
+                                    {% for obj in comp15 %}
+                                    <div id="qty15">{{ obj.compqty }}</div>
+                                    <div id="comp15">{{ obj.compname }}</div>
+                                    <input id="labor15" value="{{ obj.labor }}">
+                                    <input id="totallabor15" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo16">
+                                    {% for obj in comp16 %}
+                                    <div id="qty16">{{ obj.compqty }}</div>
+                                    <div id="comp16">{{ obj.compname }}</div>
+                                    <input id="labor16" value="{{ obj.labor }}">
+                                    <input id="totallabor16" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo17">
+                                    {% for obj in comp17 %}
+                                    <div id="qty17">{{ obj.compqty }}</div>
+                                    <div id="comp17">{{ obj.compname }}</div>
+                                    <input id="labor17" value="{{ obj.labor }}">
+                                    <input id="totallabor17" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo18">
+                                    {% for obj in comp18 %}
+                                    <div id="qty18">{{ obj.compqty }}</div>
+                                    <div id="comp18">{{ obj.compname }}</div>
+                                    <input id="labor18" value="{{ obj.labor }}">
+                                    <input id="totallabor18" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo19">
+                                    {% for obj in comp19 %}
+                                    <div id="qty19">{{ obj.compqty }}</div>
+                                    <div id="comp19">{{ obj.compname }}</div>
+                                    <input id="labor19" value="{{ obj.labor }}">
+                                    <input id="totallabor19" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo20">
+                                    {% for obj in comp20 %}
+                                    <div id="qty20">{{ obj.compqty }}</div>
+                                    <div id="comp20">{{ obj.compname }}</div>
+                                    <input id="labor20" value="{{ obj.labor }}">
+                                    <input id="totallabor20" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo21">
+                                    {% for obj in comp21 %}
+                                    <div id="qty21">{{ obj.compqty }}</div>
+                                    <div id="comp21">{{ obj.compname }}</div>
+                                    <input id="labor21" value="{{ obj.labor }}">
+                                    <input id="totallabor21" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo22">
+                                    {% for obj in comp22 %}
+                                    <div id="qty22">{{ obj.compqty }}</div>
+                                    <div id="comp22">{{ obj.compname }}</div>
+                                    <input id="labor22" value="{{ obj.labor }}">
+                                    <input id="totallabor22" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo23">
+                                    {% for obj in comp23 %}
+                                    <div id="qty23">{{ obj.compqty }}</div>
+                                    <div id="comp23">{{ obj.compname }}</div>
+                                    <input id="labor23" value="{{ obj.labor }}">
+                                    <input id="totallabor23" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo24">
+                                    {% for obj in comp24 %}
+                                    <div id="qty24">{{ obj.compqty }}</div>
+                                    <div id="comp24">{{ obj.compname }}</div>
+                                    <input id="labor24" value="{{ obj.labor }}">
+                                    <input id="totallabor24" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+                                <div class="form-rowcompinfo25">
+                                    {% for obj in comp25 %}
+                                    <div id="qty25">{{ obj.compqty }}</div>
+                                    <div id="comp25">{{ obj.compname }}</div>
+                                    <input id="labor25" value="{{ obj.labor }}">
+                                    <input id="totallabor25" value="{{ obj.totallabor }}">
+                                    {% endfor %}
+                                </div>
+
+                            </form>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <div class="container3">
+        <a id="back"  href="{% url 'wscdatabase:jobcost' instance.custid %}">Back</a>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    var x = document.getElementById('totallaborcost').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallaborcost').value = x;
+
+
+    var x = document.getElementById('cab1labor').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('cab1labor').value = x;
+
+    var x = document.getElementById('cabtotallabor').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('cabtotallabor').value = x;
+
+    var x = document.getElementById('labor1').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor1').value = x;
+
+        var x = document.getElementById('totallabor1').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor1').value = x;
+    
+        var x = document.getElementById('labor2').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor2').value = x;
+
+        var x = document.getElementById('totallabor2').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor2').value = x;
+    
+            var x = document.getElementById('labor3').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor3').value = x;
+
+        var x = document.getElementById('totallabor3').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor3').value = x;
+    
+            var x = document.getElementById('labor4').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor4').value = x;
+
+        var x = document.getElementById('totallabor4').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor4').value = x;
+    
+            var x = document.getElementById('labor5').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor5').value = x;
+
+        var x = document.getElementById('totallabor5').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor5').value = x;
+    
+            var x = document.getElementById('labor6').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor6').value = x;
+
+        var x = document.getElementById('totallabor6').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor6').value = x;
+    
+            var x = document.getElementById('labor7').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor7').value = x;
+
+        var x = document.getElementById('totallabor7').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor7').value = x;
+    
+            var x = document.getElementById('labor8').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor8').value = x;
+
+        var x = document.getElementById('totallabor8').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor8').value = x;
+    
+            var x = document.getElementById('labor9').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor9').value = x;
+
+        var x = document.getElementById('totallabor9').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor9').value = x;
+    
+            var x = document.getElementById('labor10').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor10').value = x;
+
+        var x = document.getElementById('totallabor10').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor10').value = x;
+    
+            var x = document.getElementById('labor11').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor11').value = x;
+
+        var x = document.getElementById('totallabor11').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor11').value = x;
+    
+            var x = document.getElementById('labor12').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor12').value = x;
+
+        var x = document.getElementById('totallabor12').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor12').value = x;
+    
+            var x = document.getElementById('labor13').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor13').value = x;
+
+        var x = document.getElementById('totallabor13').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor13').value = x;
+    
+            var x = document.getElementById('labor14').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor14').value = x;
+
+        var x = document.getElementById('totallabor14').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor14').value = x;
+    
+            var x = document.getElementById('labor15').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor15').value = x;
+
+        var x = document.getElementById('totallabor15').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor15').value = x;
+    
+            var x = document.getElementById('labor16').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor16').value = x;
+
+        var x = document.getElementById('totallabor16').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor16').value = x;
+    
+            var x = document.getElementById('labor17').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor17').value = x;
+
+        var x = document.getElementById('totallabor17').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor17').value = x;
+    
+            var x = document.getElementById('labor18').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor18').value = x;
+
+        var x = document.getElementById('totallabor18').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor18').value = x;
+    
+            var x = document.getElementById('labor19').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor19').value = x;
+
+        var x = document.getElementById('totallabor19').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor19').value = x;
+    
+            var x = document.getElementById('labor20').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor20').value = x;
+
+        var x = document.getElementById('totallabor20').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor20').value = x;
+    
+            var x = document.getElementById('labor21').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor21').value = x;
+
+        var x = document.getElementById('totallabor21').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor21').value = x;
+    
+            var x = document.getElementById('labor22').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor22').value = x;
+
+        var x = document.getElementById('totallabor22').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor22').value = x;
+    
+            var x = document.getElementById('labor23').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor23').value = x;
+
+        var x = document.getElementById('totallabor23').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor23').value = x;
+    
+            var x = document.getElementById('labor24').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor24').value = x;
+
+        var x = document.getElementById('totallabor24').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor24').value = x;
+    
+            var x = document.getElementById('labor25').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('labor25').value = x;
+
+        var x = document.getElementById('totallabor25').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+    document.getElementById('totallabor25').value = x;
+    
+
+
+
+
+
+});
+
+
+</script>

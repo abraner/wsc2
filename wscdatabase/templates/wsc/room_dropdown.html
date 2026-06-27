@@ -1,0 +1,6 @@
+<option value="test">Add Room</option>
+{% for c in c %}
+<option value="{{ c.id }}" {% if c.selected %} selected {% endif %}  >{{ c.room_type }}</option>
+{% endfor %}
+
+

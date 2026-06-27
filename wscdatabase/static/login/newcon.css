@@ -1,0 +1,274 @@
+body{
+    font: 16px/1.5 Arial, Helvetica,sans-serif;
+    padding:0;
+    margin:0;
+    width: 100%;
+    height:99vh;
+}
+
+/* Work Area */
+.container{
+    width: 100%;
+    height:100vh;
+    margin-top:0px;
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+}
+
+.container1{
+    flex: 1;
+}
+
+.container2{
+    flex: 2;
+}
+
+.container3{
+    flex: 1;
+}
+
+.outerdiv{
+    width: 100%;
+    height:86vh;
+    margin-top:13%;
+    margin-left:auto;
+    margin-right:auto;
+    background:#a9a9a9;
+    position: relative;
+
+}
+
+.form2{
+    margin-top: 0vh;
+    height: 100%
+
+}
+
+.container3{
+    flex: 1;
+}
+
+
+
+
+#titleh2{
+    height:50px;
+    width: 50%;
+    text-align:center;
+    font-size: 3vw;
+    margin-top:1%;
+    margin-bottom:0px;
+    color:#c0c0c0;
+    font-weight:bold;
+    font-style: italic;
+    font-family: "Times New Roman";
+    position: fixed;
+}
+
+a#back{
+    border: 2px solid #C0C0C0;
+    border-radius: 2px;
+    background: gold;
+    width: 9vh;
+    height: 3vh;
+    font-size: 2vh;
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 9vh;
+    margin-left: 5%;
+    transition: 0.6s;
+    text-align: center;
+    overflow: hidden;
+    padding-top:0vh;
+    display:inline-block;
+    float:left;
+}
+
+#back{
+    color: #000000;
+}
+
+#back:hover{
+    color: white;
+    background: green;
+}
+
+button#btn1.btn-success{
+    border: #5a3510 2px solid;
+    border-radius: 2px;
+    background: #b08f26;
+    width:100%;
+    height: 42px;
+    font-size: 17px;
+    text-align:center;
+    color: black;
+    font-family: "Arial";
+    font-weight:bold;
+    cursor: pointer;
+    margin-top: 0px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 0px;
+    transition: 0.6s;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0px;
+
+}
+button#btn1.btn-success{
+    color: #000000;
+}
+
+button#btn1.btn-success:hover{
+    color: white;
+    background: #8c721e;
+}
+
+.form-row{
+    display:flex;
+    margin-top:0px;
+    height: 6%;
+}
+
+.form-rowst{
+    display:flex;
+    margin-top:0px;
+    height: 6%;
+    width:50vw;
+}
+
+.form-rowzip{
+    display:flex;
+    margin-top:0px;
+    height: 6%;
+    width:50vw;
+}
+
+.form-rowphone{
+    display:flex;
+    margin-top:0px;
+    height: 6%;
+    width:50vw;
+}
+
+.form-rowemail{
+    display:flex;
+    margin-top:0px;
+    height: 6%;
+    width:50vw;
+}
+
+label{
+    width:23%;
+    padding-right:3px;
+    margin: auto;
+    color:black;
+    font-weight: bold;
+    text-align:right;
+    font-size:1.5vw;
+    font-style: italic;
+    font-family: "Times New Roman";
+}
+
+.label_const{
+    width:23%;
+    padding-right:3px;
+    margin-left: 0px;
+    margin-right: 0px;
+    color:black;
+    font-weight: bold;
+    text-align:right;
+    font-size:1.5vw;
+    font-style: italic;
+    font-family: "Times New Roman";
+}
+
+.label_conzipcode{
+    width:23%;
+    padding-right:3px;
+    margin-left: 0px;
+    margin-right: 0px;
+    color:black;
+    font-weight: bold;
+    text-align:right;
+    font-size:1.5vw;
+    font-style: italic;
+    font-family: "Times New Roman";
+}
+
+.label_conwork1, .label_conwork2, .label_concell1, .label_concell2, .label_conhome, .label_conemail1, .label_conemail2{
+    width:23%;
+    padding-right:3px;
+    margin-left: 0px;
+    margin-right: 0px;
+    color:black;
+    font-weight: bold;
+    text-align:right;
+    font-size:1.5vw;
+    font-style: italic;
+    font-family: "Times New Roman";
+}
+
+
+input#id_concompanytname {
+    flex:1;
+    margin-right:5%;
+    margin-top:6px;
+    font-size:1.5vw;
+    padding-left:5px;
+
+}
+
+input#id_confirstname, input#id_conlastname, input#id_conadd1, input#id_conadd2, input#id_concity{
+    flex:1;
+    margin-right:20%;
+    margin-top:4px;
+    font-size:1.5vw;
+    padding-left:5px;
+}
+
+input#id_const{
+    flex:0;
+    margin-right:20%;
+    margin-top:4px;
+    font-size:1.5vw;
+    padding-left:5px;
+    width: 2vw;
+}
+
+input#id_conzipcode{
+    flex:0;
+    margin-right:20%;
+    margin-top:4px;
+    font-size:1.5vw;
+    padding-left:5px;
+    width: 5vw;
+}
+input#id_conwork1_0, input#id_conwork2_0,
+input#id_concell1_0, input#id_concell2_0, input#id_conhome_0{
+    flex:0;
+    margin-right:20%;
+    margin-top:4px;
+    font-size:1.5vw;
+    padding-left:5px;
+    width: 10vw;
+}
+
+input#id_conemail1, input#id_conemail2{
+    flex:1;
+    margin-right:20%;
+    margin-top:4px;
+    font-size:1.5vw;
+    padding-left:5px;
+
+}
+
+
+input#id_conwork1_1, input#id_conwork2_1, input#id_concell1_1, input#id_concell2_1, input#id_conhome_1, .phone-field-ext{
+    display:none;
+}
+
+

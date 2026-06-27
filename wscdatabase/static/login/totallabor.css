@@ -1,0 +1,631 @@
+body{
+  font: 16px/1.5 Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+
+}
+text{
+    display:none;
+}
+section#workarea1{
+    width:100%;
+    height:770px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+a#back{
+    border: 2px solid black;
+    border-radius: 2px;
+    background: gold;
+    width: 30%;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10%;
+    margin-right: 0%;
+    margin-left:4.0%;
+    transition: 0.6s;
+    float:left;
+    text-align: center;
+    overflow: hidden;
+    display:inline-block;
+    padding: 1%;
+}
+a#back{
+    color: #000000;
+}
+
+a#back:hover{
+    color: white;
+    background: green;
+    text-decoration: underline;
+}
+
+
+
+div.container{
+    width:100%;
+    height:99vh;
+    margin-top:0px;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+}
+
+div.container1{
+    flex: 1;
+}
+
+div.container2{
+    flex: 2;
+}
+
+div.container3{
+    flex: 1;
+}
+
+#formh2{
+    width:100%;
+    padding-top:0px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:0px;
+    margin-top:11px;
+    color:white;
+    text-align:center;
+    font-size: calc(2.0vw + 1.0vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-shadow: 2px 2px 5px black;
+
+}
+
+.formh3{
+    width:100%;
+    padding-top:0px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:0px;
+    margin-top: 0px;
+    color: gold;
+    text-align:center;
+    font-size: calc(.75vw + .75vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-shadow: 2px 2px 5px black;
+
+}
+
+.formh4{
+    width:100%;
+    padding-top:0px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:0px;
+    margin-top: 0px;
+    color: blue;
+    text-align:center;
+    font-size: calc(.75vw + .75vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+
+
+}
+
+#bh{
+    margin-top: 10%;
+
+}
+
+
+.form2{
+    width:100%;
+    height: 90%;
+    background:#a9a9a9;
+    border:#5a3510 3px solid;
+    margin-top: 5%;
+    margin-left:auto;
+    margin-right:auto;
+}
+div#col1.fieldWrapper{
+    width:100%;
+    margin-top: 0%;
+
+}
+
+
+
+div.container6{
+    flex: 1.0;
+}
+
+hr{
+    width: 100%;
+    border:black 1px solid;
+}
+
+div.container7{
+    height: 68vh;
+    width:45%;
+    margin-top:1.0%;
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    background-color: #a9a9a9;
+    flex-direction: column;
+}
+
+#totallaborcost{
+    display: inline-block;
+    width: 22.8%;
+    margin-left: 117%;
+    padding-top: 0px;
+    padding-bottom:0px;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    text-align: center;
+    border: 2px solid black;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Times New Roman";
+    color:black;
+    box-sizing: border-box;
+    background-color: #00FF7F;
+    pointer-events: none;
+}
+
+#totallaborlabel{
+    display:inline-block;
+    width: 30%;
+    margin-left:113%;
+    padding-top: 0.0%;
+    padding-bottom:0.0%;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    text-align:center;
+    font-weight:bold;
+    font-style: italic;
+    font-family: "Times New Roman";
+    box-sizing: border-box;
+    pointer-events: none;
+
+
+}
+
+
+
+
+div.container7a, {
+    height: 68vh;
+    margin-top:1.0%;
+    margin-left:auto;
+    margin-right:auto;
+    background-color: #a9a9a9;
+
+}
+
+.form-rowcompinfo1{
+
+
+
+}
+
+div.container8{
+    flex: 1.0;
+}
+
+.container4{
+    height: 13vh;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    border-bottom: 2px solid black;
+    background-color: #a9a9a9;
+    flex-direction: column;
+
+}
+
+.container9{
+    height: 38vh;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:-10vh;
+    background-color: #a9a9a9;
+    flex-direction: column;
+
+}
+
+#section3{
+    width:1281px;
+    height:354px;
+    margin-left:30px;
+    margin-right:0px;
+    margin-top:11px;
+    background-color: #a9a9a9;
+    display:inline-block;
+    border: 2px solid black;
+}
+
+div.container5{
+    height: 59%;
+    width:100%;
+    display: flex;
+
+}
+
+div.container5a{
+    flex: 1.0;
+}
+
+div.container5b{
+    flex: 2.0;
+}
+
+div.container5c{
+    flex: 1.0;
+}
+
+
+
+div.container6{
+    height:100%;
+    width:100%;
+    display: flex;
+
+}
+
+div.container6a{
+    flex: 1.0;
+}
+
+div.container6b{
+    flex: 1.0;
+}
+
+div.container6c{
+    flex: 1.0;
+}
+
+#jobid{
+    width:100%;
+    margin-top: 0.0%;
+    margin-left:0.0%;
+    margin-right:0.0%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#label_id{
+    width:50%;
+    margin-top: 0px;
+    margin-left:0.0%;
+    margin-right:0px;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-align:center;
+    display:inline-block;
+}
+
+#id_jobid{
+    width:50%;
+    margin-top: 0px;
+    margin-left:0px;
+    margin-right:0px;
+    color:black;
+    background:#dcdcdc;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    text-align:center;
+    box-sizing:border-box;
+    pointer-events: none;
+    border-radius: 0px;
+}
+
+#custid{
+    width:20%;
+    height: 20%;
+    margin-top: 0px;
+    margin-left:7%;
+    margin-right:0px;
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+}
+
+#label_custid{
+    width:50%;
+    margin-top: 0px;
+    margin-left:0.0%;
+    margin-right:0px;
+    color:black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-style: italic;
+    font-family: "Times New Roman";
+    text-align:center;
+    display:inline-block;
+}
+
+#id_custid{
+    width:50%;
+    margin-top: 0px;
+    margin-left:0px;
+    margin-right:0px;
+    color:black;
+    background:#dcdcdc;
+    border: 1px solid black;
+    font-weight: bold;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    font-family: "Times New Roman";
+    display:inline-block;
+    -moz-appearance: textfield;
+    text-align:center;
+    box-sizing:border-box;
+    pointer-events: none;
+    border-radius: 0px;
+}
+
+div#cabinet{
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+
+}
+
+
+
+#headercab, #form-rowcabinfo, #header1{
+    display: flex;
+}
+
+
+div#A, div#cabA{
+    display:inline-block;
+    width:8%;
+    margin-top:0px;
+    padding-top:0px;
+    padding-bottom:0px;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    text-align:center;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    font-weight:bold;
+    font-style: italic;
+    font-family: "Times New Roman";
+    color:#a9a9a9;
+    background:#505050;
+    box-sizing: border-box;
+}
+
+div#C, div#cabC{
+    display: inline-block;
+    width: 46.8%;
+    padding-top: 0px;
+    padding-bottom:0px;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    text-align: center;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Times New Roman";
+    color:#a9a9a9;
+    background:#505050;
+    box-sizing: border-box;
+}
+
+div#D, div#cabD{
+    display: inline-block;
+    width: 26%;
+    padding-top: 0px;
+    padding-bottom:0px;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    text-align: center;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Times New Roman";
+    color:#a9a9a9;
+    background:#505050;
+    box-sizing: border-box;
+}
+
+div#E, div#cabE{
+    display: inline-block;
+    width: 21.2%;
+    padding-top: 0px;
+    padding-bottom:0px;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    text-align: center;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+    font-style: italic;
+    font-family: "Times New Roman";
+    color:#a9a9a9;
+    background:#505050;
+    box-sizing: border-box;
+}
+
+div#cabqty{
+    display:inline-block;
+    width: 7.8%;
+    padding-top: 0.0%;
+    padding-bottom:0.0%;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    text-align:center;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    font-weight:bold;
+    font-family: "Times New Roman";
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.form-rowcompinfo1, .form-rowcompinfo2, .form-rowcompinfo3, .form-rowcompinfo4, .form-rowcompinfo5, .form-rowcompinfo6
+, .form-rowcompinfo7, .form-rowcompinfo8, .form-rowcompinfo9, .form-rowcompinfo10, .form-rowcompinfo11,
+ .form-rowcompinfo12, .form-rowcompinfo13, .form-rowcompinfo14, .form-rowcompinfo15, .form-rowcompinfo16,
+ .form-rowcompinfo17, .form-rowcompinfo18, .form-rowcompinfo19, .form-rowcompinfo20, .form-rowcompinfo21,
+ .form-rowcompinfo22, .form-rowcompinfo23, .form-rowcompinfo24, .form-rowcompinfo25{
+    display: flex;
+
+}
+
+div#qty1, div#qty2, div#qty3, div#qty4, div#qty5, div#qty6, div#qty7, div#qty8, div#qty9, div#qty10, div#qty11,
+ div#qty12, div#qty13, div#qty14, div#qty15, div#qty16, div#qty17, div#qty18, div#qty19, div#qty20, div#qty21,
+ div#qty22, div#qty23, div#qty24, div#qty25{
+    display:inline-block;
+    width: 7.8%;
+    padding-top: 0.0%;
+    padding-bottom:0.0%;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    text-align:center;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    font-weight:bold;
+    font-family: "Times New Roman";
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+div#cabcomp{
+    display:inline-block;
+    width:46.6%;
+    padding-top: 0.0%;
+    padding-bottom:0.0%;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    text-align:center;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    font-weight:bold;
+    font-family: "Times New Roman";
+    box-sizing: border-box;
+    pointer-events: none;
+}
+div#comp1, div#comp2, div#comp3, div#comp4, div#comp5, div#comp6, div#comp7, div#comp8, div#comp9, div#comp10,
+ div#comp11, div#comp12, div#comp13, div#comp14, div#comp15, div#comp16, div#comp17, div#comp18, div#comp19, div#comp20,
+ div#comp21, div#comp22, div#comp23, div#comp24, div#comp25{
+    display:inline-block;
+    width:47.3%;
+    margin-left: -1.2%;
+    padding-top: 0.0%;
+    padding-bottom:0.0%;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    text-align:center;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    font-weight:bold;
+    font-family: "Times New Roman";
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+
+input#cab1labor{
+    display:inline-block;
+    width:25.7%;
+    padding-top: 0.0%;
+    padding-bottom:0.0%;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    text-align:right;
+    padding-right: 2%;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    font-weight:bold;
+    font-family: "Times New Roman";
+    box-sizing: border-box;
+    pointer-events: none;
+
+}
+
+input#labor1, input#labor2, input#labor3, input#labor4, input#labor5, input#labor6, input#labor7, input#labor8
+, input#labor9, input#labor10, input#labor11, input#labor12, input#labor13, input#labor14, input#labor15, input#labor16
+, input#labor17, input#labor18, input#labor19, input#labor20, input#labor21, input#labor22, input#labor23, input#labor24
+, input#labor25{
+    display:inline-block;
+    width:26.5%;
+    margin-left: -1.2%;
+    padding-top: 2.0%;
+    padding-bottom:0.5%;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    text-align:right;
+    padding-right: 2%;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    font-weight:bold;
+    font-family: "Times New Roman";
+    box-sizing: border-box;
+    pointer-events: none;
+
+}
+
+input#cabtotallabor{
+    display:inline-block;
+    width:21.1%;
+    padding-top: 0.0%;
+    padding-bottom:0.0%;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    text-align:right;
+    padding-right: 2%;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 2px solid black;
+    font-weight:bold;
+    font-family: "Times New Roman";
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+input#totallabor1, input#totallabor2, input#totallabor3, input#totallabor4, input#totallabor5, input#totallabor6
+, input#totallabor7, input#totallabor8, input#totallabor9, input#totallabor10, input#totallabor11, input#totallabor12
+, input#totallabor13, input#totallabor14, input#totallabor15, input#totallabor16, input#totallabor17, input#totallabor18
+, input#totallabor19, input#totallabor20, input#totallabor21, input#totallabor22, input#totallabor23, input#totallabor24
+, input#totallabor25{
+    display:inline-block;
+    width:22.0%;
+    margin-left: -1.2%;
+    padding-top: 0.0%;
+    padding-bottom:0.0%;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    text-align:right;
+    padding-right: 2%;
+    background-color: transparent;
+    border-style: none;
+    border-bottom: 2px solid black;
+    font-weight:bold;
+    font-family: "Times New Roman";
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+
+input#cabtotallabor, input#cabtotallabor2, input#cabtotallabor3, input#cabtotallabor4, input#cabtotallabor5, input#cabtotallabor6{
+    display:inline-block;
+    width:21.1%;
+    padding-top: 0.0%;
+    padding-bottom:0.0%;
+    font-size: calc(.5vw + .5vh + .25vmin);
+    text-align:right;
+    padding-right: 2%;
+    border-style: none;
+    border-bottom: 2px solid black;
+    font-weight:bold;
+    font-family: "Times New Roman";
+    box-sizing: border-box;
+    pointer-events: none;
+}
+

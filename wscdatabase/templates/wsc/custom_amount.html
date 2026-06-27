@@ -1,0 +1,20 @@
+<input id="id_custom" value="{{ customa.custom }}">
+<script>
+$(document).ready(function() {
+    var x = document.getElementById('id_custom').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById('id_custom').value = x;
+    });
+
+$(function(){
+    $('input#id_custom').focus(function(){
+setTimeout(function(){
+    $(".rm-modal").show()
+        }, 200);
+    });
+});
+</script>

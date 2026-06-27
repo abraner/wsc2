@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="image/png" href="../../../img/favicon1.png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/totalrmcost.css">
+    <title>WSC/Total Room Cost</title>
+</head>
+<body  style="background-image: url('../../../../img/wood.jpg');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;">
+<div class="container">
+    <div class="container1">
+    </div>
+    <div class="container2">
+
+        <form class="form2" method="post"
+            woodspecies-url="{% url 'wscdatabase:woodspecies' instance.bid_idA %}"
+            woodspeciesa-url="{% url 'wscdatabase:load_woodspecies' instance.bid_idA %}"
+            woodspeciesperc-url="{% url 'wscdatabase:load_woodspeciesperc' instance.bid_idA %}"
+            doorstyle-url="{% url 'wscdatabase:doorstyle' instance.bid_idA %}"
+            doorstylea-url="{% url 'wscdatabase:load_doorstyle' instance.bid_idA %}"
+            doorstyleperc-url="{% url 'wscdatabase:load_doorstyleperc' instance.bid_idA %}"
+            finishcolor-url="{% url 'wscdatabase:finishcolor' instance.bid_idA %}"
+            finishcolora-url="{% url 'wscdatabase:load_finishcolor' instance.bid_idA %}"
+            finishcolorperc-url="{% url 'wscdatabase:load_finishcolorperc' instance.bid_idA %}"
+            finishoption-url="{% url 'wscdatabase:finishoption' instance.bid_idA %}"
+            finishoptiona-url="{% url 'wscdatabase:load_finishoption' instance.bid_idA %}"
+            finishoptionperc-url="{% url 'wscdatabase:load_finishoptionperc' instance.bid_idA %}"
+
+            finishoption2-url="{% url 'wscdatabase:finishoption2' instance.bid_idA %}"
+            finishoptiona2-url="{% url 'wscdatabase:load_finishoption2' instance.bid_idA %}"
+            finishoptionperc2-url="{% url 'wscdatabase:load_finishoptionperc2' instance.bid_idA %}"
+
+            totalperc-url="{% url 'wscdatabase:load_totalperc' instance.bid_idA %}"
+            cabnumtotal-url="{% url 'wscdatabase:load_cabinet2' instance.bid_idA %}"
+            updatetotalrmcost-url="{% url 'wscdatabase:updatetotalrmcost' instance.bid_idA %}"
+            appendcurrm-url="{% url 'wscdatabase:appendcurrm' instance.bid_idA %}"
+            >
+            {% csrf_token %}
+            {{ form.name_of_field }}
+            <div class="container8">
+                <div class="container4">
+                    <div class="container5">
+                        <div class="container5a">
+                            <div id="bid_idA">
+                                {{ form.bid_idA.errors }}
+                                <label id="label_id">Bid ID</label>
+                                {{ form.bid_idA }}
+                                {{ form.custid.errors }}
+                                <label id="label_custid">Cust ID</label>
+                                {{ form.custid }}
+                            </div>
+                        </div>
+                        <div class="container5b">
+                            <h1 id="formh2">Total Room Cost Page</h1>
+                        </div>
+                        <div class="container5c">
+
+                        </div>
+                    </div>
+                    <div class="container6">
+                        <div class="container6a">
+                            <div id="conid">
+                                {{ form.conid.errors }}
+                                <label id="label_conid">Con. ID</label>
+                                {{ form.conid }}
+                                {{ form.saleid.errors }}
+                                <label id="label_sale">Sale ID</label>
+                                {{ form.saleid }}
+                            </div>
+                        </div>
+                        <div class="container6b">
+                            <div id="custlastname">
+                                {{ form.custlastname }}
+                                {{ form.custadd1 }}
+                            </div>
+                        </div>
+                        <div class="container6c">
+
+                            <div id="room">
+                                {{ form.room.errors }}
+                                <label id="label_room">Room</label>
+                                {{ form.room }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container7">
+                    <div class="container7a">
+                        <div id="woodspecies">
+                            <label id="label_woodspecies">Wood Species</label>
+                            <select id="id_woodspecies"></select>
+                            <div id="woodspeciesperc">
+                                <div id="id_woodspeciesperc"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container7b">
+                        <div id="doorstyle">
+                            <label id="label_doorstyle">Door Style</label>
+                            <select id="id_doorstyle"></select>
+                            <div id="doorstyleperc">
+                                <div id="id_doorstyleperc"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container7c">
+                        <div id="finishcolor">
+                            <label id="label_finishcolor">Finish Color</label>
+                            <select id="id_finishcolor"></select>
+                            <div id="finishcolorperc">
+                                <div id="id_finishcolorperc"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container7d">
+                        <div id="finishoption1">
+                            <label id="label_finishoption1">Finish Option 1</label>
+                            <select id="id_finishoption1"></select>
+                            <div id="finishoption1perc">
+                                <div id="id_finishoption1perc"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container7d2">
+                        <div id="finishoption2">
+                            <label id="label_finishoption2">Finish Option 2</label>
+                            <select id="id_finishoption2"></select>
+                            <div id="finishoption2perc">
+                                <div id="id_finishoption2perc"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container7e">
+                        <div id="totalperc">
+                            {{ form.totalperc.errors }}
+                            <label id="label_totalperc">Total Percentage Increase</label>
+                            <div id="id_totalperc"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container9">
+                    <div id="cabnumtotal">
+                        <div id="id_cabnumtotal"></div>
+                    </div>
+                </div>
+                <div id="btmbot">
+                    <a id="back"  href="{% url 'wscdatabase:custinfo' instance.custid %}">Next</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="container3">
+    </div>
+</div>
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+
+$(document).ready(function(){
+
+setTimeout(function(){
+            var urlC = $(".form2").attr("woodspeciesa-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_woodspecies").html(data);
+                     }
+                });
+        }, 0);
+
+    setTimeout(function(){
+            var urlC = $(".form2").attr("woodspeciesperc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_woodspeciesperc").html(data);
+                     }
+                });
+        }, 0);
+
+
+    setTimeout(function(){
+            var urlC = $(".form2").attr("doorstylea-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_doorstyle").html(data);
+                     }
+                });
+        }, 0);
+
+
+    setTimeout(function(){
+            var urlC = $(".form2").attr("doorstyleperc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_doorstyleperc").html(data);
+                     }
+                });
+        }, 0);
+
+    setTimeout(function(){
+            var urlC = $(".form2").attr("finishcolora-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_finishcolor").html(data);
+                     }
+                });
+        }, 0);
+
+
+
+    setTimeout(function(){
+            var urlC = $(".form2").attr("finishcolorperc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_finishcolorperc").html(data);
+                     }
+                });
+        }, 0);
+
+
+    setTimeout(function(){
+            var urlC = $(".form2").attr("finishoptiona-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_finishoption1").html(data);
+                     }
+                });
+        }, 0);
+
+
+    setTimeout(function(){
+            var urlC = $(".form2").attr("finishoptionperc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_finishoption1perc").html(data);
+                     }
+                });
+        }, 0);
+
+
+        setTimeout(function(){
+            var urlC = $(".form2").attr("finishoptiona2-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_finishoption2").html(data);
+                     }
+                });
+        }, 0);
+
+
+    setTimeout(function(){
+            var urlC = $(".form2").attr("finishoptionperc2-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_finishoption2perc").html(data);
+                     }
+                });
+        }, 0);
+
+    setTimeout(function(){
+            var urlC = $(".form2").attr("totalperc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_totalperc").html(data);
+                     }
+                });
+        }, 0);
+
+
+       setTimeout(function(){
+           var urlC = $(".form2").attr("cabnumtotal-url");
+           req = $.ajax({
+                  url: urlC,
+                  data:{
+                    },
+                    success: function (data) {
+                      $("#id_cabnumtotal").html(data);
+                    }
+               });
+       }, 200);
+});
+/////////////////////////  Wood Species //////////////////////////////////////
+
+    $(function(){
+    $('#id_woodspecies').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_woodspecies');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("woodspecies-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_woodspecies: $('#id_woodspecies').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+$(function(){
+$('#id_woodspecies').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("woodspeciesperc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_woodspeciesperc").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+$(function(){
+$('#id_woodspecies').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("totalperc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_totalperc").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+
+$(function(){
+$('#id_woodspecies').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("cabnumtotal-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_cabnumtotal").html(data);
+                     }
+                });
+        }, 800);
+    });
+});
+
+/////////////////////////  Door Style //////////////////////////////////////
+
+    $(function(){
+    $('#id_doorstyle').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_doorstyle');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("doorstyle-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_doorstyle: $('#id_doorstyle').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+
+$(function(){
+$('#id_doorstyle').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("doorstyleperc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_doorstyleperc").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+$(function(){
+$('#id_doorstyle').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("totalperc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_totalperc").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+
+$(function(){
+$('#id_doorstyle').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("cabnumtotal-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_cabnumtotal").html(data);
+                     }
+                });
+        }, 600);
+    });
+});
+
+
+/////////////////////////  Finish Color //////////////////////////////////////
+    $(function(){
+    $('#id_finishcolor').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_finishcolor');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("finishcolor-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_finishcolor: $('#id_finishcolor').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+
+$(function(){
+$('#id_finishcolor').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("finishcolorperc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_finishcolorperc").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+
+$(function(){
+$('#id_finishcolor').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("totalperc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_totalperc").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+
+$(function(){
+$('#id_finishcolor').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("cabnumtotal-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_cabnumtotal").html(data);
+                     }
+                });
+        }, 600);
+    });
+});
+
+/////////////////////////  Finish Option 1 //////////////////////////////////////
+    $(function(){
+    $('#id_finishoption1').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_finishoption1');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("finishoption-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_finishoption1: $('#id_finishoption1').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+
+$(function(){
+$('#id_finishoption1').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("finishoptionperc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_finishoption1perc").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+$(function(){
+$('#id_finishoption1').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("totalperc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_totalperc").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+
+
+$(function(){
+$('#id_finishoption1').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("cabnumtotal-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_cabnumtotal").html(data);
+                     }
+                });
+        }, 600);
+    });
+});
+
+/////////////////////////  Finish Option 2 //////////////////////////////////////
+    $(function(){
+    $('#id_finishoption2').change(function(){
+        setTimeout(function(){
+                var selectBox =document.getElementById('id_finishoption2');
+                var userInput =selectBox.options[selectBox.selectedIndex].value;
+                console.log(userInput);
+                var url = $(".form2").attr("finishoption2-url");
+                req = $.ajax({
+                       type:'POST',
+                       url: url,
+                       data:{
+                            id_finishoption2: $('#id_finishoption2').val(),
+                            csrfmiddlewaretoken: '{{ csrf_token }}'
+                         },
+                    });
+        }, 0);
+    });
+});
+
+
+$(function(){
+$('#id_finishoption2').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("finishoptionperc2-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_finishoption2perc").html(data);
+                     }
+                });
+        }, 200);
+    });
+});
+
+$(function(){
+$('#id_finishoption2').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("totalperc-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_totalperc").html(data);
+                     }
+                });
+        }, 400);
+    });
+});
+
+
+$(function(){
+$('#id_finishoption2').change(function(){
+    setTimeout(function(){
+            var urlC = $(".form2").attr("cabnumtotal-url");
+            req = $.ajax({
+                   url: urlC,
+                   data:{
+                     },
+                     success: function (data) {
+                       $("#id_cabnumtotal").html(data);
+                     }
+                });
+        }, 600);
+    });
+});
+</script>

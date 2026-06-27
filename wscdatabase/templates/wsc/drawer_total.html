@@ -1,0 +1,34 @@
+<label id="label_drawernum">Number of Drawers</label><input id="id_drawernum" value="{{ drawernum.drawernum }}">
+
+<label id="label_drawercost">Drawer Cost</label><input id="id_drawercost_0" value="{{ drawercost.drawercost }}">
+
+<label id="label_drawertotal">Price for Drawers</label><input id="id_drawertotal_0" value="{{ drawertotal.drawertotal }}">
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(document).ready(function() {
+var x = document.getElementById("id_drawercost_0").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_drawercost_0").value = x;
+    });
+
+$(document).ready(function() {
+var x = document.getElementById("id_drawertotal_0").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_drawertotal_0").value = x;
+    });
+
+
+
+
+</script>

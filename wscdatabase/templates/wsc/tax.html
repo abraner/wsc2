@@ -1,0 +1,12 @@
+<input id="id_tax" value="{{ tax.tax }}">
+<script>
+$(document).ready(function() {
+    var x = document.getElementById('id_tax').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById('id_tax').value = x;
+    });
+</script>

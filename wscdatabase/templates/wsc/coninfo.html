@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="../../../img/favicon1.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/login/coninfo.css">
+    <title>Wood Street Cabinet Bidding Program</title>
+</head>
+<body  style="background-image: url('../../../../img/wood.jpg');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;">
+    <div class="container">
+        <div class="container1">
+        </div>
+        <div class="container2">
+            <h1 id="formh2">Contractors Information</h1>
+        <div class="outerdiv">
+            <form class="form2" method="post">
+            {% csrf_token %}
+            {{ form.name_of_field }}
+            <div class="form-rowcom">
+                {{ form.concompanytname.errors }}
+                <label id="label_concompanytname">Company:</label>
+                {{ form.concompanytname }}
+            </div>
+            <div class="form-row">
+                {{ form.confirstname.errors }}
+                <label id="label_confirstname">First Name:</label>
+                {{ form.confirstname }}
+            </div>
+            <div class="form-row">
+                {{ form.conlastname.errors }}
+                <label id="label_conlastname">Last Name:</label>
+                {{ form.conlastname }}
+            </div>
+            <div class="form-row">
+                {{ form.conadd1.errors }}
+                <label id="label_conadd1">Address #1:</label>
+                {{ form.conadd1 }}
+            </div>
+            <div class="form-row">
+                {{ form.conadd2.errors }}
+                <label id="label_conadd2">Address #2:</label>
+                {{ form.conadd2 }}
+            </div>
+            <div class="form-row">
+                {{ form.concity.errors }}
+                <label id="label_concity">City:</label>
+                {{ form.concity }}
+            </div>
+            <div class="form-rowst">
+                {{ form.const.errors }}
+                <label class="label_const">State:</label>
+                {{ form.const }}
+            </div>
+            <div class="form-row">
+                {{ form.conzipcode.errors }}
+                <label class="label_conzipcode">Zip Code:</label>
+                {{ form.conzipcode }}
+            </div>
+            <div class="form-rowphone">
+                {{ form.conwork1.errors }}
+                <label class="label_conwork1">Work Phone #1:</label>
+                {{ form.conwork1 }}
+            </div>
+            <div class="form-rowphone">
+                {{ form.conwork2.errors }}
+                <label class="label_conwork2">Work Phone #2:</label>
+                {{ form.conwork2 }}
+            </div>
+            <div class="form-rowphone">
+                {{ form.concell1.errors }}
+                <label class="label_concell1">Cell Phone #1:</label>
+                {{ form.concell1 }}
+            </div>
+            <div class="form-rowphone">
+                 {{ form.concell2.errors }}
+                 <label class="label_concell2">Cell Phone #2:</label>
+                {{ form.concell2 }}
+            </div>
+            <div class="form-rowphone">
+                {{ form.conhome.errors }}
+                <label class="label_conhome">Home Phone:</label>
+                {{ form.conhome }}
+            </div>
+            <div class="form-rowemail">
+                {{ form.conemail1.errors }}
+                <label class="label_conemail1">Email #1:</label>
+                {{ form.conemail1 }}
+            </div>
+            <div class="form-rowemail">
+                {{ form.conemail2.errors }}
+                <label class="label_conemail2">Email #2:</label>
+                {{ form.conemail2 }}
+            </div>
+            </form>
+        <div id="but2">
+            <a class="btn btn9" id="btn1" href="../conedit">Update Contractors Info.</a>
+            <a class="btn btn9" id="btn2" href="{{ instance.get_absolute36_url }}">Delete Contractor</a>
+        </div>
+        </div>
+        </div>
+        <div class="container3">
+            <h1 id="formh3">Customers Information</h1>
+            <a id="back"  href="{% url 'wscdatabase:con_info_existing' %}">Back</a>
+            <form id="form3" method="post">
+            <div id="menu2">
+                <div id="header1">
+                    <div id="A">ID</div>
+                    <div id="C">First Name</div>
+                    <div id="D">Last Name</div>
+                    <div id="E">Address</div>
+                    <div id="G">City</div>
+                    <div id="H">St</div>
+                </div>
+                 <section id="sec1"></section>
+                <section id="sec2"></section>
+                <section id="sec3"></section>
+                <section id="sec4"></section>
+                <section id="sec5"></section>
+                <section id="sec6"></section>
+                <section id="sec7"></section>
+                <section id="sec8"></section>
+                <section id="sec9"></section>
+                <section id="sec10"></section>
+                <section id="sec11"></section>
+                <section id="sec12"></section>
+                <section id="sec13"></section>
+                <form id="form1" method="post">
+                    <div class="form-rowcustinfo">
+                    {% for obj in object_list %}
+                    <a id="id" href="{% url 'wscdatabase:custinfo' obj.id %}">{{ obj.id }}</a>
+                    <div id="firstname">{{ obj.custfirstname }}</div>
+                    <div id="lastname">{{ obj.custlastname }}</div>
+                    <div id="add1">{{ obj.custadd1 }}</div>
+                    <div id="city">{{ obj.custcity }}</div>
+                    <div id="st">{{ obj.custst }}</div>
+                    {% endfor %}
+                    </div>
+                </form>
+            </div>
+            <div id="but1">
+                <a class="btn btn9" id="btn" href="{{ instance.get_absolute8_url }}">Add New Customer</a>
+            </div>
+            </form>
+        </div>
+        <div class="container4">
+        </div>
+    </div>
+</body>
+</html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+
+$(document).ready(function() {
+    $("#id_idA").attr("disabled", true)
+    $("#id_conid").attr("disabled", true)
+    $("#id_concompanytname").attr("disabled", true)
+    $("#id_confirstname").attr("disabled", true)
+    $("#id_conlastname").attr("disabled", true)
+    $("#id_conadd1").attr("disabled", true)
+    $("#id_conadd2").attr("disabled", true)
+    $("#id_concity").attr("disabled", true)
+    $("#id_const").attr("disabled", true)
+    $("#id_conzipcode").attr("disabled", true)
+    $("#id_conwork1_0").attr("disabled", true)
+    $("#id_conwork2_0").attr("disabled", true)
+    $("#id_concell1_0").attr("disabled", true)
+    $("#id_concell2_0").attr("disabled", true)
+    $("#id_conhome_0").attr("disabled", true)
+    $("#id_conemail1").attr("disabled", true)
+    $("#id_conemail2").attr("disabled", true)
+});
+
+</script>

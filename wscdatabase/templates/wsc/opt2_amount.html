@@ -1,0 +1,20 @@
+<input id="id_opt2" value="{{ opt2a.opt2 }}">
+<script>
+$(document).ready(function() {
+    var x = document.getElementById('id_opt2').value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById('id_opt2').value = x;
+    });
+
+$(function(){
+    $('input#id_opt2').focus(function(){
+setTimeout(function(){
+    $(".rm-modal4").show()
+        }, 200);
+    });
+});
+</script>

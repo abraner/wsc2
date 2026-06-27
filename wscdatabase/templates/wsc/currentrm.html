@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="#" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../static/login/cust_existing3.css">
+    {% block head %}
+    <title>Customer Search</title>
+    {% endblock %}
+
+</head>
+<body  style="background-image: url('../../../../img/wood.jpg');
+             background-repeat: no-repeat;
+             background-attachment: fixed;
+             background-size: cover;">
+<section id="workarea1">
+    <section id="section1">
+        <h1 id="formh1">Current Room</h1>
+        <a id="back"  href="{% url 'wscdatabase:main' %}">Back</a>
+        <div id="menu2">
+            <div id="header1">
+                <div id="A">ID</div>
+                <div id="C">First Name</div>
+                <div id="D">Last Name</div>
+                <div id="E">Address</div>
+                <div id="G">City</div>
+                <div id="H">St</div>
+                <div id="I">Zip</div>
+            </div>
+            <section id="sec1"></section>
+            <section id="sec2"></section>
+            <section id="sec3"></section>
+            <section id="sec4"></section>
+            <section id="sec5"></section>
+            <section id="sec6"></section>
+            <section id="sec7"></section>
+            <section id="sec8"></section>
+            <section id="sec9"></section>
+            <section id="sec10"></section>
+            <section id="sec11"></section>
+            <section id="sec12"></section>
+            <section id="sec13"></section>
+        </div>
+        <form id="form1" method="post">
+            <section id="sectionA" >
+                {% for obj in object_list %}
+                <a id="id" href="{{ obj.get_absolute16_url }}">{{ obj.bid_idA }}</a>
+                <div id="firstname">{{ obj.rmnum_id }}</div>
+                <div id="lastname">{{ obj.rmcost }}</div>
+                <div id="add1">{{ obj.rmactive }}</div>
+                <div id="city">{{ obj.rmdelete }}</div>
+                {% endfor %}
+            </section>
+            <div id="pag" class="pagination">
+                <span class="step-links">
+                    {% if object_list.has_previous %}
+                    <a href="?page=1">&laquo; first</a>
+                    <a href="?page={{ object_list.previous_page_number }}">previous</a>
+                    {% endif %}
+                    <span class="object_list">
+                        Page {{ object_list.number }} of {{ object_list.paginator.num_pages }}.
+                    </span>
+                    {% if object_list.has_next %}
+                    <a href="?page={{ object_list.next_page_number }}">next</a>
+                    <a href="?page={{ object_list.paginator.num_pages }}">last &raquo;</a>
+                    {% endif %}
+                </span>
+            </div>
+        </form>
+        <form id="searchbar" class="form-inline my-2 my-lg-0">
+            <input name="search"
+                   id="search"
+                   class="form-control mr-sm-2"
+                   type="search"
+                   placeholder="Search Existing Customers"
+                   aria-label="Search">
+            <button id="searchbutton" class="btn-success" type="submit">Search</button>
+        </form>
+    </section>
+</section>
+<div class="rm-modal" style="">
+    <div class="modal-content">
+        <button type="button" class="button1">Open Cabinet Page for this Room</button>
+        <button type="button" class="button2">Finish Selection Page</button>
+
+    </div>
+</div>
+</body>

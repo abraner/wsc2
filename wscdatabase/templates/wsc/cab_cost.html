@@ -1,0 +1,217 @@
+<section id="section9">
+    <div id="totalrmcost">
+        <label id="label_totalrmcost">Production Number</label>
+        <input id="id_totalrmcost_0" value="{{ totalrmcost1.rmcost|floatformat:0 }}">-
+        <input id="id_prodqueuetotal_0" value="{{ totalrmcost2.prodqueuetotal|floatformat:0 }}">
+        <label id="label_rmgrandtotal">Total Room Cost</label>
+        <input id="id_rmgrandtotal_0" value="{{ totalrmcost3.rmgrandtotal }}">
+    </div>
+</section>
+<section id="section10">
+    <div id="cabnumtotal2">
+        <label id="label_cabnumtotal">Number of Cabinets</label><input id="cabnumtotal_id" value="{{ cabtotal.cabnumtotal }}">
+        <label id="label_cabinet">Cabinet Cost</label><input id="cabinet_0_id" value="{{ cabinet.cabinet }}">
+        <label id="label_cabtotalprice">Price for Cabinets</label><input id="cabtotalprice_id" value="{{ cabtotalprice.cabtotalprice }}">
+        <label id="label_custcabcost">Custom Cost</label><input id="cabcustcost_id" value="{{ custcabcost.custcabcost }}">
+        <label id="label_custcabtotal">Custom Cabinet Total</label><input id="custcabtotal_id" value="{{ custcabtotal.custcabtotal }}">
+    </div>
+</section>
+<section id="section4">
+    <div id="cabsidenum">
+        <label id="label_cabsidenum">Number of Sides</label><input id="id_cabsidenum" value="{{ cabsidenum.cabsidenum }}">
+        <label id="label_cabsidecost">Sides Cost</label><input id="id_cabsidecost_0" value="{{ cabsidecost.cabsidecost }}">
+        <label id="label_cabsidetotal">Price for Sides</label><input id="id_cabsidetotal_0" value="{{ cabsidetotal.cabsidetotal }}">
+        <label id="label_custsidecost">Custom Cost</label><input id="custsidecost_id" value="{{ custcabsidecost.custsidecost }}">
+        <label id="label_custcabtotal1">Custom Sides Total</label><input id="custsidetotal_id" value="{{ custcabsidetotal.custsidetotal }}">
+    </div>
+</section>
+<section id="section5">
+    <div id="drawernum">
+        <label id="label_drawernum">Number of Drawers</label><input id="id_drawernum" value="{{ drawernum.drawernum }}">
+        <label id="label_drawercost">Drawer Cost</label><input id="id_drawercost_0" value="{{ drawercost.drawercost }}">
+        <label id="label_drawertotal">Price for Drawers</label><input id="id_drawertotal_0" value="{{ drawertotal.drawertotal }}">
+         <label id="label_optionnum">Cabinet Accessories</label><input id="id_optionnum_0" value="{{ optionnum.optionnum }}">
+        <label id="label_cabaccrmtotal">Cabinet Options</label><input id="id_cabaccrmtotal_0" value="{{ cabaccrmtotal.cabaccrmtotal }}">
+        <label id="label_cabacccustom">Custom Cost</label><input id="id_cabacccustom_0" value="{{ cabacccustom.cabacccustom }}">
+        <label id="label_cabacctotal">Custom Cab. Option Total</label><input id="id_cabacctotal_0" value="{{ cabacctotal.cabacctotal }}">
+    </div>
+</section>
+<script>
+$(document).ready(function() {
+var x = document.getElementById("cabinet_0_id").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("cabinet_0_id").value = x;
+    });
+
+$(document).ready(function() {
+var x = document.getElementById("cabtotalprice_id").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("cabtotalprice_id").value = x;
+    });
+
+$(document).ready(function() {
+var x = document.getElementById("cabcustcost_id").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("cabcustcost_id").value = x;
+    });
+
+$(document).ready(function() {
+var x = document.getElementById("custcabtotal_id").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("custcabtotal_id").value = x;
+    });
+
+$(document).ready(function() {
+var x = document.getElementById("id_cabsidecost_0").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_cabsidecost_0").value = x;
+    });
+
+$(document).ready(function() {
+var x = document.getElementById("id_cabsidecost_0").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_cabsidecost_0").value = x;
+    })
+
+$(document).ready(function() {
+var x = document.getElementById("id_cabsidetotal_0").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_cabsidetotal_0").value = x;
+    })
+
+$(document).ready(function() {
+var x = document.getElementById("custsidecost_id").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("custsidecost_id").value = x;
+    });
+
+ $(document).ready(function() {
+var x = document.getElementById("custsidetotal_id").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("custsidetotal_id").value = x;
+    });
+
+$(document).ready(function() {
+var x = document.getElementById("id_drawercost_0").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_drawercost_0").value = x;
+    });
+
+$(document).ready(function() {
+var x = document.getElementById("id_drawertotal_0").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_drawertotal_0").value = x;
+    });
+
+$(document).ready(function() {
+var x = document.getElementById("id_optionnum_0").value;
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_optionnum_0").value = x;
+    });
+
+$(document).ready(function() {
+var x = document.getElementById("id_cabaccrmtotal_0").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_cabaccrmtotal_0").value = x;
+    });
+
+ $(document).ready(function() {
+var x = document.getElementById("id_cabacccustom_0").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_cabacccustom_0").value = x;
+    });
+
+ $(document).ready(function() {
+var x = document.getElementById("id_cabacctotal_0").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_cabacctotal_0").value = x;
+    });
+
+$(document).ready(function() {
+var x = document.getElementById("id_rmgrandtotal_0").value;
+
+    if (x.indexOf("$") != 0)
+    {
+        x = "$" + x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    document.getElementById("id_rmgrandtotal_0").value = x;
+    });
+
+
+
+</script>
